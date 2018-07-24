@@ -28,6 +28,12 @@
             </div>
         </div>
         <div class="form-group row">
+            <label class="col-md-2 col-form-label text-sm-left text-md-right text-muted">显示时间：</label>
+            <div class="col-md-7 col-lg-5">
+               <input type="text" name="date_time" value="{{ isset($article['date_time']) ?  $article['date_time'] : date('Y/m/d h:i') }}" size="40" class="form-control date-picker">
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="editor" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">文章内容：</label>
             <div class="col-md-10">
                 <textarea name="content" class="form-control" rows="5" id="ck_content">{{ isset($article['content']) ? $article['content'] : '' }}</textarea>
