@@ -27,7 +27,7 @@
 		            <th>Description</th>
 		            <th>Subject type</th>
 					<th>Subject id</th>
-					<th>causer type</th>
+					<th>Causer type</th>
 					<th>Causer id</th>
 		            <th>Create time</th>
 				</tr>
