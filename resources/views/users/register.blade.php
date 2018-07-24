@@ -4,7 +4,7 @@
 
 <div class="container container-min">
 	<h1 class="title">
-		注册{{ setting('name') }}帐号
+		注册{{ setting('name') }}
 	</h1>
 	<div class="form-wrapper">
 		<form method="post" action="{{ route('signup') }}" autocomplete="" id="form">
