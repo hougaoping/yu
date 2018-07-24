@@ -3,7 +3,12 @@
         {{ setting('name') }}平台管理
     </div>
     <div class="menus">
-    	@foreach (sidebar($sidebar) as $menu)
+
+        <?php
+            $sidebar = sidebar($sidebar);
+        ?>
+
+    	@foreach ($sidebar as $menu)
         @if(isset($menu['permission']) && $menu['permission'])
             <div class="menu">
                 <div class="menu-headline {!! isset($menu['is_active']) ? 'current':'' !!}">
