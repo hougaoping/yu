@@ -341,12 +341,11 @@ table .opt {
     height: 60px;
     z-index: 9;
     border-bottom:1px solid #e5e5e5;
-    padding-right:20px;
 
     #expand-sidebar {
         display: block;
         height:60px;
-        width:60px;
+        width:50px;
         cursor: pointer;
         z-index: 999;
         background-repeat: no-repeat;
@@ -373,7 +372,7 @@ table .opt {
     right:0;
     overflow:auto;
     padding:20px;
-    
+
     .table {
         margin:0;
     }
