@@ -14,7 +14,7 @@ class AddDateTimeToArticlesTable extends Migration
     public function up()
     {
         Schema::table('articles', function (Blueprint $table) {
-			$table->timestamp('date_time');
+			$table->timestamp('date_time')->index();
         });
     }
 

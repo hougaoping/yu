@@ -27,9 +27,9 @@
 		            <th>邮箱地址</th>
 		            <th>手机号码</th>
 		            <th>邮箱验证</th>
-		            <th>最后登录时间</th>
+		            <th>@widget('order', ['field' => 'last_login_time	', 'title'=>'最后登录时间'])</th>
 		            <th>@widget('order', ['field' => 'login_count', 'title'=>'登录次数'])</th>
-					<th>注册时间</th>
+					<th>@widget('order', ['field' => 'register_time', 'title'=>'注册时间'])</th>
 					<th>最后登录IP</th>
 	         	</tr>
 	     	</thead>
