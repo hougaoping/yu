@@ -1,0 +1,65 @@
+.checkboxs {
+    font-size: 15px;
+    color:#555;
+    line-height: 1.5;
+}
+    
+.checkboxs ul, .checkboxs dl {
+    margin:0;
+}
+
+.checkboxs dt {
+    margin:10px 0;
+    font-weight:bold;
+}
+
+.checkboxs dd {
+    padding: 0 0 0 20px;
+    overflow: hidden;
+}
+.checkboxs dd li {
+    list-style-type:none;
+    display: inline-block;
+    padding: 5px 0;
+}
+.checkboxs u {
+    text-decoration: none;
+    position: relative;
+    left: 10px;
+}
+.ctrl-box {
+    position: relative;
+    width:100%;
+    display: block;
+}
+.ctrl-box label {
+    width: 100%;
+    display: block;
+}
+.checkboxs input[type=checkbox] {
+    visibility: hidden;
+}
+.checkboxs input[type=checkbox]+i, input[type=radio]+i{
+	display: inline-block;
+	background: url("/images/admin/input-checkbox.png"); 
+	background-image: image-set(url("/images/admin/input-checkbox.png") 1x ,url("/images/admin/input-checkbox@x2.png") 2x);
+	background-image: -webkit-image-set(url("/images/admin/input-checkbox.png") 1x ,url("/images/admin/input-checkbox@x2.png") 2x);
+    background-repeat: no-repeat;
+    background-position: 0px -65px;
+    height: 15px;
+    width:15px;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+}
+.checkboxs input[type=checkbox]:checked+i {
+    background-position: 0px 0px;
+}
+.checkboxs .s-some input[type=checkbox]+i {
+    background-position: 0 -130px;
+}
+
+.checkboxs ul li .ctrl-box {
+	width: 200px;
+	float: left;
+}

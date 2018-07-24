@@ -1,0 +1,1 @@
+<div class="footer text-center">Copyright &copy 2018  <a href="/" title="">{{ setting('name') }}</a></div>

@@ -1,0 +1,375 @@
+$primary: #ffdc40;
+$border-radius:0;
+$border-radius-lg:0;
+$border-radius-sm:0;
+
+$input-btn-focus-width:0;
+$input-focus-border-color: #000;
+$input-btn-padding-y: .5rem;
+$input-btn-padding-x: .75rem;
+
+$body-bg: #f5f5f5;
+$body-color: #555;
+
+$font-size-base: 1rem;
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * .875);
+
+$link-color: #555;
+$link-decoration: none;
+$link-hover-color: #ffdc40;
+$link-hover-decoration: none;
+
+$grid-gutter-width: 20px;
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+html, body { 
+    font-size:13px;
+    color:#555;
+    line-height:1.5;
+    font-family: Roboto,Helvetica,Tahoma,Arial,"Microsoft YaHei";
+}
+
+::-webkit-scrollbar-thumb{background:#b1b1b1;border-radius:4px} ::-webkit-scrollbar{width:6px;height:10px;background-color:transparent;border-radius:3px}
+
+p.reminder {
+    margin-bottom:20px;
+    font-size:13px;
+}
+
+.form-control.error {
+    border:1px solid #dc3545;
+}
+
+select.form-control {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background-size: 1.5rem 1rem;
+    background-image: url('/images/icons/down.png');
+    background-image: url('/images/icons/down.svg'), none;
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right:30px;
+}
+
+.ickeck-box {
+    position: relative;
+    padding-left:25px;
+    padding-top:0;
+    height:25px;
+    margin-top:8px;
+    display:inline-block;
+    width:auto;
+    margin-right:10px;
+    .icheckbox_minimal, .iradio_minimal {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+        position: absolute;
+        left:-9999px;
+    }
+}
+
+.header {
+    width:100%;
+    height:70px;
+    line-height:70px;
+    font-size:14px;
+    background-color:#fff;
+
+    .brand {
+        float:left;
+        .logo {
+            vertical-align: top;
+            height:70px;
+        }
+    }
+
+    .login-navbar {
+        float:right;
+        padding-right:15px;
+        .navbar-item {
+            padding:0 20px;
+            display:inline-block;
+            &:hover {
+                color:#555;
+                background-color:#f0f0f0;
+            }
+        }
+
+        .drop-menu {
+            position: relative;
+            display:inline-block;
+            .menu-content {
+                background-color:#fff;
+                display: none;
+                position: absolute;
+                left:0;
+                right:0;
+                z-index:999;
+                top:100%;
+                .menu-item {
+                    display:block;
+                }
+            }
+        }
+
+        .drop-menu.active {
+            .menu-content {
+                display:block;
+            }
+        }
+
+    }
+}
+
+.container-min {
+    margin:0 auto;
+    font-size:14px;
+    h1.title {
+        font-size:2.2rem;
+        margin: 30px 0;
+        text-align: center;
+        font-weight: normal;
+    }
+    max-width:540px;
+    padding:0 15px;
+
+    .form-wrapper {
+        background-color:#fff;
+        padding:25px 35px;
+        padding-bottom:0;
+        border-radius:0;
+        
+        .radio-box {
+            padding-top:40px;
+        }
+
+
+        // 针对找回密码增加底部padding
+        &.padding-bottom {
+            padding:25px 35px;
+        }
+
+        @media (max-width: 480px) {
+            padding:0px 15px;
+            .radio-box {
+                padding-top:20px;
+            }
+
+            &.padding-bottom {
+                padding:15px;
+            }
+        }
+
+        label.input_radio {
+            border: 1px solid #ccc;
+            display: inline-block;
+            zoom: 1;
+            overflow: hidden;
+            padding: 9px 0;
+            cursor: pointer;
+            position: relative;
+            margin:0;
+            text-align:center;
+
+            &:hover {
+                border:1px solid #000;
+                padding: 9px 0;
+            }
+
+            &.selected {
+                border:1px solid #000;
+                padding: 9px 0;
+                background: url("/images/icons/selected.png") no-repeat bottom right;
+            }
+
+            input {
+                position: absolute;
+                left:-99999px;
+            }
+        }
+
+        label.input_radio {
+            width: 48%;
+        }
+
+        .remember-group {
+            padding-top:20px;
+        }
+
+        .form-group {
+            border-bottom:1px solid #ddd;
+            margin-bottom:1px;
+            padding:10px 0;
+
+            &:hover {
+                border-bottom:1px solid #000;
+                transition: border-color ease-in-out .3s;
+                margin-bottom:1px;
+            }
+            
+            label {
+                text-align: left;
+                display: inline-block;
+                vertical-align: middle;
+                margin:0;
+                width:25%;
+            }
+
+            .form-control {
+                width:70%;
+                border:none;
+                display: inline-block;
+                vertical-align: middle;
+            }            
+        }
+
+        .form-group-controls {
+            padding-top:40px;
+            @media (max-width: 480px) {
+                padding-top:20px;
+            }
+        }
+
+        // 表单页面底部的链接
+        .controls {
+            padding:23px 0;
+            margin:0;
+        }
+    }
+}
+
+
+
+.center {
+    font-size:14px;
+    &.container {
+        padding:0 15px;
+        margin:0 auto;
+        margin-top: 20px;
+        max-width:1170px;
+        position: relative;
+
+    }
+
+    .sidebar {
+        width:220px;
+        overflow: hidden;
+        position: absolute;
+        
+        .menu-list {
+            background-color:#fff;
+            .list-item {
+                position: relative;
+                display:block;
+                position: relative;
+                height: 40px;
+                line-height: 40px;
+                padding: 0 20px;
+                &:hover {
+                    color:#555;
+                    background-color:#ffdc40;   
+                }
+                &.active {
+                    color:#555;
+                    background-color:#ffdc40;  
+                }
+            }
+        }
+
+
+        @media (max-width: 767px) {
+            position: relative;
+            width: 100%;
+            margin-bottom:15px;
+            border:none;
+        }
+
+    }
+
+    // 内容区域
+    .main-container {
+        width:100%;
+        padding-left:235px;
+
+        .form-wrapper {
+            background-color:#fff;
+            position: relative;
+
+            .header-line {
+                position: relative;
+                padding:20px;
+                h3 {
+                    margin:0;
+                    font-size:22px;
+                    color:#555;
+                    text-align:center;
+                    font-weight:normal;
+                    @media (max-width: 767px){
+                        font-size:1rem;
+                    }
+                }
+            }
+
+            .form-group-wrapper {
+                .form-group {
+                    margin:0;
+                    padding: 10px 142px;
+                    @media (max-width: 991px) {
+                        padding: 10px 20px;
+                    }
+                    .label {
+                        margin-bottom:5px;
+                    }
+                }
+
+                .form-group:first-child {
+                    padding-top: 30px;
+                }
+
+                .form-group:last-child {
+                    padding-bottom: 30px;
+                }
+            }
+
+            .form-group-controls {
+                padding:0;
+                padding:30px 0;
+                text-align:center;
+            }
+        }
+
+        @media (max-width: 767px) {
+            padding-left:0;
+        }
+
+    }
+}
+
+
+.footer {
+    padding:15px;
+    width: 100%;
+    color: #555;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.footer_1 {
+    position: fixed;
+    bottom: 0;
+    display: block;
+}
+
+.footer_2 {
+    position: unset;
+    bottom: 0;
+    display: block;
+}
+

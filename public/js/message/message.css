@@ -1,0 +1,25 @@
+.message {
+    opacity:0.90;
+    position:fixed;
+    top:0;
+    left:0%;
+    right:0%;
+    height:70px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+    line-height:70px;
+    font-size:20px;
+    color:#000;
+    z-index:999;
+    text-align:center;
+}
+
+.message.success {
+    background-color: #ffdc40;
+    color:#000;
+}
+
+.message.error {
+    background-color: #f00;
+    color:#000;
+}
