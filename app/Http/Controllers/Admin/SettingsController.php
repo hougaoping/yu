@@ -39,8 +39,7 @@ class SettingsController extends BaseController
                 }
             }
 
-            activity()->log('update settings');
-
+            activity()->log('更新设置');
 			$this->success('设置保存成功', '', ['direct'=>false]);
 	    }
 	}

@@ -10,7 +10,6 @@ use Illuminate\Http\Response;
 use Validator;
 use App\Models\File;
 
-
 class FilesController extends BaseController
 {
 	public function index(Request $request) {
