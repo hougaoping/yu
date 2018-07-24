@@ -30,7 +30,6 @@
 					<th>文件大小</th>
 					<th>文件类型</th>
 		            <th>创建时间</th>
-		            <th>更新时间</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -46,7 +45,6 @@
 				<td>{{ get_real_size($data->size) }}</td>
 				<td>{{ $data->mimes }}</td>
 				<td>{{ $data->created_at->diffForHumans() }}</td>
-				<td>{{ $data->updated_at->diffForHumans() }}</td>
 		    </tr>
 		    @endforeach
 		    </tbody>
