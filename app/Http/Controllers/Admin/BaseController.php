@@ -9,7 +9,6 @@ class BaseController extends BackendController
 {	
 	public function __construct() {
         $this->middleware('admin');
-        View::share('sidebar', config('admin.sidebar'));
     }
 
     protected function _keywords() {

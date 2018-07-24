@@ -2810,7 +2810,7 @@ select.form-control-lg:not([size]):not([multiple]),
       -ms-user-select: none;
           user-select: none;
   border: 1px solid transparent;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.7rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0;
@@ -3875,8 +3875,8 @@ input[type="button"].btn-block {
 }
 
 .dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
+  padding-right: 1.275rem;
+  padding-left: 1.275rem;
 }
 
 .dropdown-toggle-split::after,

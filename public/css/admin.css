@@ -10830,7 +10830,7 @@ table .opt {
 }
 
 .content {
-  background-color: #f5f5f5;
+  background-color: #fff;
   position: absolute;
   top: 60px;
   bottom: 0;
@@ -10845,15 +10845,8 @@ table .opt {
 
 .content .content-section {
   min-height: auto;
-  margin: 20px;
+  margin: 0;
   padding: 20px;
-  background-color: #fff;
-}
-
-@media (max-width: 767px) {
-  .content .content-section {
-    margin: 0;
-  }
 }
 
 .content .content-section .title-section h2 {

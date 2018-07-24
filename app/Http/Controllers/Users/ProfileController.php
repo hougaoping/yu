@@ -26,6 +26,7 @@ class ProfileController extends BaseController
                 'user_id'      => Auth::id(),
                 'name'         => $request->name,
                 'gender'       => $request->gender,
+                'email'        => $request->email,
                 'mobile'       => $request->mobile,
                 'qq'           => $request->qq,
                 'wx'           => $request->wx,

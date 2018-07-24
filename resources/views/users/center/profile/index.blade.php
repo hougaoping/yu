@@ -26,6 +26,9 @@
                             <label class="label" for="mobile">手机号码：</label><input type="text" class="form-control" id="mobile" name="mobile" placeholder="填写常用手机号" value="@isset($profile['mobile']){{ $profile['mobile'] }}@endisset">
                         </div>
                         <div class="form-group">
+                            <label class="label" for="email">电子邮箱：</label><input type="text" class="form-control" id="email" name="email" placeholder="推荐使用QQ邮箱" value="@isset($profile['email']){{ $profile['email'] }}@endisset">
+                        </div>
+                        <div class="form-group">
                             <label class="label" for="qq">QQ号码：</label><input type="text" class="form-control" id="qq" name="qq" placeholder="填写常用QQ号码" value="@isset($profile['qq']){{ $profile['qq'] }}@endisset">
                         </div>
                         <div class="form-group">

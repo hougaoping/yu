@@ -365,7 +365,7 @@ table .opt {
 }
 
 .content {
-    background-color:#f5f5f5;
+    background-color:#fff;
     position:absolute;
     top:60px;
     bottom:0;
@@ -379,14 +379,8 @@ table .opt {
 
     .content-section {
         min-height: auto;
-        margin:20px;
+        margin:0;
         padding:20px;
-        background-color:#fff;
-
-        @media (max-width: 767px) {
-            margin:0;
-        }
-
         .title-section {
             h2 {
                 font-size:1.7rem;
