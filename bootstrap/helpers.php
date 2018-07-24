@@ -41,7 +41,7 @@ function permission($user, $active) {
     return true;
 }
 
-function sidebar($sidebar) {
+function sidebar($sidebar, $permission = true) {
     foreach($sidebar as &$menu) {
         foreach($menu['items'] as &$item) {
             if (active_class(if_route_pattern($item['active']))) {
@@ -49,12 +49,15 @@ function sidebar($sidebar) {
                 $menu['is_active'] = true;
             }
 
-            if(permission(Auth::user(), $item['route'])) {
-                $item['permission'] = true;
-                $menu['permission'] = true;
+            if ($permission) {
+                if(permission(Auth::user(), $item['route'])) {
+                    $item['permission'] = true;
+                    $menu['permission'] = true;
+                }
             }
         }
     }
+    
     return $sidebar; 
 }
 
