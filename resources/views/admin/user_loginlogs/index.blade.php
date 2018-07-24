@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content-section">
-	<div class="title-section mb-5">
+	<div class="title-section mb-4 border-bottom pb-4">
 	    <h2>登录日志</h2>
 	</div>
 	<div class="action-section row mb-4">

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="content-section">
-	<div class="title-section mb-5 d-flex justify-content-between align-items-center">
+	<div class="title-section mb-4 border-bottom pb-4 d-flex justify-content-between align-items-center">
 	    <h2>广告列表</h2>
 	    <a href="{{ route('admin.ads.create') }}" class="btn btn-primary">添加广告</a>
 	</div>

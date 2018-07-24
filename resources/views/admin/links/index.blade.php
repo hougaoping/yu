@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content-section">
-	<div class="title-section mb-5 d-flex justify-content-between align-items-center">
+	<div class="title-section mb-4 border-bottom pb-4 d-flex justify-content-between align-items-center">
 	    <h2>链接列表</h2>
 	    <a href="{{ route('admin.links.create') }}" class="btn btn-primary">添加链接</a>
 	</div>
