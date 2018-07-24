@@ -7,7 +7,6 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>@yield('title', '')-{{ setting('name') }}</title>
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
 <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/jquery.validate.js') }}"></script>
@@ -17,6 +16,7 @@
 <link href="{{ asset('js/icheck/skins/minimal/minimal.css') }}" rel="stylesheet">
 <script src="{{ asset('js/icheck/icheck.js') }}"></script>
 <!--
+<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('js/jquery-1.12.4.js') }}"></script>
 <script src="{{ asset('js/layer/layer.js') }}"></script>
 <script src="{{ asset('js/open.js') }}"></script>

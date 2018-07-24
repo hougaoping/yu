@@ -1,14 +1,4 @@
-function setFooter() {
-    var hasScroller = document.documentElement.clientHeight < document.documentElement.scrollHeight;
-    if (!hasScroller) {
-        $(".footer").removeClass('footer_2');
-        $(".footer").addClass('footer_1');   
-    }else{
-        $(".footer").removeClass('footer_1');
-        $(".footer").addClass('footer_2');             
-    } 
-}
-
+require('./bootstrap');
 
 $(function() {
     // 下拉菜单
@@ -35,3 +25,13 @@ $(function() {
     $(window).resize(setFooter)
 });
 
+function setFooter() {
+    var hasScroller = document.documentElement.clientHeight < document.documentElement.scrollHeight;
+    if (!hasScroller) {
+        $(".footer").removeClass('footer_2');
+        $(".footer").addClass('footer_1');   
+    }else{
+        $(".footer").removeClass('footer_1');
+        $(".footer").addClass('footer_2');             
+    } 
+}
