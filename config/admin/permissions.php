@@ -6,7 +6,7 @@ return [
 		'admin.dashboard',
         'admin.upload',
     ],
-    
+
 
     // 相同权限
     'equal' => [
