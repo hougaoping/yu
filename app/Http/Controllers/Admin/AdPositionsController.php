@@ -29,7 +29,6 @@ class AdPositionsController extends BaseController
 		$adPosition = new AdPosition;
 		$adPosition->fill($request->all());
         $adPosition->save();
-
         $this->success('广告位添加成功', route('admin.ad_positions.index'));
 	}
 
@@ -48,7 +47,6 @@ class AdPositionsController extends BaseController
         if ($adPosition->ads()->count() > 0 ) {
             $this->error('该广告位下还有广告');
         }
-		
         $adPosition->delete() && $this->success('广告位删除成功');
 	}
 }
