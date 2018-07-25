@@ -10811,7 +10811,7 @@ table .opt {
   height: 60px;
   width: 50px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9;
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url("/images/admin/expand-sidebar.png");
