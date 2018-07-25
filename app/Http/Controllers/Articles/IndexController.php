@@ -16,6 +16,11 @@ use App\Models\Article;
 class IndexController extends BaseController
 {
 	public function index(Article $article, Request $request) {
+        if($article->status == 0) {
+            abort(404);
+        }
+        
+        $article->increment('click', 1);
 		return view('articles.index', compact('article'));
 	} 
 }
