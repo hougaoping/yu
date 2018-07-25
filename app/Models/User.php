@@ -30,6 +30,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $_admin_roles = null;
+
     public function userEmail()
     {
         return $this->hasOne('App\Models\UserEmail');
@@ -105,9 +107,6 @@ class User extends Authenticatable
 			}
 		}
     }
-
-
-    protected $_admin_roles = null;
         
     // 获得管理员权限
     public function getAdminPermissions() {
