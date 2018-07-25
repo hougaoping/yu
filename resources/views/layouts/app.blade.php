@@ -16,9 +16,6 @@
 <link href="{{ asset('js/icheck/skins/minimal/minimal.css') }}" rel="stylesheet">
 <script src="{{ asset('js/icheck/icheck.js') }}"></script>
 <!--
-<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-<script src="{{ asset('js/jquery-1.12.4.js') }}"></script>
-<script src="{{ asset('js/layer/layer.js') }}"></script>
 <script src="{{ asset('js/open.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.css') }}"></link>
 <script defer src="{{ asset('css/fontawesome/js/all.js') }}"></script>

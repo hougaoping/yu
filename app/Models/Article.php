@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
 use \App\Traits\Models\Order;
+use \Spatie\Tags\HasTags;
 
 class Article extends Model
 {
-	use Order, LogsActivity;
+	use Order, LogsActivity, HasTags;
 
 	protected $guarded = [];
 	public $timestamps = true;

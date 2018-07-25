@@ -11,7 +11,7 @@
 		{{ csrf_field() }}
 
         <div class="form-group row">
-            <label class="col-md-2 col-form-label text-sm-left text-md-right text-muted">所属广告位：</label>
+            <label class="col-md-2 col-form-label text-sm-left text-md-right text-muted">文章分类：</label>
             <div class="col-md-7 col-lg-5">
                 <select name="article_category_id" class="form-control dropdown">
                     <option value="">请选择文章分类</option>
@@ -25,6 +25,12 @@
             <label class="col-md-2 col-form-label text-sm-left text-md-right text-muted">文章标题：</label>
             <div class="col-md-7 col-lg-5">
                <input type="text" name="title" value="@isset($article['title']){{ $article['title'] }}@endisset" size="40" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-2 col-form-label text-sm-left text-md-right text-muted">文章标签：</label>
+            <div class="col-md-7 col-lg-5">
+               <input type="text" name="keywords" value="@isset($article['keywords']){{ $article['keywords'] }}@endisset" size="40" class="form-control">
             </div>
         </div>
         <div class="form-group row">

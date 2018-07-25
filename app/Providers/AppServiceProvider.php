@@ -10,6 +10,8 @@ use App\Models\UserProfile;
 use App\Observers\UserProfileObserver;
 use App\Models\UserFeedback;
 use App\Observers\UserFeedbackObserver;
+use App\Models\Article;
+use App\Observers\ArticleObserver;
 use \Illuminate\Pagination\LengthAwarePaginator;
 use \Illuminate\Support\Facades\Validator;
 
@@ -21,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
         Carbon::setLocale('zh');
         UserProfile::observe(UserProfileObserver::class);
 		UserFeedback::observe(UserFeedbackObserver::class);
+		Article::observe(ArticleObserver::class);
         // LengthAwarePaginator::defaultView('pagination::default');
 
         Validator::extend('mobile', function ($attribute, $value, $parameters, $validator) {

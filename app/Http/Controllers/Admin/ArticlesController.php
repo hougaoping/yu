@@ -11,10 +11,13 @@ use Validator;
 use App\Models\Article;
 use App\Http\Requests\ArticleRequest;
 use App\Models\ArticleCategory;
-
+use \App\Traits\Controllers\Tags;
 
 class ArticlesController extends BaseController
 {
+
+    use Tags;
+
 	public function index(Request $request) {
         $article = new Article();
     	$list = $article->with('category')->withOrder($this->_order())->withSearch($this->_keywords())->paginate($this->_rows());
@@ -28,8 +31,11 @@ class ArticlesController extends BaseController
 	public function store(ArticleRequest $request) {
         $data = $request->all();
 		$article = new Article;
+
 		$article->fill($data);
         $article->save();
+
+        $article->attachTags($this->tagsToArray($request->keywords));
         $this->success('文章添加成功', route('admin.articles.index'));
 	}
 
@@ -42,6 +48,7 @@ class ArticlesController extends BaseController
 	public function update(ArticleRequest $request, Article $article) {
        	$data = $request->all();
         $article->update($data);
+        $article->syncTags($this->tagsToArray($request->keywords));
         $this->success('文章更新成功', route('admin.articles.index'));
 	}
 
