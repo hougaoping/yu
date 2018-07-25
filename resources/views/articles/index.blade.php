@@ -14,7 +14,7 @@
             </ul>
             </div>
         </div>
-        <div class="col-md-9 col-12 order-1">
+        <div class="col-md-9 col-12 order-1 mb-4">
             <div class="content">
                 <h1 class="title">{{ $article->title }}</h1>
                 <div class="article-info">
@@ -27,7 +27,6 @@
                 </div>
             </div>
         </div>
-        
     </div>
 </div>
 @stop
