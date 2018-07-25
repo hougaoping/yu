@@ -76,6 +76,16 @@ select.form-control {
     }
 }
 
+.pagination-wrapper {
+    padding:20px 0;
+    border-top:1px solid #e5e5e5;
+    display:flex;
+    justify-content: center;
+    .pagination {
+        margin:0;
+    }
+}
+
 .header {
     width:100%;
     height:60px;
@@ -144,7 +154,6 @@ select.form-control {
     .page-main {
         .content {
             background-color: #fff;
-            margin-bottom:1rem;
             .title {
                 text-align:center;
                 font-size:2rem;
@@ -189,6 +198,10 @@ select.form-control {
                 list-style: none;
             }
 
+            ul.article_list li:last-child {
+                border-bottom: none;
+            }
+
             ul.article_list li a {
                 text-decoration: none;
                 font-size: 1.7rem;
@@ -202,7 +215,7 @@ select.form-control {
                 margin-top: 15px;
                 text-indent: 0em;
                 font-size: 15px;
-                color: #555;
+                color: #999;
             }
 
             ul.article_list li div.info {
@@ -238,6 +251,27 @@ select.form-control {
     }
 
     .sidebar {
+        .menu-list {
+            background-color:#fff;
+        }
+
+        .menu-list .list-item {
+            position: relative;
+            display: block;
+            position: relative;
+            height: 37px;
+            line-height: 37px;
+            padding: 0 20px;
+            &.active {
+                color: #555;
+                background-color: #ffdc40;
+            }
+            &:hover {
+                color: #555;
+                background-color: #ffdc40;
+            }
+        }
+
         .part {
             background: #fff;
             margin-bottom: 15px;
@@ -268,7 +302,6 @@ select.form-control {
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
-
                     span {
                         color:#999;
                         float:right;
@@ -492,7 +525,6 @@ select.form-control {
         @media (max-width: 767px) {
             padding-left:0;
         }
-
     }
 }
 

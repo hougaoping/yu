@@ -15,7 +15,7 @@ use App\Models\ArticleCategory;
 class IndexController extends BaseController
 {
 	public function category(ArticleCategory $category, Request $request) {
-		$articles = $category->articles;
+		$articles = $category->articles()->paginate($this->_rows());
         $categories = ArticleCategory::where('parent_id', null)->get();
 		return view('articles.category', compact('category', 'articles', 'categories'));
 	}

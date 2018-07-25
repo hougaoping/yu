@@ -10533,6 +10533,21 @@ select.form-control {
   left: -9999px;
 }
 
+.pagination-wrapper {
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination-wrapper .pagination {
+  margin: 0;
+}
+
 .header {
   width: 100%;
   height: 60px;
@@ -10604,7 +10619,6 @@ select.form-control {
 
 .articles .page-main .content {
   background-color: #fff;
-  margin-bottom: 1rem;
 }
 
 .articles .page-main .content .title {
@@ -10653,6 +10667,10 @@ select.form-control {
   list-style: none;
 }
 
+.articles .page-main .content ul.article_list li:last-child {
+  border-bottom: none;
+}
+
 .articles .page-main .content ul.article_list li a {
   text-decoration: none;
   font-size: 1.7rem;
@@ -10666,7 +10684,7 @@ select.form-control {
   margin-top: 15px;
   text-indent: 0em;
   font-size: 15px;
-  color: #555;
+  color: #999;
 }
 
 .articles .page-main .content ul.article_list li div.info {
@@ -10697,6 +10715,29 @@ select.form-control {
 
 .articles .page-main .content ul.article_list li span.click_num:hover i {
   background-position: 0 -18px;
+}
+
+.articles .sidebar .menu-list {
+  background-color: #fff;
+}
+
+.articles .sidebar .menu-list .list-item {
+  position: relative;
+  display: block;
+  position: relative;
+  height: 37px;
+  line-height: 37px;
+  padding: 0 20px;
+}
+
+.articles .sidebar .menu-list .list-item.active {
+  color: #555;
+  background-color: #ffdc40;
+}
+
+.articles .sidebar .menu-list .list-item:hover {
+  color: #555;
+  background-color: #ffdc40;
 }
 
 .articles .sidebar .part {
