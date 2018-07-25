@@ -29,6 +29,7 @@
 		            <th>文章标题</th>
 					<th>文章分类</th>
 					<th>文章状态</th>
+					<th>@widget('order', ['field' => 'click', 'title'=>'点击次数'])</th>
 		            <th>创建时间</th>
 		            <th>更新时间</th>
 				</tr>
@@ -57,6 +58,9 @@
 					@else
 					  隐藏
 					@endif
+				</td>
+				<td>
+					{{ $data->click }}
 				</td>
 				<td>{{ $data->created_at }}</td>
 				<td>{{ $data->updated_at }}</td>
