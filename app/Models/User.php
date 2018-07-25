@@ -121,13 +121,13 @@ class User extends Authenticatable
 
             $permissions = [];
             foreach($this->_admin_roles as $v) {
-               $permission = is_array(json_decode($v['permissions'])) ? json_decode($v['permissions']) : [];
-               $permissions = array_merge($permissions, $permission);
+                $permission = is_array(json_decode($v['permissions'])) ? json_decode($v['permissions']) : [];
+                $permissions = array_merge($permissions, $permission);
             }
 
             return $permissions;
         }else {
-           return [];
+            return [];
         }
     }
 
