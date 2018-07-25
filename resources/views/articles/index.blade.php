@@ -4,16 +4,26 @@
 <div class="container articles">
     <div class="page-main row">
         <div class="sidebar col-md-3 col-12 order-2">
-            
-        </div>
-        <div class="content col-md-9 col-12 order-1">
-            <h1 class="title">{{ $article->title }}</h1>
-            <div class="article-info">
-                <span>{{ $article->date_time }}</span>
-                <span><a title="放大网页内容字体，方便您阅读" href="javascript:void(0);" id="add_size">放大字体</a></span>
+            <div class="part">
+            <h3>最新推荐</h3>
+            <ul class="clearfix">
+                @foreach ($newest as $article)
+                <li><a href="{{ route('article.index', $article) }}" title="{{ $article->title }}">{{ $article->title }}</a></li>
+                @endforeach
+            </ul>
             </div>
-            <div class="article-body">
-                {!!  $article->content !!}
+        </div>
+        <div class="col-md-9 col-12 order-1">
+            <div class="content">
+                <h1 class="title">{{ $article->title }}</h1>
+                <div class="article-info">
+                    <span>{{ $article->date_time }}</span>
+                    <span><a title="" href="javascript:void(0);">{{ $article->category->name }}</a></span>
+                    <span><a title="放大网页内容字体，方便阅读" href="javascript:void(0);" id="add_size">放大字体</a></span>
+                </div>
+                <div class="article-body">
+                    {!!  $article->content !!}
+                </div>
             </div>
         </div>
         

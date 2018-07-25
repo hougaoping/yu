@@ -88,6 +88,7 @@ tinymce.init({
          "save table contextmenu directionality emoticons template paste textcolor"
     ],
 
+    // tinymce upload
     images_upload_handler: function (blobInfo, success, failure) {
         var xhr, formData;
 

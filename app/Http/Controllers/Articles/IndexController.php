@@ -21,6 +21,8 @@ class IndexController extends BaseController
         }
         
         $article->increment('click', 1);
-		return view('articles.index', compact('article'));
+        $newest = Article::newest();
+
+		return view('articles.index', compact('article', 'newest'));
 	} 
 }

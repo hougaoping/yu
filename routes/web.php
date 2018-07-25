@@ -26,7 +26,6 @@ route::match(['get','post'], 'forgot/reset', 'Users\ForgotController@reset')->na
 Route::match(['get','post'], 'forgot/mobile', 'Users\Mobile\ForgotController@index')->name('forgot.mobile');
 route::match(['get','post'], 'forgot/mobile/reset', 'Users\Mobile\ForgotController@reset')->name('forgot.mobile.reset');
 
-
 // 会员中心路由
 Route::name('center.')->group(function () {
     Route::group(['prefix' => 'center'], function() {

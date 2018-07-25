@@ -25,6 +25,11 @@ class Article extends Model
         !empty($keywords) && $query->where('title', 'like', '%' . $keywords . '%');
     }
 
+    // 获取最新文章
+    public static function newest($limit = 10) {
+        return self::where('status', 1)->limit($limit)->orderBy('id', 'desc')->get();
+    }
+
 	public function category()
     {
         return $this->belongsTo('App\Models\ArticleCategory', 'article_category_id');
