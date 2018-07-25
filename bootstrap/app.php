@@ -1,4 +1,5 @@
 <?php
+
 require(__DIR__ . '/dir.functions.php');
 require(__DIR__ . '/helpers.php');
 

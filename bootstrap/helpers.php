@@ -10,7 +10,7 @@ function get_tree($categories, $level = 0) {
         array_push($tree, array(
             'id'    => $category->id,
             'name'  => $category->name,
-            'item' => $category,
+            'item'  => $category,
             'level' => $level
         ));
 
