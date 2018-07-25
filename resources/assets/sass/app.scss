@@ -129,7 +129,6 @@ select.form-control {
     }
 }
 
-
 .articles {
     margin-top: 20px;
     padding-left:15px;
@@ -187,6 +186,7 @@ select.form-control {
             line-height: 1;
             font-size: 14px;
             padding: 0 20px;
+
             h3 {
                 margin:0;
                 font-size: 15px;
@@ -199,10 +199,10 @@ select.form-control {
                 border-bottom: 1px solid #eee;
                 letter-spacing: 10px;
             }
+
             ul {
                 padding: 10px 0;
                 margin:0;
-
                 li {
                     padding: 0;
                     height: 40px;
@@ -210,6 +210,11 @@ select.form-control {
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
+
+                    span {
+                        color:#999;
+                        float:right;
+                    }
                 }
             }
         }
@@ -332,8 +337,6 @@ select.form-control {
     }
 }
 
-
-
 .center {
     font-size:13px;
     &.container {
@@ -366,7 +369,6 @@ select.form-control {
                 }
             }
         }
-
 
         @media (max-width: 767px) {
             position: relative;
@@ -436,7 +438,6 @@ select.form-control {
     }
 }
 
-
 .footer {
     padding:15px;
     width: 100%;
@@ -456,4 +457,3 @@ select.form-control {
     bottom: 0;
     display: block;
 }
-

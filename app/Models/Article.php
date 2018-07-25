@@ -13,6 +13,7 @@ class Article extends Model
 
 	protected $guarded = [];
 	public $timestamps = true;
+    protected $dates = ['date_time']; // 扩展日期字段
 
 	protected static $logAttributes = ['title'];
 

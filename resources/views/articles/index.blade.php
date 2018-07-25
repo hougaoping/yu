@@ -8,7 +8,8 @@
             <h3>最新推荐</h3>
             <ul class="clearfix">
                 @foreach ($newest as $article)
-                <li><a href="{{ route('article.index', $article) }}" title="{{ $article->title }}">{{ $article->title }}</a></li>
+                <li><a href="{{ route('article.index', $article) }}" title="{{ $article->title }}">{{ $article->title }}</a> <span>{{ $article->date_time->diffForHumans() }}</span>
+                </li>
                 @endforeach
             </ul>
             </div>

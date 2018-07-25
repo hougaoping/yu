@@ -10676,6 +10676,11 @@ select.form-control {
   overflow: hidden;
 }
 
+.articles .sidebar .part ul li span {
+  color: #999;
+  float: right;
+}
+
 .container-min {
   margin: 0 auto;
   font-size: 14px;
