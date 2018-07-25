@@ -129,6 +129,54 @@ select.form-control {
     }
 }
 
+
+.articles {
+    margin-top: 20px;
+    a {
+        color: #336699;
+        &:hover {
+            color:#ffdc40;
+        }
+    }
+
+    .page-main {
+        .content {
+            background-color: #fff;
+            .title {
+                text-align:center;
+                font-size:2rem;
+                font-weight:normal;
+                margin:3rem 0;
+            }
+            
+            .article-info {
+                text-align: center;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                background-color: #f9f9f9;
+                padding: 0;
+                height: 2.7rem;
+                line-height: 2.7rem;
+                span {
+                    padding-right: 10px;
+                    color: #aab2bd;
+                    &:hover {
+                        color: #656d78;
+                    }
+                }
+            }
+
+            div.article-body {
+                font-size: 15px;
+                line-height: 2;
+                word-wrap: break-word;
+                color: #555;
+                padding:2rem;
+            }
+        }
+    }
+}
+
 .container-min {
     margin:0 auto;
     font-size:14px;
@@ -251,12 +299,9 @@ select.form-control {
 .center {
     font-size:13px;
     &.container {
-        padding:0 15px;
         margin:0 auto;
         margin-top: 20px;
-        max-width:1170px;
         position: relative;
-
     }
 
     .sidebar {

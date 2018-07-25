@@ -10588,6 +10588,56 @@ select.form-control {
   display: block;
 }
 
+.articles {
+  margin-top: 20px;
+}
+
+.articles a {
+  color: #336699;
+}
+
+.articles a:hover {
+  color: #ffdc40;
+}
+
+.articles .page-main .content {
+  background-color: #fff;
+}
+
+.articles .page-main .content .title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 3rem 0;
+}
+
+.articles .page-main .content .article-info {
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #f9f9f9;
+  padding: 0;
+  height: 2.7rem;
+  line-height: 2.7rem;
+}
+
+.articles .page-main .content .article-info span {
+  padding-right: 10px;
+  color: #aab2bd;
+}
+
+.articles .page-main .content .article-info span:hover {
+  color: #656d78;
+}
+
+.articles .page-main .content div.article-body {
+  font-size: 15px;
+  line-height: 2;
+  word-wrap: break-word;
+  color: #555;
+  padding: 2rem;
+}
+
 .container-min {
   margin: 0 auto;
   font-size: 14px;
@@ -10715,10 +10765,8 @@ select.form-control {
 }
 
 .center.container {
-  padding: 0 15px;
   margin: 0 auto;
   margin-top: 20px;
-  max-width: 1170px;
   position: relative;
 }
 

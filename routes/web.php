@@ -39,6 +39,12 @@ Route::name('center.')->group(function () {
     });
 });
 
+Route::name('article.')->group(function() {
+    Route::group(['prefix' => 'articles'], function() {
+        Route::match(['get'], '/{article}', 'Articles\IndexController@index')->where('article', '[0-9]+')->name('index');
+    });
+});
+
 // 后台模块路由
 Route::name('admin.')->group(function () {
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function() {
