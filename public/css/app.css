@@ -10641,6 +10641,64 @@ select.form-control {
   padding: 1.5rem;
 }
 
+.articles .page-main .content ul.article_list {
+  color: #bbb;
+  padding: 0px 20px;
+}
+
+.articles .page-main .content ul.article_list li {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #eee;
+  list-style: none;
+}
+
+.articles .page-main .content ul.article_list li a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.articles .page-main .content ul.article_list li p {
+  padding: 0;
+  margin: 0px;
+  margin-top: 15px;
+  text-indent: 0em;
+  font-size: 15px;
+  color: #555;
+}
+
+.articles .page-main .content ul.article_list li div.info {
+  margin-top: 1rem;
+  padding-left: 0;
+  line-height: 2;
+  font-size: 13px;
+  text-align: left;
+  color: #aab2bd;
+}
+
+.articles .page-main .content ul.article_list li span {
+  padding-right: 1rem;
+}
+
+.articles .page-main .content ul.article_list li span:hover {
+  color: #656d78;
+}
+
+.articles .page-main .content ul.article_list li span.click_num i {
+  padding-left: 20px;
+  background-image: url(/images/icons/article_icon.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: relative;
+  top: -2px;
+}
+
+.articles .page-main .content ul.article_list li span.click_num:hover i {
+  background-position: 0 -18px;
+}
+
 .articles .sidebar .part {
   background: #fff;
   margin-bottom: 15px;

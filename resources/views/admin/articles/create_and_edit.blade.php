@@ -36,7 +36,7 @@
         <div class="form-group row">
             <label class="col-md-2 col-form-label text-sm-left text-md-right text-muted">点击次数：</label>
             <div class="col-md-7 col-lg-5">
-               <input type="text" name="click" value="@isset($article['click']){{ $article['click'] }}@endisset" size="40" class="form-control">
+               <input type="text" name="click" value="{{ isset($article['click']) ?  $article['click'] : 0 }}" size="40" class="form-control">
             </div>
         </div>
         <div class="form-group row">

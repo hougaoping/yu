@@ -19,7 +19,7 @@
                 <h1 class="title">{{ $article->title }}</h1>
                 <div class="article-info">
                     <span>{{ $article->date_time }}</span>
-                    <span><a title="" href="javascript:void(0);">{{ $article->category->name }}</a></span>
+                    <span><a title="" href="{{ route('article.category', $article->category) }}">{{ $article->category->name }}</a></span>
                     <span><a title="放大网页内容字体，方便阅读" href="javascript:void(0);" id="add_size">放大字体</a></span>
                 </div>
                 <div class="article-body">

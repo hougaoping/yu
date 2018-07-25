@@ -176,6 +176,64 @@ select.form-control {
                 color: #555;
                 padding:1.5rem;
             }
+
+            ul.article_list {
+                color: #bbb;
+                padding: 0px 20px;
+            }
+
+            ul.article_list li {
+                padding-top: 2rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px dashed #eee;
+                list-style: none;
+            }
+
+            ul.article_list li a {
+                text-decoration: none;
+                font-size: 1.7rem;
+                line-height: 1;
+                display: inline-block;
+            }
+
+            ul.article_list li p {
+                padding: 0;
+                margin: 0px;
+                margin-top: 15px;
+                text-indent: 0em;
+                font-size: 15px;
+                color: #555;
+            }
+
+            ul.article_list li div.info {
+                margin-top: 1rem;
+                padding-left: 0;
+                line-height: 2;
+                font-size: 13px;
+                text-align: left;
+                color: #aab2bd;
+            }
+
+            ul.article_list li span {
+                padding-right: 1rem;
+            }
+
+            ul.article_list li span:hover {
+                color: #656d78;
+            }
+
+            ul.article_list li span.click_num i {
+                padding-left: 20px;
+                background-image: url(/images/icons/article_icon.png);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                position: relative;
+                top: -2px;
+            }
+
+            ul.article_list li span.click_num:hover i {
+                background-position: 0 -18px;
+            }
         }
     }
 

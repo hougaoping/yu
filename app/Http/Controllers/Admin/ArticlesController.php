@@ -12,6 +12,7 @@ use App\Models\Article;
 use App\Http\Requests\ArticleRequest;
 use App\Models\ArticleCategory;
 use \App\Traits\Controllers\Tags;
+use Carbon\Carbon;
 
 class ArticlesController extends BaseController
 {
@@ -30,8 +31,8 @@ class ArticlesController extends BaseController
 
 	public function store(ArticleRequest $request) {
         $data = $request->all();
+        $data['date_time'] = Carbon::parse($request->date_time);
 		$article = new Article;
-
 		$article->fill($data);
         $article->save();
 
@@ -47,6 +48,7 @@ class ArticlesController extends BaseController
 
 	public function update(ArticleRequest $request, Article $article) {
        	$data = $request->all();
+        $data['date_time'] = Carbon::parse($request->date_time);
         $article->update($data);
         $article->syncTags($this->tagsToArray($request->keywords));
         $this->success('文章更新成功', route('admin.articles.index'));
