@@ -324,6 +324,11 @@ select.form-control {
     max-width:540px;
     padding:0 15px;
 
+    // 获取验证码按钮不需要太宽
+    .get-verify {
+        padding:.5rem;
+    }
+
     .form-wrapper {
         background-color:#fff;
         padding:25px 35px;

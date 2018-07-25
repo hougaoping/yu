@@ -25,7 +25,6 @@ class AdPositionsController extends BaseController
 	}
 
 	public function store(AdPositionRequest $request) {
-
 		$adPosition = new AdPosition;
 		$adPosition->fill($request->all());
         $adPosition->save();

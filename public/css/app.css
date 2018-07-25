@@ -10794,6 +10794,10 @@ select.form-control {
   font-weight: normal;
 }
 
+.container-min .get-verify {
+  padding: .5rem;
+}
+
 .container-min .form-wrapper {
   background-color: #fff;
   padding: 25px 35px;
