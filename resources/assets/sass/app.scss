@@ -132,6 +132,9 @@ select.form-control {
 
 .articles {
     margin-top: 20px;
+    padding-left:20px;
+    padding-right:20px;
+
     a {
         color: #336699;
         &:hover {
@@ -148,11 +151,10 @@ select.form-control {
                 font-weight:normal;
                 margin:3rem 0;
             }
-            
+
             .article-info {
                 text-align: center;
-                margin-left: 2rem;
-                margin-right: 2rem;
+                margin:0 1rem;
                 background-color: #f9f9f9;
                 padding: 0;
                 height: 2.7rem;
@@ -171,9 +173,13 @@ select.form-control {
                 line-height: 2;
                 word-wrap: break-word;
                 color: #555;
-                padding:2rem;
+                padding:1rem;
             }
         }
+    }
+
+    .sidebar {
+        background-color:#f0f0f0;
     }
 }
 

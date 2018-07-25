@@ -10590,6 +10590,8 @@ select.form-control {
 
 .articles {
   margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .articles a {
@@ -10613,8 +10615,7 @@ select.form-control {
 
 .articles .page-main .content .article-info {
   text-align: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 0 1rem;
   background-color: #f9f9f9;
   padding: 0;
   height: 2.7rem;
@@ -10635,7 +10636,11 @@ select.form-control {
   line-height: 2;
   word-wrap: break-word;
   color: #555;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.articles .sidebar {
+  background-color: #f0f0f0;
 }
 
 .container-min {

@@ -3,7 +3,11 @@
 @section('content')
 <div class="container articles">
     <div class="page-main row">
-        <div class="content col-9">
+        <div class="sidebar col-md-3 col-12 order-2">
+            
+            
+        </div>
+        <div class="content col-md-9 col-12 order-1">
             <h1 class="title">{{ $article->title }}</h1>
             <div class="article-info">
                 <span>2017-03-19 22:26</span>
@@ -14,8 +18,7 @@
                 {!!  $article->content !!}
             </div>
         </div>
-        <div class="sidebar col-3">
-        </div>
+        
     </div>
 </div>
 @stop
