@@ -341,6 +341,9 @@ table .opt {
     height: 60px;
     z-index: 9;
     border-bottom:1px solid #e5e5e5;
+    position: absolute;
+    right: 0;
+    left: 0;
 
     #expand-sidebar {
         display: block;
