@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content-section">
-	<div class="title-section mb-4 border-bottom pb-4 d-flex justify-content-between align-items-center">
+	<div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
 	    <h2>广告位列表</h2>
 	    <a href="{{ route('admin.ad_positions.create') }}" class="btn btn-primary">添加广告位</a>
 	</div>

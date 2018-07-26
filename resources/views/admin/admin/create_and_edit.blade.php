@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="content-section">
-    <div class="title-section mb-4 pb-4 border-bottom d-flex justify-content-between align-items-center">
+    <div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
         <h2>{{ isset($admin['id']) ? '编辑管理员' : '添加管理员'}}</h2>
     </div>
     <div class="form-section">

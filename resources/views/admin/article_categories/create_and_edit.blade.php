@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="content-section">
-    <div class="title-section mb-4 pb-4 border-bottom d-flex justify-content-between align-items-center">
+    <div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
         <h2>{{ isset($articleCategory['id']) ? '编辑文章分类' : '添加文章分类'}}</h2>
     </div>
     <div class="form-section">
