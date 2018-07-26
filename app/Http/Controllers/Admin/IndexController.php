@@ -48,8 +48,6 @@ class IndexController extends BaseController
             if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'is_admin' => 1])) {
                 request()->session()->regenerate();
                 session()->put('is_admin', intval(true));
-                session()->put('username', $request->email);
-                session()->put('last_login_time', time());
                 
                 $user->recordLastLoginLog();
                 $user->recordLoginLog($request->email, true);
