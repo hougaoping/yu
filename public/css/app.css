@@ -10730,6 +10730,7 @@ select.form-control {
   height: 37px;
   line-height: 37px;
   padding: 0 20px;
+  color: #555;
 }
 
 .articles .sidebar .menu-list .list-item.active {

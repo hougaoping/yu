@@ -34,7 +34,7 @@
 				<button type="submit" class="btn btn-primary btn-block" id="btn-submit">立即注册</button>
 			</div>
 			<p class="controls clearfix">
-				<a href="" class="float-left" target="_blank">注册协议</a>
+				<a href="{{ route('article.index', 1) }}" class="float-left" target="_blank">注册协议</a>
 				<a href="{{ route('signin.mobile') }}" class="float-right">已有帐号, 立即登录</a>
 			</p>
 		</form>
@@ -55,7 +55,7 @@
 </style>
 <script type="text/javascript">
 
-	
+
 !function(a,b){function d(){return"object"==typeof localStorage?localStorage:"object"==typeof globalStorage?globalStorage[location.href]:"object"==typeof userData?globalStorage[location.href]:{}}var c={userData:null,name:location.href,init:function(){if(!c.userData)try{c.userData=b.createElement("INPUT"),c.userData.type="hidden",c.userData.style.display="none",c.userData.addBehavior("#default#userData"),b.body.appendChild(c.userData);var a=new Date;a.setDate(a.getDate()+365),c.userData.expires=a.toUTCString()}catch(d){return!1}return!0},setItem:function(a,b){c.init()&&(c.userData.load(c.name),c.userData.setAttribute(a,b),c.userData.save(c.name))},getItem:function(a){return c.init()?(c.userData.load(c.name),c.userData.getAttribute(a)):void 0},removeItem:function(a){c.init()&&(c.userData.load(c.name),c.userData.removeAttribute(a),c.userData.save(c.name))}},e=d();a.storageExt={setItem:function(b,d){a.localStorage?e.setItem(b,d):c.setItem(b,d)},getItem:function(b){return a.localStorage?e.getItem(b):c.getItem(b)},removeItem:function(b){a.localStorage?e.removeItem(b):c.removeItem(b)}}}(window,document);
 
 
@@ -93,7 +93,7 @@ $(function(){
 	        if (cd > 0) {
 	            return  parseInt( cd/1000, 10);
 	        }
-	    }  
+	    }
 	    return false;
 	}
 

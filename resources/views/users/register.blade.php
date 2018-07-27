@@ -29,7 +29,7 @@
 				<button type="submit" class="btn btn-primary btn-block" id="btn-submit">立即注册</button>
 			</div>
 			<p class="controls clearfix">
-				<a href="" class="float-left" target="_blank">注册协议</a>
+				<a href="{{ route('article.index', 1) }}" class="float-left" target="_blank">注册协议</a>
 				<a href="{{ route('signin') }}" class="float-right">已有帐号, 立即登录</a>
 			</p>
 		</form>
