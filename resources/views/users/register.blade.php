@@ -19,7 +19,7 @@
 			</div>
 			<div class="form-group">
 				<label for="pwd2" class="label">确认密码</label>
-				<input type="password" class="form-control" id="pwd2" name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="请再次输入您的登录密码">
+				<input type="password" class="form-control" id="pwd2" name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="再次输入登录密码">
 			</div>
 			<div class="radio-box clearfix">
 				<label class="input_radio seller float-left" for="seller"><input type="radio" name="type" value="seller" id="seller">注册商家帐号</label>

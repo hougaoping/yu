@@ -27,7 +27,6 @@
 					<th>操作</th>
 		            <th>邮箱地址</th>
 		            <th>手机号码</th>
-		            <th>邮箱验证</th>
 		            <th>@widget('order', ['field' => 'last_login_time	', 'title'=>'最后登录时间'])</th>
 		            <th>@widget('order', ['field' => 'login_count', 'title'=>'登录次数'])</th>
 					<th>@widget('order', ['field' => 'register_time', 'title'=>'注册时间'])</th>
@@ -39,22 +38,14 @@
 				<td>{{ $data->id }}</td>
 				<td>
 					<a class="opt" href="{{ route('admin.users.profile', ['id' => $data['id']]) }}">用户信息</a>
-		            <!-- <span class="opt-separator"> | </span> -->
+		            <span class="opt-separator"> | </span>
+					<a class="opt" href="{{ route('admin.users.charge', ['id' => $data['id']]) }}">手工充值</a>
 				</td>
 				<td>
 					{{ $data->email }}
 				</td>
 				<td>
 					{{ $data->mobile }}
-				</td>
-				<td>
-					@isset($data->userEmail)
-						@if ($data->userEmail->activated == 1)
-						  已验证
-						@else
-						  未验证
-						@endif
-					@endisset
 				</td>
 				<td>
 					{{ date('Y/m/d H:i:s', $data->last_login_time) }}

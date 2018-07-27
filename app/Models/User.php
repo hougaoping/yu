@@ -52,10 +52,16 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\UserVerify');
     }
 
-	// 查看用户的反馈
+	// 用户的反馈
 	public function feedbacks()
     {
         return $this->hasMany('App\Models\UserFeedback');
+    }
+	
+	// 用户的财务信息
+	public function finances()
+    {
+        return $this->hasMany('App\Models\UserFinance');
     }
 
     public function recordLastLoginLog() {
