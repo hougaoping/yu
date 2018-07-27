@@ -206,8 +206,6 @@ table .opt {
     @media (max-width: 767px) {
         display:none;
     }
-
-
     .logo {
         width:auto;
         height:60px;
@@ -423,6 +421,15 @@ table .opt {
     }
 }
 
+.form-section {
+    .form-group {
+        padding:10px 0;
+        margin:0;
+        border-top:1px solid #eee;
+        border-bottom:1px solid #eee;
+        margin-top:-1px;
+    }
+}
 
 #cpmsg {
     background-image:url('/images/admin/cpmsg/caution.png');
@@ -482,14 +489,4 @@ table .opt {
 #cpmsg dd a {
     color: #0057ff;
     font-weight:bold;
-}
-
-.form-section {
-    .form-group {
-        padding:10px 0;
-        margin:0;
-        border-top:1px solid #eee;
-        border-bottom:1px solid #eee;
-        margin-top:-1px;
-    }
 }

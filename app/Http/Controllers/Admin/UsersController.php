@@ -23,7 +23,7 @@ class UsersController extends BaseController
 
         $filter = [
             'type' => [
-                'seller' => ['route'=>'admin.users.index',  'args' => ['type' => 'seller'], 'name'=> '卖家会员'],
+                'seller' => ['route'=>'admin.users.index',  'args' => ['type' => 'seller'], 'name'=> '商家会员'],
                 'buyer'  => ['route'=>'admin.users.index',  'args' => ['type' => 'buyer'], 'name' => '买家会员'],
                 'admin'  => ['route'=>'admin.users.index',  'args' => ['type' => 'admin'], 'name' => '管理员'],
             ],

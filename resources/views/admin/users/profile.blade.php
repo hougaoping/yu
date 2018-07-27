@@ -21,6 +21,30 @@
 					<td class="text-right text-muted">手机号码：</td>
 					<td class="text-md-left">{{ $user['mobile'] }}</td>
 				</tr>
+				<tr class="">
+					<td class="text-right text-muted">注册时间：</td>
+					<td class="text-md-left">{{ date('Y-m-d H:i:s',$user['register_time']) }}</td>
+				</tr>
+				<tr class="">
+					<td class="text-right text-muted">最后一次登录时间：</td>
+					<td class="text-md-left">{{ date('Y-m-d H:i:s',$user['last_login_time']) }}</td>
+				</tr>
+				<tr class="">
+					<td class="text-right text-muted">注册IP地址：</td>
+					<td class="text-md-left">{{ $user['register_ip'] }}</td>
+				</tr>
+				<tr class="">
+					<td class="text-right text-muted">最后一次登录IP地址：</td>
+					<td class="text-md-left">{{ $user['last_login_ip'] }}</td>
+				</tr>
+				<tr class="">
+					<td class="text-right text-muted">会员类型：</td>
+					<td class="text-md-left">{{ $user['type'] == 'seller' ? '商家会员' : '买家会员' }}</td>
+				</tr>
+				<tr class="">
+					<td class="text-right text-muted">登录次数：</td>
+					<td class="text-md-left">{{ $user['login_count'] }}</td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
@@ -79,13 +103,13 @@
 					<td class="text-md-left">
 						<div class="row">
 							<div class="col-4">
-								<select class="form-control address" id="address"><option>请选择</option></select>
+								<select class="form-control address disable" id="address" disabled><option>请选择</option></select>
 							</div>
 							<div class="col-4">
-								<select class="form-control address" id="city"><option>请选择</option></select>
+								<select class="form-control address" id="city" disabled><option>请选择</option></select>
 							</div>
 							<div class="col-4">
-								<select class="form-control address" id="area"><option>请选择</option></select>
+								<select class="form-control address" id="area" disabled><option>请选择</option></select>
 							</div>
 						</div>
 						<input type="hidden" name="address" value="@isset($profile['address']){{ $profile['address'] }}@endisset" id="_address">
