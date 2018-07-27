@@ -10798,6 +10798,10 @@ table .opt {
   }
 }
 
+.main.fully {
+  left: 0;
+}
+
 .header {
   background-color: #fff;
   height: 60px;
@@ -10843,6 +10847,10 @@ table .opt {
 
 .content .table {
   margin: 0;
+}
+
+.content .text-muted {
+  font-weight: bold;
 }
 
 .content .content-section {
@@ -10950,9 +10958,5 @@ table .opt {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   margin-top: -1px;
-}
-
-.form-section .form-group .text-muted {
-  font-weight: bold;
 }
 

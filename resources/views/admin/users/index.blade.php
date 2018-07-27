@@ -23,7 +23,8 @@
 	    <table class="table table-hover">
 	        <thead>
 		        <tr class="">
-		        	<th>@widget('order', ['field' => 'id', 'title'=>'ID'])</th>
+		        	<th>@widget('order', ['field' => 'id', 'title'=>'UID'])</th>
+					<th>操作</th>
 		            <th>邮箱地址</th>
 		            <th>手机号码</th>
 		            <th>邮箱验证</th>
@@ -36,6 +37,10 @@
 		    @foreach ($list as $data)
 	        </tr>
 				<td>{{ $data->id }}</td>
+				<td>
+					<a class="opt" href="{{ route('admin.users.profile', ['id' => $data['id']]) }}">用户信息</a>
+		            <!-- <span class="opt-separator"> | </span> -->
+				</td>
 				<td>
 					{{ $data->email }}
 				</td>

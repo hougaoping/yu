@@ -32,6 +32,11 @@ class UsersController extends BaseController
     	return view('admin.users.index', compact('list', 'filter'));
 	}
 
+    public function profile(User $user) {
+        $profile = $user->userProfile;
+        return view('admin.users.profile', compact('user', 'profile'));
+    }
+
 	public function destroy(User $user) {
         $user->userEmail()->delete();
 		$user->delete() && $this->success('用户删除成功');

@@ -155,7 +155,7 @@ table .opt {
         padding: 35px;
         border: 1px solid #bbb;
         border-radius: 0;
-        
+
         h3 {
             margin:0;
             margin-bottom:30px;
@@ -191,7 +191,6 @@ table .opt {
         }
     }
 }
-
 
 .sidebar {
     overflow: auto;
@@ -329,6 +328,10 @@ table .opt {
     }
 }
 
+.main.fully {
+    left:0;
+}
+
 .header {
     background-color:#fff;
     height: 60px;
@@ -371,6 +374,10 @@ table .opt {
 
     .table {
         margin:0;
+    }
+
+    .text-muted {
+        font-weight:bold;
     }
 
     .content-section {
@@ -484,8 +491,5 @@ table .opt {
         border-top:1px solid #eee;
         border-bottom:1px solid #eee;
         margin-top:-1px;
-        .text-muted {
-            font-weight:bold;
-        }
     }
 }

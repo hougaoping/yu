@@ -52,33 +52,34 @@ $.ajaxSetup({
 	}
 });
 
-var isHideBar;
 $(function() {
     var close_sidebar   = $('#expand-sidebar');
     var sidebar         = $('.sidebar');
     var main            = $('.main');
 
-    var is_hidden       = sidebar.is(':hidden');
-
-    // 设置默认是否打开菜单
-    if(isHideBar) {
-       $('.sidebar').hide();
-       $('.main').css('left', 0);
-    }
-
     function toggleMenu(isHide) {
         var curIsHide = sidebar.is(':hidden');
         if (curIsHide) {
-            var left = !is_hidden ? '200px' : '0px';
-            main.css('left', left);
+            var is_hidden = $(document).width() > 767 ? true : false;
+            if (is_hidden) {
+                main.removeClass('fully');
+            }
             sidebar.show();
         } else {
+            main.addClass('fully');
             sidebar.hide();
-            main.css('left', 0);
         }
     }
 
     close_sidebar.click(toggleMenu);
+    $(window).resize(function() {
+        var document_width = $(document).width();
+        if (document_width > 767) {
+            if (!main.hasClass('fully')) {
+                sidebar.show();
+            }
+        }
+    });
 });
 
 // 点击main关闭菜单
@@ -98,8 +99,6 @@ $.fn.hideWithClickOther = function (fn){
 $('div.sidebar').hideWithClickOther(function (){
     return parseInt($('.main').css('left'), 10) < 1;
 });
-
-// 点击main关闭菜单结束
 
 // 日期选择组件
 $('.date-picker').datetimepicker();

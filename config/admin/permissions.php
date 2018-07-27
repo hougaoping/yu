@@ -89,6 +89,7 @@ return [
             'name' => '用户管理',
             'items' => [
                'admin.users.index' => '用户列表',
+			   'admin.users.profile' => '个人信息',
                'admin.users.destroy' => '删除用户',
             ],
         ],
