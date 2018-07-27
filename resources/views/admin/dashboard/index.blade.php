@@ -2,8 +2,8 @@
 @section('content')
 <div class="content-section">
 
-<div class="">
-	<h3 class="h4 mt-3 mb-3">系统信息</h3> 
+<div class="table-responsive">
+	<h3 class="h4 mt-3 mb-3">系统信息</h3>
 	<table class="table table-hover">
 		<tbody>
 		<tr>
@@ -42,5 +42,5 @@
 	</table>
 </div>
 
-</div>	
+</div>
 @stop

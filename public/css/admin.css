@@ -10485,8 +10485,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   background-color: transparent;
   border-radius: 3px;
 }
@@ -10508,10 +10508,6 @@ select.form-control {
 
 .form-control:focus {
   z-index: 9999;
-}
-
-.btn-group .btn {
-  min-width: 140px;
 }
 
 .ickeck-box {

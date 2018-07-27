@@ -38,7 +38,7 @@ html, body {
     font-family: Roboto,Helvetica,Tahoma,Arial,"Microsoft YaHei";
 }
 
-::-webkit-scrollbar-thumb{background:#b1b1b1;border-radius:4px} ::-webkit-scrollbar{width:6px;height:10px;background-color:transparent;border-radius:3px}
+::-webkit-scrollbar-thumb{background:#b1b1b1;border-radius:4px} ::-webkit-scrollbar{width:5px;height:5px;background-color:transparent;border-radius:3px}
 
 select.form-control {
     -webkit-appearance: none;
@@ -60,12 +60,6 @@ select.form-control {
     z-index:9999;
 }
 
-.btn-group {
-    .btn {
-        min-width:140px;
-    }
-}
-
 .ickeck-box {
     display: flex;
     align-items: center;
@@ -82,7 +76,6 @@ select.form-control {
         top: 0;
         left: 0;
     }
-
     input[type="radio"], input[type="checkbox"] {
         position: absolute;
         left:-9999px;
