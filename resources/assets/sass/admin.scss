@@ -31,7 +31,7 @@ $grid-gutter-width:20px;
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-html, body { 
+html, body {
     font-size:13px;
     color:#555;
     line-height:1.5;
@@ -178,8 +178,8 @@ table .opt {
         .form-group {
            .form-control {
                 font-size:1rem;
-                padding: 11px;
                 width:100%;
+                height:43px;
                 &.captcha {
                     width: 55%;
                     float: left;
@@ -210,7 +210,7 @@ table .opt {
     bottom: 0;
     left: 0;
     position: absolute;
-
+    z-index:999;
     @media (max-width: 767px) {
         display:none;
     }
@@ -491,5 +491,8 @@ table .opt {
         border-top:1px solid #eee;
         border-bottom:1px solid #eee;
         margin-top:-1px;
+        .text-muted {
+            font-weight:bold;
+        }
     }
 }

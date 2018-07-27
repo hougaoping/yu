@@ -10,12 +10,12 @@
 		<a class="navbar-item" href="{{ route('signup.mobile') }}">注册</a>
 		@else
 	 	<div class="drop-menu">
-		    <a class="navbar-item" href="{{ route('center.index') }}">{{ session('username') }} </a>
+		    <a class="navbar-item" href="javascript:void(0);">{{ session('username') }} </a>
 		    	<div class="menu-content">
 			    	@can('admin', Auth::user())
 			    	<a class="navbar-item menu-item" href="{{ route('admin.index') }}" target="_blank">管理中心</a>
 			    	@endcan
-			    	<a class="navbar-item menu-item" href="{{ route('center.password') }}">修改密码</a>
+					<a class="navbar-item menu-item" href="{{ route('center.index') }}">会员中心</a>
 					<a class="navbar-item menu-item" href="{{ route('logout') }}">退出</a>
 		    	</div>
 	  	</div>

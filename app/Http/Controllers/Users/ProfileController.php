@@ -17,7 +17,6 @@ class ProfileController extends BaseController
     }
 
 	public function index(Request $request) {
-
         if($request->isMethod('get')) {
             $profile = Auth::user()->userProfile;
             return view('users.center.profile.index', compact('profile'));
@@ -31,7 +30,8 @@ class ProfileController extends BaseController
                 'qq'           => $request->qq,
                 'wx'           => $request->wx,
                 'intro'        => $request->intro,
-                'address'      => $request->address
+                'address'      => $request->address,
+				'complete_address' => $request->complete_address
             ];
 
             if (Auth::user()->userProfile) {

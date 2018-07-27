@@ -34,7 +34,7 @@
     @include('admin.layouts._header')
     <div class="content">
         @yield('content')
-    </div>  
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -55,14 +55,17 @@ $.ajaxSetup({
 var isHideBar;
 $(function() {
     var close_sidebar   = $('#expand-sidebar');
-    var sidebar = $('.sidebar');
-    var main           = $('.main');
+    var sidebar         = $('.sidebar');
+    var main            = $('.main');
 
     function toggleMenu(isHide) {
         var curIsHide = sidebar.is(':hidden');
         if (curIsHide) {
+            var is_show = true;
+            if (is_show) {
+                main.css('left', '200px');
+            }
             sidebar.show();
-            main.css('left', '200px');
         } else {
             sidebar.hide();
             main.css('left', 0);
@@ -73,7 +76,7 @@ $(function() {
     if(isHideBar) {
        $('.sidebar').hide();
        $('.main').css('left', 0);
-    }   
+    }
 });
 
 

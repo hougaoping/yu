@@ -52,6 +52,9 @@
                             <input type="hidden" name="address" value="@isset($profile['address']){{ $profile['address'] }}@endisset" id="_address">
                         </div>
                         <div class="form-group">
+                            <label class="label" for="complete_address">详细地址：</label><input type="text" class="form-control" id="complete_address" name="complete_address" placeholder="详细地址" value="@isset($profile['complete_address']){{ $profile['complete_address'] }}@endisset">
+                        </div>
+                        <div class="form-group">
                             <label class="label" for="intro">个人简介：</label><textarea class="form-control" id="intro" name="intro" rows="5" placeholder="一句话介绍一下自己吧，让别人更了解你">@isset($profile['intro']){{ $profile['intro'] }}@endisset</textarea>
                         </div>
                     </div>

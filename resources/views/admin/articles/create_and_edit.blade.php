@@ -58,7 +58,7 @@
                     <input type="radio" name="status" id="status_enabled" class="ickeck-input" value="1" @isset($status) @if($status==1) checked="checked" @endif @endisset>
                     <label for="status_enabled" class="form-check-label">启用</label>
                 </div>
-                <div class="ickeck-box">    
+                <div class="ickeck-box">
                     <input type="radio" name="status" id="status_disable" class="ickeck-input" value="0"  @isset($status) @if($status==0) checked="checked" @endif @endisset>
                     <label for="status_disable" class="form-check-label">禁用</label>
                 </div>
@@ -150,7 +150,7 @@ $(function(){
             title : {
                 required : true,
             },
-           
+
         },
         messages : {
             title : {
