@@ -120,11 +120,9 @@ $(function(){
 			charge : {
 				required : '请输入充值金额',
 			},
-
             description: {
                 required : '请输入操作备注',
             },
-
 		},
 		submitHandler : function(){
 			$('#form').ajaxPost();
