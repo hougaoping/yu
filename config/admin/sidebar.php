@@ -87,6 +87,11 @@ return [
                     'route' => 'admin.user_finances.index',
                     'active'=> 'admin.user_finances.*'
                 ],
+                [
+                    'title' => '用户反馈',
+                    'route' => 'admin.user_feedbacks.index',
+                    'active'=> 'admin.user_feedbacks.*'
+                ],
             ]
         ],
 

@@ -106,6 +106,12 @@ return [
             ],
         ],
         [
+            'name' => '用户反馈',
+            'items' => [
+               'admin.user_feedbacks.index' => '用户反馈',
+            ],
+        ],
+        [
             'name' => '管理员管理',
             'items' => [
                 'admin.admin.index' => '管理员列表',
