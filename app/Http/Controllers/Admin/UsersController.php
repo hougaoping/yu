@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Cookie;
@@ -9,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Validator;
 use App\Models\User;
-
 
 class UsersController extends BaseController
 {
@@ -24,8 +22,8 @@ class UsersController extends BaseController
         $filter = [
             'type' => [
                 'seller' => ['route'=>'admin.users.index',  'args' => ['type' => 'seller'], 'name'=> '商家会员'],
-                'buyer'  => ['route'=>'admin.users.index',  'args' => ['type' => 'buyer'], 'name' => '买家会员'],
-                'admin'  => ['route'=>'admin.users.index',  'args' => ['type' => 'admin'], 'name' => '管理员'],
+                'buyer'  => ['route'=>'admin.users.index',  'args' => ['type' => 'buyer'],  'name' => '买家会员'],
+                'admin'  => ['route'=>'admin.users.index',  'args' => ['type' => 'admin'],  'name' => '管理员'],
             ],
         ];
 
@@ -37,8 +35,12 @@ class UsersController extends BaseController
         return view('admin.users.profile', compact('user', 'profile'));
     }
 
-    public function charge(User $user) {
-        return view('admin.users.charge', compact('user'));
+    public function charge(User $user, Request $request) {
+        if($request->isMethod('get')) {
+		    return view('admin.users.charge', compact('user'));
+        } else {
+
+        }
     }
 
 	public function destroy(User $user) {

@@ -4,6 +4,7 @@
 <div class="content-section">
     <div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
         <h2>充值</h2>
+        <a href="{{ route('admin.users.index') }}" class="btn btn-primary">用户列表</a>
     </div>
     <div class="form-section">
         <form method="post" action="{{ route('admin.users.charge', $user['id'])}}" autocomplete="off" id="form">
