@@ -38,8 +38,7 @@ class UsersController extends BaseController
     }
 
     public function charge(User $user) {
-
-        return '';
+        return view('admin.users.charge', compact('user'));
     }
 
 	public function destroy(User $user) {

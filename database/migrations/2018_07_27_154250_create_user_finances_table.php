@@ -18,9 +18,9 @@ class CreateUserFinancesTable extends Migration
 			$table->unsignedInteger('user_id')->index();
 			$table->unsignedInteger('causer')->index();
 			$table->string('description')->nullable();
-			$table->string('enum')->index();             // 项目类型
-			$table->string('change');                    // 现金变化
-			$table->string('amount');                    // 余额
+			$table->string('enum')->index(); 
+			$table->string('change');
+			$table->string('amount');
             $table->timestamps();
         });
     }
