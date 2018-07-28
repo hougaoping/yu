@@ -27,10 +27,10 @@
 					<th>操作</th>
 		            <th>邮箱地址</th>
 		            <th>手机号码</th>
-		            <th>@widget('order', ['field' => 'last_login_time	', 'title'=>'最后登录时间'])</th>
-		            <th>@widget('order', ['field' => 'login_count', 'title'=>'登录次数'])</th>
-					<th>@widget('order', ['field' => 'register_time', 'title'=>'注册时间'])</th>
+					<th>@widget('order', ['field' => 'login_count', 'title'=>'登录次数'])</th>
 					<th>最后登录IP</th>
+		            <th>@widget('order', ['field' => 'last_login_time	', 'title'=>'最后登录时间'])</th>
+					<th>@widget('order', ['field' => 'register_time', 'title'=>'注册时间'])</th>
 	         	</tr>
 	     	</thead>
 		    @foreach ($list as $data)
@@ -39,7 +39,7 @@
 				<td>
 					<a class="opt" href="{{ route('admin.users.profile', ['id' => $data['id']]) }}">用户信息</a>
 		            <span class="opt-separator"> | </span>
-					<a class="opt" href="{{ route('admin.users.charge', ['id' => $data['id']]) }}">手工充值</a>
+					<a class="opt" href="{{ route('admin.users.charge', ['id' => $data['id']]) }}">充值</a>
 				</td>
 				<td>
 					{{ $data->email }}
@@ -48,16 +48,16 @@
 					{{ $data->mobile }}
 				</td>
 				<td>
-					{{ date('Y/m/d H:i:s', $data->last_login_time) }}
-				</td>
-				<td>
 					{{ $data->login_count }}
 				</td>
 				<td>
-					{{ date('Y/m/d H:i:s', $data->register_time) }}
+					{{ $data->last_login_ip }}
 				</td>
 				<td>
-					{{ $data->last_login_ip }}
+					{{ date('Y/m/d H:i:s', $data->last_login_time) }}
+				</td>
+				<td>
+					{{ date('Y/m/d H:i:s', $data->register_time) }}
 				</td>
 		    </tr>
 		    @endforeach

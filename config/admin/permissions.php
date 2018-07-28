@@ -7,13 +7,11 @@ return [
         'admin.upload',
     ],
 
-
     // 相同权限
     'equal' => [
         'admin.articles.create' => ['admin.upload.tinymce'],
         'admin.articles.edit' => ['admin.upload.tinymce'],
     ],
-
 
 	'permissions' => [
         [
@@ -88,8 +86,9 @@ return [
         [
             'name' => '用户管理',
             'items' => [
-               'admin.users.index' => '用户列表',
+               'admin.users.index'   => '用户列表',
 			   'admin.users.profile' => '个人信息',
+			   'admin.users.charge'  => '充值',
                'admin.users.destroy' => '删除用户',
             ],
         ],
