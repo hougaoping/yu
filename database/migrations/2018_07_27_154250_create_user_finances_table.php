@@ -23,6 +23,7 @@ class CreateUserFinancesTable extends Migration
 			$table->string('change');
 			$table->string('amount');
             $table->timestamps();
+			$table->index(['created_at']);
         });
     }
 

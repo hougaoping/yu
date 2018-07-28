@@ -1,16 +1,17 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-
 <div class="content-section">
 	<div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
 	    <h2>财务明细</h2>
 	</div>
 	<div class="action-section row mb-4">
-		<div class="col-md-5">
-		    <form name="search" method="get" action="">
+		<div class="col-md-7">
+		    <form name="search" method="get" action="" autocomplete="off">
 		    	<div class="input-group">
-		        	<input name="uid" type="text" class="search keywords form-control" value="{{ request()->input('uid') }}" onclick="$(this).focus().select()" placeholder="UID">
+					<input name="start_time" type="text" class="search date-picker form-control" value="{{ request()->input('start_time') }}" onclick="$(this).focus().select()" placeholder="起始时间">
+					<input name="end_time" type="text" class="search date-picker form-control" value="{{ request()->input('end_time') }}" onclick="$(this).focus().select()" placeholder="结束时间">
+		        	<input name="uid" type="text" class="search keywords form-control" value="{{ request()->input('uid') }}" onclick="$(this).focus().select()" placeholder="UID" style="max-width:90px;">
 		        	<div class="input-group-append">
 			        	<select name="enum" class="form-control">
 			                <option value="">请选择项目</option>
@@ -44,7 +45,7 @@
 				<td>{{ $enum_money[$data->enum] }}</td>
 				<td>{{ $data->change }}</td>
 				<td>{{ $data->amount }}</td>
-				<td class="text-muted">{{ $data->description }}</td>
+				<td>{{ $data->description }}</td>
 				<td>{{ $data->created_at }}</td>
 		    </tr>
 		    </tr>

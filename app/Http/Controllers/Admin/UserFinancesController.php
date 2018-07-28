@@ -15,7 +15,7 @@ class UserFinancesController extends BaseController
 {
 	public function index(Request $request) {
         $userFinance = new UserFinance();
-    	$list = $userFinance->withOrder($this->_order())->withSearch(request()->input('uid'), request()->input('enum'))->paginate($this->_rows());
+    	$list = $userFinance->withOrder($this->_order())->withSearch($request->uid, $request->enum, $request->start_time, $request->end_time)->paginate($this->_rows());
         $enum_money = config('enum.money');
 
     	return view('admin.user_finances.index', compact('list', 'enum_money'));

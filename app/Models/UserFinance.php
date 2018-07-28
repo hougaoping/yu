@@ -22,9 +22,13 @@ class UserFinance extends Model
         return $this->belongsTo('App\Models\User');
     }
 		
-	public function scopeWithSearch($query, $uid = '', $enum = '') {
+	public function scopeWithSearch($query, $uid = '', $enum = '', $start_time = '', $end_time = '') {
         !empty($uid) && $query->where('user_id', $uid);
 		!empty($enum) && $query->where('enum', $enum);
+
+        if (!empty($start_time) && !empty($end_time)) {
+            $query->whereBetween('created_at', [$start_time, $end_time]);
+        }
     }
 	
 	public function scopeWithOrder($query, $keywords = '')
