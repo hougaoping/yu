@@ -1,6 +1,5 @@
 <?php
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -8,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Validator;
 use App\Models\User;
+use App\Models\UserFinance;
+use Auth;
 
 class UsersController extends BaseController
 {
@@ -18,7 +19,6 @@ class UsersController extends BaseController
 	public function index(Request $request) {
         $user = new User();
     	$list = $user->withOrder($this->_order())->withSearch($this->_keywords(), $this->_type())->paginate($this->_rows());
-
         $filter = [
             'type' => [
                 'seller' => ['route'=>'admin.users.index',  'args' => ['type' => 'seller'], 'name'=> '商家会员'],
@@ -26,7 +26,6 @@ class UsersController extends BaseController
                 'admin'  => ['route'=>'admin.users.index',  'args' => ['type' => 'admin'],  'name' => '管理员'],
             ],
         ];
-
     	return view('admin.users.index', compact('list', 'filter'));
 	}
 
@@ -37,9 +36,28 @@ class UsersController extends BaseController
 
     public function charge(User $user, Request $request) {
         if($request->isMethod('get')) {
-		    return view('admin.users.charge', compact('user'));
+            $token = time();
+            $request->session()->put('token', $token);
+		    return view('admin.users.charge', compact('user', 'token'));
         } else {
+            $token = $request->input('token');
+            if(empty($request->session()->get('token')) || $request->session()->get('token') != $token) {
+                return $this->error('请勿重复提交');
+            }
 
+            $request->session()->pull('token', null);
+
+            DB::beginTransaction();
+            try{
+                $user->amount = $user->amount + $request->charge;
+                $user->save();
+                UserFinance::create(['user_id'=>$user->id, 'causer' => Auth::id(), 'enum' => 'CHARGE_ADD', 'change' => $request->charge, 'description' => $request->description, 'amount' => $user->amount]);
+                DB::commit();
+            } catch (\Exception $e) {
+                DB::rollBack();
+            }
+
+            $this->success('充值成功', route('admin.users.index'));
         }
     }
 

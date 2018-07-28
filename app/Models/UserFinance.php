@@ -10,14 +10,12 @@ use \App\Traits\Models\Order;
 class UserFinance extends Model
 {
 	use Order, LogsActivity;
-		
+
 	public $timestamps = true;
 
-	protected $fillable = [
-        
-    ];
-	
-	// protected $guarded = [];
+	// protected $fillable = [];
+
+	protected $guarded = [];
 
     public function user()
     {

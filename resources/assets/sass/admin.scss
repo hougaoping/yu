@@ -382,13 +382,11 @@ table .opt {
                 margin:0;
             }
         }
-
         .table-responsive {
             .table {
                 min-width:900px;
             }
         }
-
         .list {
             .table th i.sort {
                 background-image: url('/images/admin/field-sort.png');
@@ -409,21 +407,10 @@ table .opt {
                 background-position: right -58px;
             }
         }
-
         .no-content {
             text-align:center;
             padding:40px 0;
         }
-    }
-}
-
-.form-section {
-    .form-group {
-        padding:7px 0;
-        margin:0;
-        border-top:1px solid #eee;
-        border-bottom:1px solid #eee;
-        margin-top:-1px;
     }
 }
 
