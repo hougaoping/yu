@@ -45,7 +45,7 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\UserLoginlog');
     }
-	
+
 	// 获得验证码
 	public function verifys()
     {
@@ -57,7 +57,7 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\UserFeedback');
     }
-	
+
 	// 用户的财务信息
 	public function finances()
     {
@@ -69,7 +69,7 @@ class User extends Authenticatable
         $this->last_login_ip   = request()->getClientIp();
         $this->save();
     }
-    
+
     public function recordLoginLog($username, $result = true) {
         $this->loginLogs()->create(['user_id' => $this->id, 'username' => $username, 'login_time' => time(), 'result' => intval($result), 'ip' => request()->getClientIp(), 'is_admin' => $this->is_admin, 'url' => request()->getRequestUri()]);
     }
@@ -77,7 +77,7 @@ class User extends Authenticatable
     // 获取当前登录的用户名称
     public function getUsername($asterisk = true) {
         if (session()->has('username')) {
-            return $asterisk ? email_asterisk(session()->get('username')) : session()->get('username'); 
+            return $asterisk ? email_asterisk(session()->get('username')) : session()->get('username');
         }else {
             return $this->name;
         }
@@ -98,22 +98,22 @@ class User extends Authenticatable
 
 		if (!empty($type)) {
 			switch($type) {
-				case 'admin': 
+				case 'admin':
 					$query->where('is_admin', '1');
 				break;
-				case 'member': 
+				case 'member':
 					$query->where('is_admin', '0');
 				break;
-                case 'seller': 
+                case 'seller':
                     $query->where('type', 'seller');
                 break;
-                case 'buyer': 
+                case 'buyer':
                     $query->where('type', 'buyer');
                 break;
 			}
 		}
     }
-        
+
     // 获得管理员权限
     public function getAdminPermissions() {
 
