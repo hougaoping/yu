@@ -65,6 +65,7 @@ Route::name('admin.')->group(function () {
         Route::match(['get'], 'users/{user}/profile', 'UsersController@profile')->name('users.profile');
         Route::match(['get','post'], 'users/{user}/charge', 'UsersController@charge')->name('users.charge');
         Route::resource('user_emails', 'UserEmailsController', ['only'=>['index']]);
+        Route::resource('user_finances', 'UserFinancesController', ['only'=>['index']]);
         Route::resource('admin', 'AdminController', ['except'=>['show']]);
         Route::resource('roles', 'RolesController', ['except'=>['show']]);
     });

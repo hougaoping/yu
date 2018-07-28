@@ -16,7 +16,8 @@ class CreateUserFinancesTable extends Migration
         Schema::create('user_finances', function (Blueprint $table) {
             $table->increments('id');
 			$table->unsignedInteger('user_id')->index();
-			$table->unsignedInteger('causer')->index();
+			$table->string('causer_type');
+			$table->unsignedInteger('causer_id')->index();
 			$table->string('description')->nullable();
 			$table->string('enum')->index(); 
 			$table->string('change');

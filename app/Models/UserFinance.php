@@ -21,7 +21,12 @@ class UserFinance extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
-
+		
+	public function scopeWithSearch($query, $uid = '', $enum = '') {
+        !empty($uid) && $query->where('user_id', $uid);
+		!empty($enum) && $query->where('enum', $enum);
+    }
+	
 	public function scopeWithOrder($query, $keywords = '')
     {
         $this->withOrder($query, $keywords);

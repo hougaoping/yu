@@ -82,6 +82,11 @@ return [
                     'route' => 'admin.user_emails.index',
                     'active'=> 'admin.user_emails.*'
                 ],
+                [
+                    'title' => '财务明细',
+                    'route' => 'admin.user_finances.index',
+                    'active'=> 'admin.user_finances.*'
+                ],
             ]
         ],
 

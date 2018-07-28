@@ -9,6 +9,7 @@
     <div class="form-section">
         <form method="post" action="{{ route('admin.users.charge', $user['id'])}}" autocomplete="off" id="form">
             {{ csrf_field() }}
+            <input type="hidden" name="token" value="{{ $token }}">
             <div class="form-group row">
                 <label class="col-md-2 col-form-label text-sm-left text-md-right text-muted">手机号码：</label>
                 <div class="col-md-7 col-lg-5">

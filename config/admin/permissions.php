@@ -4,13 +4,14 @@ return [
     // 公共权限
 	'public' => [
 		'admin.dashboard',
-        'admin.upload',
     ],
 
     // 相同权限
     'equal' => [
         'admin.articles.create' => ['admin.upload.tinymce'],
-        'admin.articles.edit' => ['admin.upload.tinymce'],
+        'admin.articles.edit'   => ['admin.upload.tinymce'],
+        'admin.ads.create'      => ['admin.upload'],
+        'admin.ads.edit'        => ['admin.upload'],
     ],
 
 	'permissions' => [
@@ -95,7 +96,13 @@ return [
         [
             'name' => '用户邮箱',
             'items' => [
-               'admin.user_emails.index' => '用户列表',
+               'admin.user_emails.index' => '用户邮箱',
+            ],
+        ],
+        [
+            'name' => '财务明细',
+            'items' => [
+               'admin.user_finances.index' => '财务明细',
             ],
         ],
         [
