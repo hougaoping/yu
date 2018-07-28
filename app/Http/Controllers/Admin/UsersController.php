@@ -21,7 +21,7 @@ class UsersController extends BaseController
     	$list = $user->withOrder($this->_order())->withSearch($this->_keywords(), $this->_type())->paginate($this->_rows());
         $filter = [
             'type' => [
-                'seller' => ['route'=>'admin.users.index',  'args' => ['type' => 'seller'], 'name'=> '商家会员'],
+                'seller' => ['route'=>'admin.users.index',  'args' => ['type' => 'seller'], 'name' => '商家会员'],
                 'buyer'  => ['route'=>'admin.users.index',  'args' => ['type' => 'buyer'],  'name' => '买家会员'],
                 'admin'  => ['route'=>'admin.users.index',  'args' => ['type' => 'admin'],  'name' => '管理员'],
             ],
@@ -46,7 +46,7 @@ class UsersController extends BaseController
             }
             $request->session()->pull('token', null);
 
-            
+
             DB::beginTransaction();
             try{
                 $user->amount = $user->amount + $request->charge;
