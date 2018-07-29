@@ -9,7 +9,7 @@
             $roles = Auth::user()->getAdminRolesName();
             echo isset($roles[0]) ? '<a class="dropdown-item disabled" href="">' . $roles[0] . '</a>' : '';
           ?>
-          <a class="dropdown-item" href="{{ route('center.password') }}" target="_blank">修改我的密码</a>
+          <a class="dropdown-item" href="{{ route('center.password.index') }}" target="_blank">修改我的密码</a>
           <a class="dropdown-item" href="{{ route('logout') }}">退出</a>
         </div>
     </div>

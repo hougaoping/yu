@@ -10969,7 +10969,6 @@ select.form-control {
 
 .center .main-container .form-wrapper .header-line {
   position: relative;
-  padding: 20px;
 }
 
 .center .main-container .form-wrapper .header-line h3 {
@@ -10984,6 +10983,17 @@ select.form-control {
   .center .main-container .form-wrapper .header-line h3 {
     font-size: 1rem;
   }
+}
+
+.center .main-container .form-wrapper .header-line .tabs a {
+  display: inline-block;
+  padding: 20px 15px;
+  margin-bottom: -1px;
+}
+
+.center .main-container .form-wrapper .header-line .tabs a.active {
+  border-bottom: 2px solid #000;
+  font-weight: bold;
 }
 
 .center .main-container .form-wrapper .form-group-wrapper .form-group {

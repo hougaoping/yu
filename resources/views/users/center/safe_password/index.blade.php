@@ -6,8 +6,11 @@
     @include('users.layouts._sidebar')
     <div class="main-container">
         <div class="form-wrapper">
-            <div class="header-line border-bottom">
-                <h3>安全密码</h3>
+            <div class="header-line d-flex justify-content-between align-items-center border-bottom">
+                <div class="tabs clearfix">
+                    <a href="{{ route('center.password.index') }}">修改登录密码</a>
+                    <a href="{{ route('center.password.safe_password') }}" class="active">修改安全密码</a>
+                </div>
             </div>
             <form method="post" action="" class="" autocomplete="off" id="form">
                 {{ csrf_field() }}

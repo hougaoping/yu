@@ -488,7 +488,6 @@ select.form-control {
 
             .header-line {
                 position: relative;
-                padding:20px;
                 h3 {
                     margin:0;
                     font-size:22px;
@@ -497,6 +496,18 @@ select.form-control {
                     font-weight:normal;
                     @media (max-width: 767px){
                         font-size:1rem;
+                    }
+                }
+
+                .tabs {
+                    a {
+                        display:inline-block;
+                        padding:20px 15px;
+                        margin-bottom:-1px;
+                        &.active {
+                            border-bottom:2px solid #000;
+                            font-weight:bold;
+                        }
                     }
                 }
             }

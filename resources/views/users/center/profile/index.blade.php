@@ -6,7 +6,7 @@
     @include('users.layouts._sidebar')
     <div class="main-container">
         <div class="form-wrapper">
-            <div class="header-line border-bottom">
+            <div class="header-line p-4 border-bottom">
                 <h3>个人信息</h3>
             </div>
             <form method="post" action="" class="" autocomplete="off" id="form">
