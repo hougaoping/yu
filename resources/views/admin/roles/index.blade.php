@@ -20,7 +20,7 @@
 			</thead>
 			<tbody>
 		    @foreach ($roles as $role)
-	        </tr>
+	        <tr>
 				<td>{{ $role->id }}</td>
 				<td>
 					<a class="opt edit" href="{{ route('admin.roles.edit', ['id' => $role['id']]) }}">编辑</a>

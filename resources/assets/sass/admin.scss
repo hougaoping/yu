@@ -374,6 +374,12 @@ table .opt {
         margin:0;
     }
 
+    .table-responsive {
+        .table {
+            min-width:700px;
+        }
+    }
+
     .content-section {
         min-height: auto;
         .title-section {
@@ -382,11 +388,7 @@ table .opt {
                 margin:0;
             }
         }
-        .table-responsive {
-            .table {
-                min-width:900px;
-            }
-        }
+        
         .list {
             .table th i.sort {
                 background-image: url('/images/admin/field-sort.png');

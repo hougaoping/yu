@@ -18,7 +18,7 @@
 		        </tr>
 	     	</thead>
 		    @foreach ($list as $data)
-	        </tr>
+	        <tr>
 				<td>{{ $data->id }}</td>
 				<td>{{ $data->user_id }}</td>
 				<td>{{ $data->contact }}
@@ -26,7 +26,6 @@
 				<td>{{ $data->description }}
 				</td>
 				<td>{{ $data->created_at }}</td>
-		    </tr>
 		    </tr>
 		    @endforeach
 	    </table>

@@ -34,7 +34,7 @@
 		        </tr>
 	     	</thead>
 		    @foreach ($list as $data)
-	        </tr>
+	        <tr>
 				<td>{{ $data->id }}</td>
 				<td>{{ $data->user_id }}</td>
 				<td>

@@ -10,6 +10,8 @@
 <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/jquery.validate.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ asset('js/datetimepicker/jquery.datetimepicker.css') }}">
+<script src="{{ asset('js/datetimepicker/build/jquery.datetimepicker.full.min.js') }}"></script>
 <link href="{{ asset('js/message/message.css') }}" rel="stylesheet">
 <script src="{{ asset('js/message/message.js') }}"></script>
 <script src="{{ asset('js/ajaxPost.js') }}"></script>
@@ -50,6 +52,10 @@ $.ajaxSetup({
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
+
+// 日期选择组件
+$('.date-picker').datetimepicker();
+$.datetimepicker.setLocale('zh');
 
 @stack('scripts')
 </script>

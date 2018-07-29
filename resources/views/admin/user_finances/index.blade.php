@@ -25,6 +25,7 @@
 		    </form>
 		</div>
 	</div>
+
 	<div class="list table-responsive">
 	    <table class="table table-hover">
 	        <thead>
@@ -39,7 +40,7 @@
 		        </tr>
 	     	</thead>
 		    @foreach ($list as $data)
-	        </tr>
+	        <tr>
 				<td>{{ $data->id }}</td>
 				<td>{{ $data->user_id }}</td>
 				<td>{{ $enum_money[$data->enum] }}</td>
@@ -47,7 +48,6 @@
 				<td>{{ $data->amount }}</td>
 				<td>{{ $data->description }}</td>
 				<td>{{ $data->created_at }}</td>
-		    </tr>
 		    </tr>
 		    @endforeach
 	    </table>
@@ -58,9 +58,9 @@
         @endif
 		</div>
 	    @if ($list->hasPages())
-	    <div class="pagination-wrapper">
-            {{ $list->appends($_GET)->links() }}
-        </div>
-	@endif
+		    <div class="pagination-wrapper">
+	            {{ $list->appends($_GET)->links() }}
+	        </div>
+		@endif
 	</div>
 @stop

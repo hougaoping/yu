@@ -34,7 +34,7 @@
 			</thead>
 			<tbody>
 		    @foreach ($list as $data)
-	        </tr>
+	        <tr>
 				<td>{{ $data->id }}</td>
 				<td>
 					<a href="{{ $data->url() }}" name="imageurl"></a>

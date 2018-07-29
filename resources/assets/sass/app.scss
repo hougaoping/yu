@@ -33,7 +33,7 @@ html, body {
     font-family: Roboto,Helvetica,Tahoma,Arial,"Microsoft YaHei";
 }
 
-::-webkit-scrollbar-thumb{background:#b1b1b1;border-radius:4px} ::-webkit-scrollbar{width:6px;height:10px;background-color:transparent;border-radius:3px}
+::-webkit-scrollbar-thumb{background:#b1b1b1;border-radius:4px} ::-webkit-scrollbar{width:5px;height:5px;background-color:transparent;border-radius:3px}
 
 p.reminder {
     margin-bottom:20px;
@@ -42,6 +42,10 @@ p.reminder {
 
 .form-control.error {
     border:1px solid #dc3545;
+}
+
+.form-control:focus{
+    z-index:9999;
 }
 
 select.form-control {
@@ -204,7 +208,7 @@ select.form-control {
 
             ul.article_list li a {
                 text-decoration: none;
-                font-size: 1.7rem;
+                font-size: 1.4rem;
                 line-height: 1;
                 display: inline-block;
             }
@@ -481,8 +485,18 @@ select.form-control {
     .main-container {
         width:100%;
         padding-left:235px;
+     
+        .table {
+            margin:0;
+        }
 
-        .form-wrapper {
+        .table-responsive {
+            .table {
+                min-width:700px;
+            }
+        }
+
+        .container-wrapper {
             background-color:#fff;
             position: relative;
 
@@ -502,7 +516,7 @@ select.form-control {
                 .tabs {
                     a {
                         display:inline-block;
-                        padding:20px 15px;
+                        padding:25px 30px;
                         margin-bottom:-1px;
                         &.active {
                             border-bottom:2px solid #000;
@@ -534,9 +548,41 @@ select.form-control {
             }
 
             .form-group-controls {
-                padding:0;
                 padding:30px 0;
                 text-align:center;
+            }
+
+            .action-controls {
+                padding:30px 0;
+            }
+
+
+            .list-wrapper {
+                padding:20px;
+                .list {
+                    .table th i.sort {
+                        background-image: url('/images/icons/field-sort.png');
+                        background-image:image-set(url('/images/icons/field-sort.png')1x,url('/images/icons/field-sort@x2.png')2x) ;
+                        background-image:-webkit-image-set(url('/images/icons/field-sort.png')1x,url('/images/icons/field-sort@x2.png')2x) ;
+                        background-repeat: no-repeat;
+                        background-position: right 2px;
+                        padding-right: 15px;
+                        color: #333;
+                        position: relative;
+                        text-decoration: none;
+                    }
+
+                    .table th i.sort-up {
+                        background-position: right -118px;
+                    }
+                    .table th i.sort-down {
+                        background-position: right -58px;
+                    }
+                }
+                .no-content {
+                    text-align:center;
+                    padding:40px 0;
+                }
             }
         }
 

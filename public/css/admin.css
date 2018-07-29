@@ -10849,6 +10849,10 @@ table .opt {
   margin: 0;
 }
 
+.content .table-responsive .table {
+  min-width: 700px;
+}
+
 .content .content-section {
   min-height: auto;
 }
@@ -10856,10 +10860,6 @@ table .opt {
 .content .content-section .title-section h2 {
   font-size: 1.7rem;
   margin: 0;
-}
-
-.content .content-section .table-responsive .table {
-  min-width: 900px;
 }
 
 .content .content-section .list .table th i.sort {

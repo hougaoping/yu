@@ -27,6 +27,7 @@
 					<th>操作</th>
 		            <th>邮箱地址</th>
 		            <th>手机号码</th>
+		            <th>余额</th>
 					<th>@widget('order', ['field' => 'login_count', 'title'=>'登录'])</th>
 					<th>最后登录IP</th>
 		            <th>@widget('order', ['field' => 'last_login_time	', 'title'=>'最后登录时间'])</th>
@@ -34,7 +35,7 @@
 	         	</tr>
 	     	</thead>
 		    @foreach ($list as $data)
-	        </tr>
+	        <tr>
 				<td>{{ $data->id }}</td>
 				<td>
 					<a class="opt" href="{{ route('admin.users.profile', ['id' => $data['id']]) }}">个人信息</a>
@@ -46,6 +47,9 @@
 				</td>
 				<td>
 					{{ $data->mobile }}
+				</td>
+				<td>
+					{{ $data->amount }}
 				</td>
 				<td>
 					{{ $data->login_count }}

@@ -31,6 +31,8 @@ Route::name('center.')->group(function () {
     Route::group(['prefix' => 'center'], function() {
         Route::match(['get', 'post'], 'password', 'Users\PassswordController@index')->name('password.index');
         Route::match(['get', 'post'], 'safe_password', 'Users\SafePassswordController@index')->name('password.safe_password');
+        Route::match(['get'], 'finance', 'Users\FinanceController@index')->name('finance.index');
+        Route::match(['get'], 'finance/coin', 'Users\FinanceController@coin')->name('finance.coin');
         Route::match(['get', 'post'], 'feedback', 'Users\FeedbackController@index')->name('feedback.index');
         Route::match(['get', 'post'], 'profile', 'Users\ProfileController@index')->name('profile.index');
         Route::match(['get'], '/', function() {

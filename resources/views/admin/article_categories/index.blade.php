@@ -34,7 +34,7 @@
 				</tr>
 			</thead>
 		    @foreach ($tree as $category)
-	        </tr>
+	        <tr>
 	        	<td>{{ $category['id']}}</td>
 				<td>
 					<a class="opt edit" href="{{ route('admin.article_categories.edit', ['id' => $category['id']]) }}">编辑</a>

@@ -35,7 +35,7 @@
 				</tr>
 			</thead>
 		    @foreach ($list as $data)
-	        </tr>
+	        <tr>
 				<td>{{ $data->id }}</td>
 				<td>
 					<a class="opt edit" href="{{ route('admin.articles.edit', ['id' => $data['id']]) }}">编辑</a>

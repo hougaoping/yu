@@ -34,7 +34,7 @@
 			</thead>
 			<tbody>
 		    @foreach ($list as $data)
-	        </tr>
+	        <tr>
 				<td>{{ $data->id }}</td>
 				<td>{{ $data->description }}</td>
 				<td>{{ $data->subject_type }}</td>

@@ -10485,8 +10485,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   background-color: transparent;
   border-radius: 3px;
 }
@@ -10498,6 +10498,10 @@ p.reminder {
 
 .form-control.error {
   border: 1px solid #dc3545;
+}
+
+.form-control:focus {
+  z-index: 9999;
 }
 
 select.form-control {
@@ -10675,7 +10679,7 @@ select.form-control {
 
 .articles .page-main .content ul.article_list li a {
   text-decoration: none;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 1;
   display: inline-block;
 }
@@ -10962,16 +10966,24 @@ select.form-control {
   padding-left: 235px;
 }
 
-.center .main-container .form-wrapper {
+.center .main-container .table {
+  margin: 0;
+}
+
+.center .main-container .table-responsive .table {
+  min-width: 700px;
+}
+
+.center .main-container .container-wrapper {
   background-color: #fff;
   position: relative;
 }
 
-.center .main-container .form-wrapper .header-line {
+.center .main-container .container-wrapper .header-line {
   position: relative;
 }
 
-.center .main-container .form-wrapper .header-line h3 {
+.center .main-container .container-wrapper .header-line h3 {
   margin: 0;
   font-size: 22px;
   color: #555;
@@ -10980,49 +10992,81 @@ select.form-control {
 }
 
 @media (max-width: 767px) {
-  .center .main-container .form-wrapper .header-line h3 {
+  .center .main-container .container-wrapper .header-line h3 {
     font-size: 1rem;
   }
 }
 
-.center .main-container .form-wrapper .header-line .tabs a {
+.center .main-container .container-wrapper .header-line .tabs a {
   display: inline-block;
-  padding: 20px 15px;
+  padding: 25px 30px;
   margin-bottom: -1px;
 }
 
-.center .main-container .form-wrapper .header-line .tabs a.active {
+.center .main-container .container-wrapper .header-line .tabs a.active {
   border-bottom: 2px solid #000;
   font-weight: bold;
 }
 
-.center .main-container .form-wrapper .form-group-wrapper .form-group {
+.center .main-container .container-wrapper .form-group-wrapper .form-group {
   margin: 0;
   padding: 10px 142px;
 }
 
 @media (max-width: 991px) {
-  .center .main-container .form-wrapper .form-group-wrapper .form-group {
+  .center .main-container .container-wrapper .form-group-wrapper .form-group {
     padding: 10px 20px;
   }
 }
 
-.center .main-container .form-wrapper .form-group-wrapper .form-group .label {
+.center .main-container .container-wrapper .form-group-wrapper .form-group .label {
   margin-bottom: 5px;
 }
 
-.center .main-container .form-wrapper .form-group-wrapper .form-group:first-child {
+.center .main-container .container-wrapper .form-group-wrapper .form-group:first-child {
   padding-top: 30px;
 }
 
-.center .main-container .form-wrapper .form-group-wrapper .form-group:last-child {
+.center .main-container .container-wrapper .form-group-wrapper .form-group:last-child {
   padding-bottom: 30px;
 }
 
-.center .main-container .form-wrapper .form-group-controls {
-  padding: 0;
+.center .main-container .container-wrapper .form-group-controls {
   padding: 30px 0;
   text-align: center;
+}
+
+.center .main-container .container-wrapper .action-controls {
+  padding: 30px 0;
+}
+
+.center .main-container .container-wrapper .list-wrapper {
+  padding: 20px;
+}
+
+.center .main-container .container-wrapper .list-wrapper .list .table th i.sort {
+  background-image: url("/images/icons/field-sort.png");
+  background-image: image-set(url("/images/icons/field-sort.png") 1x, url("/images/icons/field-sort@x2.png") 2x);
+  background-image: -webkit-image-set(url("/images/icons/field-sort.png") 1x, url("/images/icons/field-sort@x2.png") 2x);
+  background-repeat: no-repeat;
+  background-position: right 2px;
+  padding-right: 15px;
+  color: #333;
+  position: relative;
+  text-decoration: none;
+}
+
+.center .main-container .container-wrapper .list-wrapper .list .table th i.sort-up {
+  background-position: right -118px;
+}
+
+.center .main-container .container-wrapper .list-wrapper .list .table th i.sort-down {
+  background-position: right -58px;
+}
+
+.center .main-container .container-wrapper .list-wrapper .no-content {
+  text-align: center;
+  padding: 40px 0;
 }
 
 @media (max-width: 767px) {

@@ -5,7 +5,7 @@
 <div class="center container clearfix">
     @include('users.layouts._sidebar')
     <div class="main-container">
-        <div class="form-wrapper">
+        <div class="container-wrapper">
             <div class="header-line p-4 border-bottom">
                 <h3>个人信息</h3>
             </div>
