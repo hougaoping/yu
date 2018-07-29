@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '设置安全密码')
+@section('title', '安全密码')
 @section('content')
 
 <div class="center container clearfix">
@@ -7,7 +7,7 @@
     <div class="main-container">
         <div class="form-wrapper">
             <div class="header-line border-bottom">
-                <h3>设置安全密码</h3>
+                <h3>安全密码</h3>
             </div>
             <form method="post" action="" class="" autocomplete="off" id="form">
                 {{ csrf_field() }}
@@ -16,6 +16,12 @@
                         <label for="password" class="label">登录密码：</label>
                         <input type="password" class="form-control" id="login_password" name="login_password" placeholder="登录密码">
                     </div>
+                    @if (!empty(Auth::user()->safe_password))
+                    <div class="form-group">
+                        <label for="old_safe-password" class="label">现用安全密码：</label>
+                        <input type="password" class="form-control" id="old_safe-password" name="old_safe_password" placeholder="现用安全密码">
+                    </div>
+                    @endif
                     <div class="form-group">
                         <label for="safe-password" class="label">安全密码：</label>
                         <input type="password" class="form-control" id="safe-password" name="safe_password" placeholder="安全密码">
@@ -54,6 +60,9 @@ $(function(){
             login_password : {
                 required : true,
             },
+            old_safe_password : {
+                required : true,
+            },
             safe_password : {
                 required : true,
             },
@@ -66,6 +75,9 @@ $(function(){
         messages : {
             login_password : {
                 required : '请填写登录密码',
+            },
+            old_safe_password : {
+                required : '请填写现用安全密码',
             },
             safe_password : {
                 required : '请填写安全密码',
