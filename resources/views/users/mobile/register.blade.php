@@ -70,7 +70,7 @@ $(function(){
 	}
 	function sendCheckCode() {
 		return $.ajax({
-	        url: <?php echo json_encode(route('signup.mobile.send-verify'))?>,
+	        url: <?php echo json_encode(route('signup.mobile.verify'))?>,
 	        type: 'POST',
 	        dataType: 'json',
 	        cache: false,

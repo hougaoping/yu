@@ -15,7 +15,6 @@
 		            <th>联系方式</th>
 		            <th>详细描述</th>
 					<th>创建时间</th>
-					<th>更新时间</th>
 		        </tr>
 	     	</thead>
 		    @foreach ($list as $data)
@@ -27,7 +26,6 @@
 				<td>{{ $data->description }}
 				</td>
 				<td>{{ $data->created_at }}</td>
-				<td>{{ $data->updated_at }}</td>
 		    </tr>
 		    </tr>
 		    @endforeach

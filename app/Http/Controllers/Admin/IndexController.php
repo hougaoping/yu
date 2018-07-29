@@ -29,7 +29,7 @@ class IndexController extends BaseController
 		} else {
             $validator = Validator::make($request->all(), [
                 'email'    => 'required',
-                'password'    => 'required',
+                'password' => 'required',
                 // 'captcha'     => 'required|captcha',
             ], [
                 'captcha.required' => '验证码不能为空',

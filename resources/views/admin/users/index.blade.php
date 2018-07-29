@@ -37,7 +37,7 @@
 	        </tr>
 				<td>{{ $data->id }}</td>
 				<td>
-					<a class="opt" href="{{ route('admin.users.profile', ['id' => $data['id']]) }}">用户信息</a>
+					<a class="opt" href="{{ route('admin.users.profile', ['id' => $data['id']]) }}">个人信息</a>
 		            <span class="opt-separator"> | </span>
 					<a class="opt" href="{{ route('admin.users.charge', ['id' => $data['id']]) }}">充值</a>
 				</td>

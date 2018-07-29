@@ -5,7 +5,7 @@ Route::get('/', function() {
     return Redirect::to(route('signin.mobile'));
 })->name('index');
 
-Route::match(['get'], 'area/index', 'AreaController@index')->name('areas');
+Route::match(['get'], 'areas/index', 'AreaController@index')->name('areas');
 
 Route::get('login', function() {
     return Redirect::to(route('signup.mobile'));
@@ -13,12 +13,12 @@ Route::get('login', function() {
 
 Route::match(['get', 'post'], 'signup', 'Users\IndexController@register')->name('signup');
 Route::match(['get','post'], 'signin', 'Users\IndexController@login')->name('signin');
-Route::get('signup/confirm-email', 'Users\IndexController@confirmEmail')->name('confirm.email');
+Route::get('signup/confirm', 'Users\IndexController@confirmEmail')->name('signup.confirm');
 Route::get('logout', 'Users\IndexController@logout')->name('logout');
 
 Route::match(['get', 'post'], 'signup/mobile', 'Users\Mobile\IndexController@register')->name('signup.mobile');
 Route::match(['get','post'], 'signin/mobile', 'Users\Mobile\IndexController@login')->name('signin.mobile');
-Route::post('signup/mobile/send-verify', 'Users\mobile\IndexController@verify')->middleware('throttle:3')->name('signup.mobile.send-verify');
+Route::post('signup/mobile/verify', 'Users\mobile\IndexController@verify')->middleware('throttle:3')->name('signup.mobile.verify');
 
 // 忘记密码
 Route::match(['get','post'], 'forgot', 'Users\ForgotController@index')->name('forgot');
@@ -29,11 +29,12 @@ route::match(['get','post'], 'forgot/mobile/reset', 'Users\Mobile\ForgotControll
 // 会员中心路由
 Route::name('center.')->group(function () {
     Route::group(['prefix' => 'center'], function() {
-        Route::match(['get', 'post'], 'password', 'Users\PassswordController@index')->name('password');
-        Route::match(['get', 'post'], 'feedback', 'Users\FeedbackController@index')->name('feedback');
-        Route::match(['get', 'post'], 'profile', 'Users\ProfileController@index')->name('profile');
+        Route::match(['get', 'post'], 'password', 'Users\PassswordController@index')->name('password.index');
+        Route::match(['get', 'post'], 'safe_password', 'Users\PassswordController@safePassword')->name('password.safe_password');
+        Route::match(['get', 'post'], 'feedback', 'Users\FeedbackController@index')->name('feedback.index');
+        Route::match(['get', 'post'], 'profile', 'Users\ProfileController@index')->name('profile.index');
         Route::match(['get'], '/', function() {
-            return redirect()->route('center.profile');
+            return redirect()->route('center.profile.index');
         })->name('index');
     });
 });
