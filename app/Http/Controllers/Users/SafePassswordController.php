@@ -22,13 +22,14 @@ class SafePassswordController extends BaseController
             if (empty($request->login_password)) {
                 $this->error('请填写登录密码');
             }
-            if (empty($request->password)) {
+            if (empty($request->safe_password)) {
                 $this->error('请填写新的登录密码');
             }
-            if($request->password != $request->password_repeat) {
+            if($request->safe_password != $request->safe_password_repeat) {
                 $this->error('两次密码不相同');
             }
+
+            
         }
     }
-
 }
