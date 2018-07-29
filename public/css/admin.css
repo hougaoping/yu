@@ -10893,7 +10893,9 @@ table .opt {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   margin-top: -1px;
-}#cpmsg {
+}
+
+#cpmsg {
   background-image: url("/images/admin/cpmsg/caution.png");
   background-image: image-set(url("/images/admin/cpmsg/caution.png") 1x, url("/images/admin/cpmsg/caution@x2.png") 2x);
   background-image: -webkit-image-set(url("/images/admin/cpmsg/caution.png") 1x, url("/images/admin/cpmsg/caution@x2.png") 2x);
