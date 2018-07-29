@@ -20,8 +20,8 @@ class CreateUserFinancesTable extends Migration
 			$table->unsignedInteger('causer_id')->index();
 			$table->string('description')->nullable();
 			$table->string('enum')->index(); 
-			$table->string('change');
-			$table->string('amount');
+			$table->decimal('change',12, 2);
+			$table->decimal('amount',12, 2);
             $table->timestamps();
 			$table->index(['created_at']);
         });

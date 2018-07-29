@@ -11,7 +11,8 @@
                     <a href="{{ route('center.finance.coin') }}">金币明细</a>
                 </div>
             </div>
-            <div class="">
+
+            <div class="list-wrapper">
                 <div class="action-controls d-flex justify-content-center align-items-center">
                     <div class="col-md-7">
                         <form name="search" method="get" action="" autocomplete="off">
@@ -31,25 +32,25 @@
                         </form>
                     </div>
                 </div>
-            <div class="list-wrapper">
+            
             <div class="list table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <tr class="">
+							<th>@widget('order', ['field' => 'created_at', 'title'=>'时间'])</th>
                             <th>项目</th>
                             <th>资金变化</th>
                             <th>余额</th>
                             <th>操作描述</th>
-                            <th>@widget('order', ['field' => 'created_at', 'title'=>'时间'])</th>
                         </tr>
                     </thead>
                     @foreach ($list as $data)
                     <tr>
+						<td>{{ $data->created_at->diffForHumans() }}</td>
                         <td>{{ $enum_money[$data->enum] }}</td>
-                        <td>{{ $data->change }}</td>
-                        <td>{{ $data->amount }}</td>
+                        <td class="text-success">{{ $data->change }}</td>
+                        <td class="text-danger">{{ $data->amount }}</td>
                         <td>{{ $data->description }}</td>
-                        <td>{{ $data->created_at->diffForHumans() }}</td>
                     </tr>
                     @endforeach
                 </table>
@@ -58,14 +59,13 @@
                         查询不到相关记录
                     </div>
                 @endif
-                </div></div>
-                @if ($list->hasPages())
+            </div>
+				@if ($list->hasPages())
                     <div class="pagination-wrapper">
                         {{ $list->appends($_GET)->links() }}
                     </div>
                 @endif
-            </div>
-            </div>
+			</div>
         </div>
     </div>
 </div>

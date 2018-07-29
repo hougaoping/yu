@@ -10846,7 +10846,7 @@ table .opt {
 }
 
 .content .table {
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .content .table-responsive .table {

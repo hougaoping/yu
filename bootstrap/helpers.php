@@ -94,6 +94,9 @@ function get_tree($categories, $level = 0) {
 }
 
 function permission($user, $active) {
+
+    // return true;
+
     $permissions = is_object($user) ? $user->getAdminPermissions() : [];
     
     $configPermissions = config('admin.permissions');
