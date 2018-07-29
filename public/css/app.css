@@ -11042,6 +11042,7 @@ select.form-control {
 
 .center .main-container .container-wrapper .list-wrapper {
   padding: 20px;
+  padding-top: 0;
 }
 
 .center .main-container .container-wrapper .list-wrapper .list .table th i.sort {
