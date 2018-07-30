@@ -43,7 +43,7 @@
 	        <tr>
 				<td>{{ $data->id }}</td>
 				<td>{{ $data->user_id }}</td>
-				<td>{{ $enum_money[$data->enum] }}</td>
+				<td>{{ $data->type }}</td>
 				<td>{{ $data->change }}</td>
 				<td>{{ $data->amount }}</td>
 				<td>{{ $data->description }}</td>

@@ -162,14 +162,11 @@ return [
 
         // ActiveLog
         Jenssegers\Agent\AgentServiceProvider::class,
-        // laravel-widgets 
         Arrilot\Widgets\ServiceProvider::class,
-        // active
         HieuLe\Active\ActiveServiceProvider::class,
-
         MercurySeries\Flashy\FlashyServiceProvider::class,
-
         App\Providers\EasySmsServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ],
 
     /*
@@ -224,6 +221,7 @@ return [
         'AsyncWidget'  => Arrilot\Widgets\AsyncFacade::class,
         'Active' => HieuLe\Active\Facades\Active::class,
         'Flashy' => MercurySeries\Flashy\Flashy::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

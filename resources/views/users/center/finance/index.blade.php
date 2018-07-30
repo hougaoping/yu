@@ -11,11 +11,10 @@
                     <a href="{{ route('center.finance.coin') }}">金币明细</a>
                 </div>
             </div>
-
             <div class="list-wrapper">
                 <div class="row pt-5 pb-4 d-flex justify-content-start align-items-center">
                     <div class="col-md-7">
-                        <form name="search" method="get" action="" autocomplete="off">
+                        <form name="search" method="get" action="" autocomplete="off" id="filter-form">
                             <div class="input-group">
                                 <input name="start_time" type="text" class="search date-picker form-control" value="{{ request()->input('start_time') }}" placeholder="起始时间">
                                 <input name="end_time" type="text" class="search date-picker form-control" value="{{ request()->input('end_time') }}" placeholder="结束时间">
@@ -31,7 +30,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col mt-2 mt-md-0"><button class="btn btn-primary" type="submit" onclick="return confirm('确定导出吗？操作可能需要一些时间');">导出Excel</button></div>
+                    <div class="col mt-2 mt-md-0"><a class="btn btn-primary export" href="<?php echo route('center.finance.export') ?>" id="export" onclick="return confirm('确定导出吗？操作可能需要一些时间');">导出Excel</a></div>
                 </div>
             
             <div class="list table-responsive">
@@ -47,7 +46,7 @@
                     @foreach ($list as $data)
                     <tr>
 						<td>{{ $data->created_at->diffForHumans() }}</td>
-                        <td>{{ $enum_money[$data->enum] }}</td>
+                        <td>{{ $data->type }}</td>
                         <td class="text-success text-right">{{ $data->change }}</td>
                         <td class="text-danger text-right">{{ $data->amount }}</td>
                     </tr>

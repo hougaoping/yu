@@ -21,6 +21,12 @@ class UserFinance extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
+    public function getTypeAttribute($value)
+    {
+        $enum_money = config('enum.money');
+        return $enum_money[$this->enum];
+    }
 		
 	public function scopeWithSearch($query, $uid = '', $enum = '', $start_time = '', $end_time = '') {
         !empty($uid) && $query->where('user_id', $uid);
