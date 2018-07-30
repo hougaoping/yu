@@ -58,7 +58,7 @@
                             <label class="label" for="intro">个人简介：</label><textarea class="form-control" id="intro" name="intro" rows="5" placeholder="一句话介绍一下自己吧，让别人更了解你">@isset($profile['intro']){{ $profile['intro'] }}@endisset</textarea>
                         </div>
                     </div>
-                    <div class="form-group-controls border-top">
+                    <div class="border-top  pb-4 pt-4 d-flex justify-content-center align-items-center">
                         <button type="submit" class="btn btn-primary" id="btn-submit">保存</button>
                     </div>
                 </form>

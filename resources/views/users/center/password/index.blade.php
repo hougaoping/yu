@@ -25,7 +25,7 @@
                             <input type="password" class="form-control" id="password_repeat" name="password_repeat" placeholder="再次输入登录密码">
                         </div>
                 </div>
-                <div class="form-group-controls border-top">
+                <div class="border-top  pb-4 pt-4 d-flex justify-content-center align-items-center">
                     <button type="submit" class="btn btn-primary" id="btn-submit">保存</button>
                 </div>
             </form>

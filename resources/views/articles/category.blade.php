@@ -16,8 +16,7 @@
 					@foreach ($articles as $article)
 					<li>
 						<a href="{{ route('article.index', $article) }}" target="_blank" title="">{{ $article->title }}</a>
-						<p> {{ description($article->content, 120) }} </p> 
-						<i class="clearfix"></i>
+						<div> {{ description($article->content, 120) }} </div> 
 						<div class="info">
                             <span class="time">{{ $article->date_time }}</span>
                             <span class="click_num"><i></i>{{ $article->click }}人读过</span></div>

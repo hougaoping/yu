@@ -8,9 +8,9 @@
 		<div class="col-md-5">
 		    <form name="search" method="get" action="">
 		    	<div class="input-group">
-		        	<input name="keywords" type="text" class="search keywords form-control" value="{{ request()->input('keywords') }}" onclick="$(this).focus().select()" placeholder="搜索关键字">
+		        	<input name="keywords" type="text" class="search keywords form-control" value="{{ request()->input('keywords') }}" onclick="$(this).focus().select()" placeholder="关键字">
 		        	<div class="input-group-append">
-	    			<button class="btn btn-primary" type="submit">搜索</button>
+	    			<button class="btn btn-primary" type="submit">查询</button>
 	  				</div>
 		    	</div>
 		    </form>

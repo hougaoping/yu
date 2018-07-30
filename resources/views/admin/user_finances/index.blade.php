@@ -19,7 +19,7 @@
 			                <option value="{{ $key }}" @if(request()->has('enum') && $key == request()->input('enum')) selected="selected" @endif>{{ $name }}</option>
 		                	@endforeach
 			            </select>
-		    			<button class="btn btn-primary" type="submit">搜索</button>
+		    			<button class="btn btn-primary" type="submit">查询</button>
 	  				</div>
 		    	</div>
 		    </form>

@@ -13,8 +13,8 @@
             </div>
 
             <div class="list-wrapper">
-                <div class="action-controls d-flex justify-content-center align-items-center">
-                    <div class="col-md-7">
+                <div class="row pt-5 pb-4 d-flex justify-content-start align-items-center">
+                    <div class="col-md-6">
                         <form name="search" method="get" action="" autocomplete="off">
                             <div class="input-group">
                                 <input name="start_time" type="text" class="search date-picker form-control" value="{{ request()->input('start_time') }}" placeholder="起始时间">
@@ -26,22 +26,22 @@
                                         <option value="{{ $key }}" @if(request()->has('enum') && $key == request()->input('enum')) selected="selected" @endif>{{ $name }}</option>
                                         @endforeach
                                     </select>
-                                    <button class="btn btn-primary" type="submit">搜索</button>
+                                    <button class="btn btn-primary" type="submit">查询</button>
                                 </div>
                             </div>
                         </form>
                     </div>
+                    <div class="col mt-2 mt-md-0"><button class="btn btn-primary" type="submit" onclick="return confirm('确定导出吗？操作可能需要一些时间');">导出Excel</button></div>
                 </div>
             
             <div class="list table-responsive">
                 <table class="table table-hover">
-                    <thead>
+                    <thead class="">
                         <tr class="">
 							<th>@widget('order', ['field' => 'created_at', 'title'=>'时间'])</th>
                             <th>项目</th>
                             <th>资金变化</th>
                             <th>余额</th>
-                            <th>操作描述</th>
                         </tr>
                     </thead>
                     @foreach ($list as $data)
@@ -50,7 +50,6 @@
                         <td>{{ $enum_money[$data->enum] }}</td>
                         <td class="text-success">{{ $data->change }}</td>
                         <td class="text-danger">{{ $data->amount }}</td>
-                        <td>{{ $data->description }}</td>
                     </tr>
                     @endforeach
                 </table>

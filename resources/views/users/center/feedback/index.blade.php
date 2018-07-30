@@ -18,7 +18,7 @@
                         <textarea class="form-control" id="description" name="description" rows="9" placeholder="欢迎提出宝贵意见和建议。我们将逐一回复，您的支持是我们最大的鼓励和帮助"></textarea>
                     </div>
                 </div>
-                <div class="form-group-controls border-top">
+                <div class="border-top  pb-4 pt-4 d-flex justify-content-center align-items-center">
                     <button type="submit" class="btn btn-primary" id="btn-submit">保存</button>
                 </div>
             </form>

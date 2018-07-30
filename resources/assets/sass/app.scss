@@ -146,9 +146,6 @@ select.form-control {
 
 .articles {
     margin-top: 20px;
-    padding-left:15px;
-    padding-right:15px;
-
     a {
         color: #336699;
         &:hover {
@@ -194,12 +191,13 @@ select.form-control {
             ul.article_list {
                 color: #bbb;
                 padding: 0px 20px;
+                margin:0;
             }
 
             ul.article_list li {
                 padding-top: 2rem;
                 padding-bottom: 1rem;
-                border-bottom: 1px dashed #eee;
+                border-bottom: 1px solid #eee;
                 list-style: none;
             }
 
@@ -209,17 +207,17 @@ select.form-control {
 
             ul.article_list li a {
                 text-decoration: none;
-                font-size: 1.4rem;
+                font-size: 1.5rem;
                 line-height: 1;
                 display: inline-block;
             }
 
-            ul.article_list li p {
+            ul.article_list li div {
                 padding: 0;
                 margin: 0px;
                 margin-top: 15px;
+                font-size:15px;
                 text-indent: 0em;
-                font-size: 15px;
                 color: #999;
             }
 
@@ -233,7 +231,7 @@ select.form-control {
             }
 
             ul.article_list li span {
-                padding-right: 1rem;
+                padding-right: 20px;
             }
 
             ul.article_list li span:hover {
@@ -283,7 +281,6 @@ select.form-control {
             background: #fff;
             margin-bottom: 15px;
             line-height: 1;
-            font-size: 14px;
             padding: 0 20px;
 
             h3 {
@@ -486,10 +483,6 @@ select.form-control {
     .main-container {
         width:100%;
         padding-left:235px;
-     
-        .table {
-            margin-bottom:20px;
-        }
 
         .table-responsive {
             .table {
@@ -517,11 +510,13 @@ select.form-control {
                 .tabs {
                     a {
                         display:inline-block;
-                        padding:20px 30px;
+                        padding:20px 40px;
                         margin-bottom:-1px;
+                        color:#999;
+
                         &.active {
                             border-bottom:2px solid #000;
-                            font-weight:bold;
+                            color:#000;
                         }
                     }
                 }
@@ -540,21 +535,12 @@ select.form-control {
                 }
 
                 .form-group:first-child {
-                    padding-top: 30px;
+                    padding-top: 40px;
                 }
 
                 .form-group:last-child {
-                    padding-bottom: 30px;
+                    padding-bottom: 40px;
                 }
-            }
-
-            .form-group-controls {
-                padding:30px 0;
-                text-align:center;
-            }
-
-            .action-controls {
-                padding:30px 0;
             }
 
             .list-wrapper {
@@ -575,10 +561,12 @@ select.form-control {
                     .table th i.sort-up {
                         background-position: right -118px;
                     }
+
                     .table th i.sort-down {
                         background-position: right -58px;
                     }
                 }
+
                 .no-content {
                     text-align:center;
                     padding:30px 0;
@@ -596,8 +584,7 @@ select.form-control {
     padding:15px;
     width: 100%;
     color: #555;
-    font-size:14px;
-    line-height:1.5;
+    line-height:2;
 }
 
 .footer_1 {

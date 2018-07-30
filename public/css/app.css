@@ -10611,8 +10611,6 @@ select.form-control {
 
 .articles {
   margin-top: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .articles a {
@@ -10664,12 +10662,13 @@ select.form-control {
 .articles .page-main .content ul.article_list {
   color: #bbb;
   padding: 0px 20px;
+  margin: 0;
 }
 
 .articles .page-main .content ul.article_list li {
   padding-top: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px solid #eee;
   list-style: none;
 }
 
@@ -10679,17 +10678,17 @@ select.form-control {
 
 .articles .page-main .content ul.article_list li a {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1;
   display: inline-block;
 }
 
-.articles .page-main .content ul.article_list li p {
+.articles .page-main .content ul.article_list li div {
   padding: 0;
   margin: 0px;
   margin-top: 15px;
-  text-indent: 0em;
   font-size: 15px;
+  text-indent: 0em;
   color: #999;
 }
 
@@ -10703,7 +10702,7 @@ select.form-control {
 }
 
 .articles .page-main .content ul.article_list li span {
-  padding-right: 1rem;
+  padding-right: 20px;
 }
 
 .articles .page-main .content ul.article_list li span:hover {
@@ -10751,7 +10750,6 @@ select.form-control {
   background: #fff;
   margin-bottom: 15px;
   line-height: 1;
-  font-size: 14px;
   padding: 0 20px;
 }
 
@@ -10966,10 +10964,6 @@ select.form-control {
   padding-left: 235px;
 }
 
-.center .main-container .table {
-  margin-bottom: 20px;
-}
-
 .center .main-container .table-responsive .table {
   min-width: 700px;
 }
@@ -10999,13 +10993,14 @@ select.form-control {
 
 .center .main-container .container-wrapper .header-line .tabs a {
   display: inline-block;
-  padding: 20px 30px;
+  padding: 20px 40px;
   margin-bottom: -1px;
+  color: #999;
 }
 
 .center .main-container .container-wrapper .header-line .tabs a.active {
   border-bottom: 2px solid #000;
-  font-weight: bold;
+  color: #000;
 }
 
 .center .main-container .container-wrapper .form-group-wrapper .form-group {
@@ -11024,20 +11019,11 @@ select.form-control {
 }
 
 .center .main-container .container-wrapper .form-group-wrapper .form-group:first-child {
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 .center .main-container .container-wrapper .form-group-wrapper .form-group:last-child {
-  padding-bottom: 30px;
-}
-
-.center .main-container .container-wrapper .form-group-controls {
-  padding: 30px 0;
-  text-align: center;
-}
-
-.center .main-container .container-wrapper .action-controls {
-  padding: 30px 0;
+  padding-bottom: 40px;
 }
 
 .center .main-container .container-wrapper .list-wrapper {
@@ -11079,8 +11065,7 @@ select.form-control {
   padding: 15px;
   width: 100%;
   color: #555;
-  font-size: 14px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .footer_1 {

@@ -10847,10 +10847,6 @@ table .opt {
   min-height: auto;
 }
 
-.content .content-wrapper .list .table {
-  margin: 0;
-}
-
 .content .content-wrapper .list .table-responsive .table {
   min-width: 700px;
 }
