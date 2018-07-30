@@ -1,12 +1,10 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-<div class="content-section">
-
-    <div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
+<div class="form-wrapper">
+    <div class="mb-4 pb-4 d-flex justify-content-between align-items-center">
         <h2>{{ isset($ad['id']) ? '编辑广告' : '添加广告'}}</h2>
     </div>
-    <div class="form-section">
     <form action="{{ isset($ad['id']) ? route('admin.ads.update', $ad['id']) : route('admin.ads.store') }}" method="post" id="form" enctype="multipart/form-data">
 		{!! isset($ad['id']) ? '<input type="hidden" name="_method" value="PUT">' : '' !!}
 		{{ csrf_field() }}
@@ -61,7 +59,7 @@
                     <input type="radio" name="status" id="status_enabled" class="ickeck-input" value="1" @isset($status) @if($status==1) checked="checked" @endif @endisset>
                     <label for="status_enabled" class="form-check-label">启用</label>
                 </div>
-                <div class="ickeck-box">    
+                <div class="ickeck-box">
                     <input type="radio" name="status" id="status_disable" class="ickeck-input" value="0"  @isset($status) @if($status==0) checked="checked" @endif @endisset>
                     <label for="status_disable" class="form-check-label">禁用</label>
                 </div>
@@ -79,7 +77,6 @@
             </div>
         </div>
     </form>
-     </div>
 </div>
 @stop
 

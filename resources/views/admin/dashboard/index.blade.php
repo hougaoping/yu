@@ -1,6 +1,5 @@
 @extends('admin.layouts.admin')
 @section('content')
-<div class="content-section">
 <div class="card">
 	<div class="card-header">系统信息</div>
 	<div class="table-responsive">
@@ -41,6 +40,5 @@
 			</tbody>
 		</table>
 	</div>
-</div>
 </div>
 @stop

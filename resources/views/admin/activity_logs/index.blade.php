@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="content-section">
-	<div class="title-section pb-4 mb-4">
+<div class="content-wrapper">
+	<div class="pb-4 mb-4">
 	    <h3>平台操作日志</h3>
 	</div>
-	<div class="action-section row mb-4">
+	<div class="row mb-4">
 		<div class="col-md-5">
 		    <form name="search" method="get" action="">
 		    	<div class="input-group">

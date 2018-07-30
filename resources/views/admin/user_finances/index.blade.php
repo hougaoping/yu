@@ -1,11 +1,11 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-<div class="content-section">
-	<div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
+<div class="content-wrapper">
+	<div class="mb-4 pb-4 d-flex justify-content-between align-items-center">
 	    <h2>财务明细</h2>
 	</div>
-	<div class="action-section row mb-4">
+	<div class="row mb-4">
 		<div class="col-md-7">
 		    <form name="search" method="get" action="" autocomplete="off">
 		    	<div class="input-group">

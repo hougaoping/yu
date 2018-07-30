@@ -1,12 +1,12 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-<div class="content-section">
-    <div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
+<div class="content-wrapper">
+    <div class="mb-4 pb-4 d-flex justify-content-between align-items-center">
         <h2>充值</h2>
         <a href="{{ route('admin.users.index') }}" class="btn btn-primary">用户列表</a>
     </div>
-    <div class="form-section">
+    <div class="form-wrapper">
         <form method="post" action="{{ route('admin.users.charge', $user['id'])}}" autocomplete="off" id="form">
             {{ csrf_field() }}
             <input type="hidden" name="token" value="{{ $token }}">

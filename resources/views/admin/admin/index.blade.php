@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="content-section">
-	<div class="title-section mb-5 d-flex justify-content-between align-items-center">
+<div class="content-wrapper">
+	<div class="mb-5 d-flex justify-content-between align-items-center">
 	    <h2>管理员列表</h2>
 	    <a href="{{ route('admin.admin.create') }}" class="btn btn-primary">添加管理员</a>
 	</div>

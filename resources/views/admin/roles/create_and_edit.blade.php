@@ -1,62 +1,60 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-<div class="content-section">
-    <div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
+<div class="form-wrapper">
+    <div class="mb-4 pb-4 d-flex justify-content-between align-items-center">
         <h2>{{ isset($role['id']) ? '编辑角色' : '添加角色'}}</h2>
     </div>
-    <div class="form-section">
-        <form method="post" action="{{ isset($role['id']) ? route('admin.roles.update', $role['id']) : route('admin.roles.store') }}" autocomplete="off" id="form">
-            {!! isset($role['id']) ? '<input type="hidden" name="_method" value="PUT">' : '' !!}
-            {{ csrf_field() }}
-            <div class="form-group row">
-                <label for="input-name" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">角色名称：</label>
-                <div class="col-md-7 col-lg-5">
-                    <input type="text" name="name" id="input-name" value="@isset($role['name']){{ $role['name'] }}@endisset" class="form-control">
-                </div>
+    <form method="post" action="{{ isset($role['id']) ? route('admin.roles.update', $role['id']) : route('admin.roles.store') }}" autocomplete="off" id="form">
+        {!! isset($role['id']) ? '<input type="hidden" name="_method" value="PUT">' : '' !!}
+        {{ csrf_field() }}
+        <div class="form-group row">
+            <label for="input-name" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">角色名称：</label>
+            <div class="col-md-7 col-lg-5">
+                <input type="text" name="name" id="input-name" value="@isset($role['name']){{ $role['name'] }}@endisset" class="form-control">
             </div>
-            <div class="form-group row">
-                <label for="" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">角色权限：</label>
-                <div class="col-md-10">
-                    <div class="checkboxs">
-                        @foreach ($permissions as $permission)
-                        <dl>
-                            <dt><span class="ctrl-box"><label><input type="checkbox"><i></i><u>{{ $permission['name'] }}</u></label></span></dt>
-                            <dd>
-                                <ul>
-                                @foreach ($permission['items'] as $route => $name)
-                                <li><span class="ctrl-box"><label><input type="checkbox" name="permissions[]" value="{{ $route }}" <?php
-                                if (isset($role['permissions'])) {
-                                    if (strpos($route, '|')) {
-                                        $hasMany = explode('|', $route);
-                                        foreach ($hasMany as $_route) {
-                                            if (in_array($_route, json_decode($role['permissions']))) {
-                                                echo ' checked="checked"';
-                                            }
-                                            break;
-                                        }
-                                    }else {
-                                        if (in_array($route, json_decode($role['permissions']))) {
+        </div>
+        <div class="form-group row">
+            <label for="" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">角色权限：</label>
+            <div class="col-md-10">
+                <div class="checkboxs">
+                    @foreach ($permissions as $permission)
+                    <dl>
+                        <dt><span class="ctrl-box"><label><input type="checkbox"><i></i><u>{{ $permission['name'] }}</u></label></span></dt>
+                        <dd>
+                            <ul>
+                            @foreach ($permission['items'] as $route => $name)
+                            <li><span class="ctrl-box"><label><input type="checkbox" name="permissions[]" value="{{ $route }}" <?php
+                            if (isset($role['permissions'])) {
+                                if (strpos($route, '|')) {
+                                    $hasMany = explode('|', $route);
+                                    foreach ($hasMany as $_route) {
+                                        if (in_array($_route, json_decode($role['permissions']))) {
                                             echo ' checked="checked"';
                                         }
+                                        break;
+                                    }
+                                }else {
+                                    if (in_array($route, json_decode($role['permissions']))) {
+                                        echo ' checked="checked"';
                                     }
                                 }
-                                ?>><i></i><u>{{ $name }}</u></label></span></li>
-                                @endforeach
-                                </ul>
-                            </dd>
-                        </dl>
-                       @endforeach
-                    </div>
+                            }
+                            ?>><i></i><u>{{ $name }}</u></label></span></li>
+                            @endforeach
+                            </ul>
+                        </dd>
+                    </dl>
+                   @endforeach
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="col-md-7 col-lg-5 offset-md-2">
-                    <button type="submit" class="btn btn-primary" id="btn-submit">保存</button>
-                </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-7 col-lg-5 offset-md-2">
+                <button type="submit" class="btn btn-primary" id="btn-submit">保存</button>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>
 @stop
 
@@ -146,13 +144,13 @@ $(function(){
 			name : {
 				required : true,
 			},
-		  
+
 		},
 		messages : {
 			name : {
 				required : '请输入角色名称',
 			},
-			
+
 		},
 		submitHandler : function(){
 			$('#form').ajaxPost();

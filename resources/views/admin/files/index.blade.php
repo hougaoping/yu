@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="content-section">
-	<div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
+<div class="content-wrapper">
+	<div class="mb-4 pb-4 d-flex justify-content-between align-items-center">
 	    <h2>文件列表</h2>
 	</div>
 
-	<div class="action-section row mb-4">
+	<div class="row mb-4">
 		<div class="col-md-5">
 		    <form name="search" method="get" action="">
 		    	<div class="input-group">

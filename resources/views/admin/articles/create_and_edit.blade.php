@@ -1,11 +1,10 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-<div class="content-section">
-    <div class="title-section mb-4 pb-4 d-flex justify-content-between align-items-center">
+<div class="form-wrapper">
+    <div class="mb-4 pb-4 d-flex justify-content-between align-items-center">
         <h2>{{ isset($article['id']) ? '编辑文章' : '添加文章'}}</h2>
     </div>
-    <div class="form-section">
     <form action="{{ isset($article['id']) ? route('admin.articles.update', $article['id']) : route('admin.articles.store') }}" method="post" id="form">
 		{!! isset($article['id']) ? '<input type="hidden" name="_method" value="PUT">' : '' !!}
 		{{ csrf_field() }}
@@ -70,7 +69,6 @@
             </div>
         </div>
     </form>
-     </div>
 </div>
 @stop
 

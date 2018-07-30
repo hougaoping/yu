@@ -370,26 +370,37 @@ table .opt {
     overflow:auto;
     padding:20px;
 
-    .table {
-        margin-bottom:20px;
+    // 标题
+    h2, h3 {
+        font-size:1.7rem;
+        margin:0;
     }
 
-    .table-responsive {
-        .table {
-            min-width:700px;
+    // 表单页面
+    .form-wrapper {
+        .form-group {
+            padding:7px 0;
+            margin:0;
+            border-top:1px solid #eee;
+            border-bottom:1px solid #eee;
+            margin-top:-1px;
         }
     }
 
-    .content-section {
+    // 内容页面
+    .content-wrapper {
         min-height: auto;
-        .title-section {
-            h2 {
-                font-size:1.7rem;
+        .list {
+            .table {
                 margin:0;
             }
-        }
-        
-        .list {
+
+            .table-responsive {
+                .table {
+                    min-width:700px;
+                }
+            }
+
             .table th i.sort {
                 background-image: url('/images/admin/field-sort.png');
                 background-image:image-set(url('/images/admin/field-sort.png')1x,url('/images/admin/field-sort@x2.png')2x) ;
@@ -405,10 +416,12 @@ table .opt {
             .table th i.sort-up {
                 background-position: right -118px;
             }
+
             .table th i.sort-down {
                 background-position: right -58px;
             }
         }
+
         .no-content {
             text-align:center;
             padding:40px 0;
@@ -416,15 +429,6 @@ table .opt {
     }
 }
 
-.form-section {
-    .form-group {
-        padding:7px 0;
-        margin:0;
-        border-top:1px solid #eee;
-        border-bottom:1px solid #eee;
-        margin-top:-1px;
-    }
-}
 
 #cpmsg {
     background-image:url('/images/admin/cpmsg/caution.png');

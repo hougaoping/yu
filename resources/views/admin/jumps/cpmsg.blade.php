@@ -1,8 +1,8 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-<div class="content-section">
-<div class="title-section d-flex justify-content-between align-items-center">
+<div class="content-wrapper">
+<div class="d-flex justify-content-between align-items-center border-bottom pb-4">
     <h2>操作通知</h2>
 </div>
 <div id="cpmsg" class="<?php echo $code == 0 ? 'error' : 'success'?>">

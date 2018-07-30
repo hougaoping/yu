@@ -10845,24 +10845,33 @@ table .opt {
   padding: 20px;
 }
 
-.content .table {
-  margin-bottom: 20px;
-}
-
-.content .table-responsive .table {
-  min-width: 700px;
-}
-
-.content .content-section {
-  min-height: auto;
-}
-
-.content .content-section .title-section h2 {
+.content h2,
+.content h3 {
   font-size: 1.7rem;
   margin: 0;
 }
 
-.content .content-section .list .table th i.sort {
+.content .form-wrapper .form-group {
+  padding: 7px 0;
+  margin: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: -1px;
+}
+
+.content .content-wrapper {
+  min-height: auto;
+}
+
+.content .content-wrapper .list .table {
+  margin: 0;
+}
+
+.content .content-wrapper .list .table-responsive .table {
+  min-width: 700px;
+}
+
+.content .content-wrapper .list .table th i.sort {
   background-image: url("/images/admin/field-sort.png");
   background-image: image-set(url("/images/admin/field-sort.png") 1x, url("/images/admin/field-sort@x2.png") 2x);
   background-image: -webkit-image-set(url("/images/admin/field-sort.png") 1x, url("/images/admin/field-sort@x2.png") 2x);
@@ -10874,25 +10883,17 @@ table .opt {
   text-decoration: none;
 }
 
-.content .content-section .list .table th i.sort-up {
+.content .content-wrapper .list .table th i.sort-up {
   background-position: right -118px;
 }
 
-.content .content-section .list .table th i.sort-down {
+.content .content-wrapper .list .table th i.sort-down {
   background-position: right -58px;
 }
 
-.content .content-section .no-content {
+.content .content-wrapper .no-content {
   text-align: center;
   padding: 40px 0;
-}
-
-.form-section .form-group {
-  padding: 7px 0;
-  margin: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  margin-top: -1px;
 }
 
 #cpmsg {
