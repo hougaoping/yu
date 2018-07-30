@@ -12,11 +12,8 @@ class FinancesExport implements FromCollection, WithHeadings
 {
     use Exportable;
 
-    public function __construct($user, $enum, $start_time, $end_time) {
-        $this->user       = $user;
-        $this->enum       = $enum;
-        $this->start_time = $start_time;
-        $this->end_time   = $end_time;
+    public function __construct($user) {
+        $this->user = $user;
     }
 
     // 添加表头
@@ -32,6 +29,6 @@ class FinancesExport implements FromCollection, WithHeadings
 
     public function collection()
     {
-        return UserFinance::query()->withSearch($this->user, $this->enum, $this->start_time, $this->end_time)->get(['id', 'enum', 'change', 'amount', 'created_at']);
+        return UserFinance::query()->withSearch($this->user)->get(['id', 'enum', 'change', 'amount', 'created_at']);
     }
 }
