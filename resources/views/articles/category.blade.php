@@ -15,7 +15,7 @@
                 <ul class="article_list">
 					@foreach ($articles as $article)
 					<li>
-						<a href="{{ route('article.index', $article) }}" target="_blank" title="">{{ $article->title }}</a>
+						<a href="{{ route('article.index', $article) }}" target="" title="{{ $article->title }}">{{ $article->title }}</a>
 						<div> {{ description($article->content, 120) }} </div> 
 						<div class="info">
                             <span class="time">{{ $article->date_time }}</span>

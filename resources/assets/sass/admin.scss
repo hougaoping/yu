@@ -381,10 +381,8 @@ table .opt {
     .content-wrapper {
         min-height: auto;
         .list {
-            .table-responsive {
-                .table {
-                    min-width:700px;
-                }
+            .table {
+                min-width:700px;
             }
 
             .table th i.sort {

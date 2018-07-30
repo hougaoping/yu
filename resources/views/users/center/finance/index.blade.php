@@ -14,7 +14,7 @@
 
             <div class="list-wrapper">
                 <div class="row pt-5 pb-4 d-flex justify-content-start align-items-center">
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <form name="search" method="get" action="" autocomplete="off">
                             <div class="input-group">
                                 <input name="start_time" type="text" class="search date-picker form-control" value="{{ request()->input('start_time') }}" placeholder="起始时间">
@@ -40,16 +40,16 @@
                         <tr class="">
 							<th>@widget('order', ['field' => 'created_at', 'title'=>'时间'])</th>
                             <th>项目</th>
-                            <th>资金变化</th>
-                            <th>余额</th>
+                            <th class="text-right">资金变化</th>
+                            <th class="text-right">余额</th>
                         </tr>
                     </thead>
                     @foreach ($list as $data)
                     <tr>
 						<td>{{ $data->created_at->diffForHumans() }}</td>
                         <td>{{ $enum_money[$data->enum] }}</td>
-                        <td class="text-success">{{ $data->change }}</td>
-                        <td class="text-danger">{{ $data->amount }}</td>
+                        <td class="text-success text-right">{{ $data->change }}</td>
+                        <td class="text-danger text-right">{{ $data->amount }}</td>
                     </tr>
                     @endforeach
                 </table>
