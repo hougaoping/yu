@@ -30,7 +30,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col mt-2 mt-md-0"><a class="btn btn-primary export" href="<?php echo route('center.finances.export') ?>" id="export" onclick="return confirm('确定导出吗？操作可能需要一些时间');">导出Excel</a></div>
+                    <div class="col mt-3 mt-md-0"><a class="btn btn-primary export" href="<?php echo route('center.finances.export') ?>" id="export" onclick="return confirm('确定导出吗？操作可能需要一些时间');">导出Excel</a></div>
                 </div>
             
             <div class="list table-responsive">
