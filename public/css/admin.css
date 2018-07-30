@@ -10768,22 +10768,6 @@ table .opt {
   border-bottom: none;
 }
 
-.pagination-wrapper {
-  padding: 0;
-  padding-top: 20px;
-  border-top: 1px solid #e5e5e5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.pagination-wrapper .pagination {
-  margin: 0;
-}
-
 .main {
   position: absolute;
   left: 200px;
@@ -10792,14 +10776,14 @@ table .opt {
   bottom: 0;
 }
 
+.main.fully {
+  left: 0;
+}
+
 @media (max-width: 767px) {
   .main {
     left: 0px;
   }
-}
-
-.main.fully {
-  left: 0;
 }
 
 .header {

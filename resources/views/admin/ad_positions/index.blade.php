@@ -71,7 +71,7 @@
         @endif
 	</div>
 	@if ($list->hasPages())
-	    <div class="pagination-wrapper">
+	    <div class="pt-4 border-top d-flex justify-content-end align-items-center">
             {{ $list->appends($_GET)->links() }}
         </div>
 	@endif

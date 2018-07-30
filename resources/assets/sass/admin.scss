@@ -304,30 +304,20 @@ table .opt {
     }
 }
 
-.pagination-wrapper {
-	padding:0;
-    padding-top:20px;
-    border-top:1px solid #e5e5e5;
-    display:flex;
-    justify-content: flex-end;
-    .pagination {
-        margin:0;
-    }
-}
-
 .main {
     position: absolute;
     left: 200px;
     right:0;
     top:0;
     bottom:0;
+
+    &.fully {
+        left:0;
+    }
+
     @media (max-width: 767px) {
         left: 0px;
     }
-}
-
-.main.fully {
-    left:0;
 }
 
 .header {
