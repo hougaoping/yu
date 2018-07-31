@@ -11,7 +11,7 @@
             <form action="" method="post" target="" class="form">
     			<div class="list-wrapper p-4">
     				<div class="mb-5 reminder">
-                        <strong class="d-block">您有： <span class="text-red">386</span> 个金币</strong>
+                        <strong class="d-block">您有 <span class="text-red">386</span> 个金币</strong>
     					购买成功后，将直接转入您的金币账户中
     				</div>
                     

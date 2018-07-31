@@ -568,9 +568,14 @@ select.form-control {
                         border: 1px solid #ddd;
                         cursor: pointer;
                         width: 100%;
-                        height: 55px;
-                        line-height: 55px;
+                        height: 75px;
+                        line-height: 75px;
                         text-align: center;
+                        position:relative;
+
+                        &:hover {
+                            background-color:#eee;
+                        }
 
                         &.checked {
                             border: 1px solid #000;

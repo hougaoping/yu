@@ -11053,9 +11053,14 @@ select.form-control {
   border: 1px solid #ddd;
   cursor: pointer;
   width: 100%;
-  height: 55px;
-  line-height: 55px;
+  height: 75px;
+  line-height: 75px;
   text-align: center;
+  position: relative;
+}
+
+.center .main-container .container-wrapper .list-wrapper .coins .item:hover {
+  background-color: #eee;
 }
 
 .center .main-container .container-wrapper .list-wrapper .coins .item.checked {
