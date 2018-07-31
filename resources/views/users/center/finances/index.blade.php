@@ -59,11 +59,11 @@
                 @endif
             </div>
 		</div>
-            @if ($list->hasPages())
-                <div class="pagination-wrapper">
-                    {{ $list->appends($_GET)->links() }}
-                </div>
-            @endif
+		@if ($list->hasPages())
+			<div class="pagination-wrapper">
+				{{ $list->appends($_GET)->links() }}
+			</div>
+		@endif
         </div>
     </div>
 </div>
