@@ -46,17 +46,17 @@ class UsersController extends BaseController
             }
             $request->session()->pull('token', null);
 
-
             DB::beginTransaction();
-            try{
+            try {
                 $user->amount = $user->amount + $request->charge;
                 $user->save();
                 UserFinance::create(['user_id'=>$user->id,'causer_type' => Auth::user()->getMorphClass(), 'causer_id' => Auth::id(), 'enum' => 'CHARGE_ADD', 'change' => $request->charge, 'description' => $request->description, 'amount' => $user->amount]);
                 DB::commit();
             } catch (\Exception $e) {
-                $this->error('出现异常，事务回滚');
                 DB::rollBack();
+                $this->error('充值失败');
             }
+
             $this->success('充值成功', route('admin.users.index'));
         }
     }

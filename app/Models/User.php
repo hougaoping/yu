@@ -58,10 +58,16 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\UserFeedback');
     }
 
-	// 用户的财务信息
+	// 用户的财务明细
 	public function finances()
     {
         return $this->hasMany('App\Models\UserFinance');
+    }
+	
+	// 用户的金币明细
+	public function coins()
+    {
+        return $this->hasMany('App\Models\UserCoin');
     }
 
     public function recordLastLoginLog() {
