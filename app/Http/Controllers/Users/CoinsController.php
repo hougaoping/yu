@@ -19,8 +19,7 @@ class CoinsController extends BaseController
         if($request->isMethod('get')) {
             return view('users.center.coins.index');
         } else {
-            
-            $this->success('保存成功', '', ['direct'=>false]);
+            $this->success('保存成功');
         }
     }
 }
