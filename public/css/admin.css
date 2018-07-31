@@ -10835,6 +10835,18 @@ table .opt {
   margin: 0;
 }
 
+.content .id-tabs a {
+  padding: 15px 30px;
+  color: #555;
+  display: inline-block;
+}
+
+.content .id-tabs .selected {
+  font-weight: bold;
+  color: #0057ff;
+  border-bottom: 2px solid #0057ff;
+}
+
 .content .form-wrapper .form-group {
   padding: 7px 0;
   margin: 0;

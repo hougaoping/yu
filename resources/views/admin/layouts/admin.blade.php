@@ -17,12 +17,12 @@
 <script src="{{ asset('js/datetimepicker/build/jquery.datetimepicker.full.min.js') }}"></script>
 <link href="{{ asset('js/icheck/skins/minimal/minimal.css') }}" rel="stylesheet">
 <script src="{{ asset('js/icheck/icheck.js') }}"></script>
+<script src="{{ asset('js/idTabs.js') }}"></script>
 <!--
 <script src="{{ asset('js/js.cookie.js') }}"></script>
 <script src="{{ asset('js/layer/layer.js') }}"></script>
 <script src="{{ asset('js/open.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.css') }}"></link>
-<script src="{{ asset('js/idTabs.js') }}"></script>
 -->
 @stack('links')
 </head>
