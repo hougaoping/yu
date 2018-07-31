@@ -34,6 +34,7 @@ Route::name('center.')->group(function () {
         Route::match(['get'], 'finances', 'Users\FinancesController@index')->name('finances.index');
         Route::match(['get'], 'finances/export', 'Users\FinancesController@export')->name('finances.export');
         Route::match(['get'], 'finances/coins', 'Users\FinancesController@coins')->name('finances.coins');
+        Route::match(['get'], 'finances/coins/export', 'Users\FinancesController@coinsExport')->name('finances.coins.export');
         Route::match(['get', 'post'], 'coins', 'Users\CoinsController@index')->name('coins.index');
         Route::match(['get', 'post'], 'feedback', 'Users\FeedbackController@index')->name('feedback.index');
         Route::match(['get', 'post'], 'profile', 'Users\ProfileController@index')->name('profile.index');

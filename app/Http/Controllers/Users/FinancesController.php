@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\User;
 use App\Models\UserFinance;
+use App\Models\UserCoin;
 use App\Exports\FinancesExport;
+use App\Exports\CoinsExport;
+
 use Excel;
 
 class FinancesController extends BaseController
@@ -30,6 +33,13 @@ class FinancesController extends BaseController
     }
 
     public function coins(Request $request) {
-        return 'coin';
+        $userCoin = new UserCoin();
+        $list = $userCoin->withOrder($this->_order())->withSearch(Auth::id(), $request->enum, $request->start_time, $request->end_time)->paginate($this->_rows());
+        $enum_coin = config('enum.coin');
+        return view('users.center.finances.coins', compact('list', 'enum_coin'));
+    }
+
+    public function coinsExport(Request $request) {
+       return Excel::download(new CoinsExport(Auth::id()), 'coins.xlsx');
     }
 }
