@@ -25,6 +25,8 @@ $(function() {
     $(window).resize(setFooter)
 });
 
+    
+
 function setFooter() {
     var hasScroller = document.documentElement.clientHeight < document.documentElement.scrollHeight;
     if (!hasScroller) {
