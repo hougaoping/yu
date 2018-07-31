@@ -19,7 +19,10 @@ class CoinsController extends BaseController
         if($request->isMethod('get')) {
             return view('users.center.coins.index');
         } else {
-            $this->success('保存成功');
+            if (!$request->has('coins_radio')) {
+                $this->error('请选择金币数量');
+            }
+            $this->success('金币购买成功');
         }
     }
 }

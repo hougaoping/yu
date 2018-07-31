@@ -35898,7 +35898,7 @@ $(function () {
 
         var _this = $(this);
         _this.addClass("selected");
-        _this.find('input').attr("selected", true);
+        _this.find('input').attr("checked", true);
     });
 
     setFooter();

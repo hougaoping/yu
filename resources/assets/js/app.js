@@ -18,14 +18,14 @@ $(function() {
 
         var _this = $(this);
         _this.addClass("selected");
-        _this.find('input').attr("selected", true);
+        _this.find('input').attr("checked", true);
     });
 
     setFooter();
     $(window).resize(setFooter)
 });
 
-    
+
 
 function setFooter() {
     var hasScroller = document.documentElement.clientHeight < document.documentElement.scrollHeight;
