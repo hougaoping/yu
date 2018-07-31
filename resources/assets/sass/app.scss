@@ -265,8 +265,8 @@ select.form-control {
             position: relative;
             display: block;
             position: relative;
-            height: 37px;
-            line-height: 37px;
+            height: 39px;
+            line-height: 39px;
             padding: 0 20px;
             color:#555;
             
@@ -459,8 +459,8 @@ select.form-control {
                 position: relative;
                 display:block;
                 position: relative;
-                height: 37px;
-                line-height: 37px;
+                height: 39px;
+                line-height: 39px;
                 padding: 0 20px;
                 &:hover {
                     color:#555;
@@ -551,6 +551,8 @@ select.form-control {
                 .reminder {
                     font-size:15px;
                     padding:20px;
+                    color: #857221;
+                    background-color: #fff8d9;
                     border:none;
                 }
 

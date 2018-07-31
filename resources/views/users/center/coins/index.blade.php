@@ -10,15 +10,15 @@
             </div>
             <form action="" method="post" target="" class="form">
     			<div class="list-wrapper p-4">
-    				<div class="alert alert-primary mb-5 reminder">
+    				<div class="mb-5 reminder">
                         <strong class="d-block">您有： <span class="text-red">386</span> 个金币</strong>
-    					金币购买成功后，将直接转入您的金币账户中
+    					购买成功后，将直接转入您的金币账户中
     				</div>
                     
                         <div id="coins" class="coins">
                             <h4 class="">请选择要购买的金币数量：</h4>
                             <div class="row">
-                                <div class="col-md-6 mb-3"><div class="item checked"><input name="coins_radio" type="radio" value="20"><strong>20 金币</strong> = ￥21.00 元</div></div>
+                                <div class="col-md-6 mb-3"><div class="item"><input name="coins_radio" type="radio" value="20"><strong>20 金币</strong> = ￥21.00 元</div></div>
                                 <div class="col-md-6 mb-3"><div class="item"><input name="coins_radio" type="radio" value="50"><strong>50 金币</strong> =￥52.50 元</div></div>
                                 <div class="col-md-6 mb-3"><div class="item"><input name="coins_radio" type="radio" value="100"><strong>100 金币</strong> =￥105.00 元</div></div>
                                 <div class="col-md-6 mb-3"><div class="item"><input name="coins_radio" type="radio" value="200"><strong>200 金币</strong> =￥210.00 元</div></div>
