@@ -27,11 +27,15 @@ class CoinsController extends BaseController
                 $this->error('请选择金币数量');
             }
             
+             // 计算所需费用
+            $money = $request->coins_radio + ((float) setting('money_coins_percent') / 100) * $request->coins_radio;
+            if (Auth::user()->amount < $money) {
+                $this->error('余额不足');
+            }
+
             DB::beginTransaction();
             try {
-                // 计算所需费用
-                $money = $request->coins_radio + ((float) setting('money_coins_percent') / 100) * $request->coins_radio;
-                
+
                 Auth::user()->coin = Auth::user()->coin + $request->coins_radio;
                 Auth::user()->amount = Auth::user()->amount - $money;
                 Auth::user()->save();
