@@ -456,11 +456,11 @@ select.form-control {
             background-color:#fff;
 
             .list-title {
+                display:block;
                 height: 57px;
                 line-height: 57px;
                 padding: 0 30px;
                 color:#555;
-                font-size:15px;
                 font-weight:bold;
             }
 
@@ -558,10 +558,10 @@ select.form-control {
             }
 
             .list-wrapper {
-                padding:0 40px;
+                padding:0 30px;
 
                 @media (max-width: 1200px) {
-                    padding:0 20px;
+                    padding:0 15px;
                 }
 
                 .reminder {
