@@ -39,16 +39,16 @@
                         <tr class="">
 							<th>@widget('order', ['field' => 'created_at', 'title'=>'时间'])</th>
                             <th>项目</th>
-                            <th class="text-right">资金变化</th>
-                            <th class="text-right">余额</th>
+                            <th class="text-left">资金变化</th>
+                            <th class="text-left">余额</th>
                         </tr>
                     </thead>
                     @foreach ($list as $data)
                     <tr>
 						<td>{{ $data->created_at->diffForHumans() }}</td>
                         <td>{{ $data->type }}</td>
-                        <td class="text-success text-right">{{ $data->change }}</td>
-                        <td class="text-danger text-right">{{ $data->amount }}</td>
+                        <td class="text-success text-left">{{ $data->change }}</td>
+                        <td class="text-danger text-left">{{ $data->amount }}</td>
                     </tr>
                     @endforeach
                 </table>

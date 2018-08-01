@@ -16,8 +16,6 @@ class CreateUserCoinsTable extends Migration
         Schema::create('user_coins', function (Blueprint $table) {
             $table->increments('id');
 			$table->unsignedInteger('user_id')->index();
-			$table->string('causer_type');
-			$table->unsignedInteger('causer_id')->index();
 			$table->string('description')->nullable();
 			$table->string('enum')->index(); 
 			$table->unsignedInteger('change');

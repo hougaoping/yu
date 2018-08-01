@@ -16,7 +16,9 @@ class UserCoin extends Model
 	// protected $fillable = [];
 
 	protected $guarded = [];
-
+		
+	protected static $logAttributes = ['id', 'user_id', 'description', 'enum', 'change', 'coin', 'created_at'];
+	
     public function user()
     {
         return $this->belongsTo('App\Models\User');

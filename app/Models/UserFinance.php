@@ -16,7 +16,9 @@ class UserFinance extends Model
 	// protected $fillable = [];
 
 	protected $guarded = [];
-
+		
+	protected static $logAttributes = ['id', 'user_id', 'description', 'enum', 'change', 'amount', 'created_at'];
+	
     public function user()
     {
         return $this->belongsTo('App\Models\User');

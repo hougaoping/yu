@@ -50,7 +50,7 @@ class UsersController extends BaseController
             try {
                 $user->amount = $user->amount + $request->charge;
                 $user->save();
-                UserFinance::create(['user_id'=>$user->id,'causer_type' => Auth::user()->getMorphClass(), 'causer_id' => Auth::id(), 'enum' => 'CHARGE_ADD', 'change' => $request->charge, 'description' => $request->description, 'amount' => $user->amount]);
+                UserFinance::create(['user_id'=>$user->id, 'enum' => 'CHARGE_ADD', 'change' => $request->charge, 'description' => $request->description, 'amount' => $user->amount]);
                 DB::commit();
             } catch (\Exception $e) {
                 DB::rollBack();

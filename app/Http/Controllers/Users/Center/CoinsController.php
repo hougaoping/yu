@@ -38,8 +38,8 @@ class CoinsController extends BaseController
                 Auth::user()->coin = Auth::user()->coin + $request->coins_radio;
                 Auth::user()->amount = Auth::user()->amount - $money;
                 Auth::user()->save();
-                UserCoin::create(['user_id' => Auth::user()->id, 'causer_type' => Auth::user()->getMorphClass(), 'causer_id' => Auth::id(), 'enum' => 'BUY_COIN', 'change' => $request->coins_radio, 'description' => '购买金币', 'coin' => Auth::user()->coin]);
-                UserFinance::create(['user_id' => Auth::user()->id, 'causer_type' => Auth::user()->getMorphClass(), 'causer_id' => Auth::id(), 'enum' => 'BUY_COIN', 'change' => -1 * $money, 'description' => '购买金币', 'amount' => Auth::user()->amount]);
+                UserCoin::create(['user_id' => Auth::user()->id, 'enum' => 'BUY_COIN', 'change' => $request->coins_radio, 'description' => '购买金币', 'coin' => Auth::user()->coin]);
+                UserFinance::create(['user_id' => Auth::user()->id, 'enum' => 'BUY_COIN', 'change' => -1 * $money, 'description' => '购买金币', 'amount' => Auth::user()->amount]);
                 DB::commit();
             } catch (\Exception $e) {
                 DB::rollBack();

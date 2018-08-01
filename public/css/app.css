@@ -11062,12 +11062,6 @@ select.form-control {
   padding-left: 75px;
 }
 
-.center .main-container .container-wrapper .list-wrapper .coins h4 {
-  color: #999;
-  font-size: 15px;
-  padding-bottom: 10px;
-}
-
 .center .main-container .container-wrapper .list-wrapper .coins .item {
   border: 1px solid #ddd;
   cursor: pointer;

@@ -15,7 +15,6 @@
     					购买成功后，将直接转入您的金币账户中
     				</div>
                     <div id="coins" class="coins">
-                        <h4 class="">请选择要购买的金币数量：</h4>
                         <div class="row">
                             <div class="col-md-6 mb-3"><div class="item input_radio"><input name="coins_radio" type="radio" value="20"><strong>20 金币</strong> = ￥{{ 20 + ((float) setting('money_coins_percent')) * 20 }} 元</div></div>
                             <div class="col-md-6 mb-3"><div class="item input_radio"><input name="coins_radio" type="radio" value="50"><strong>50 金币</strong> =￥{{ 50 + ((float) setting('money_coins_percent')) * 50 }} 元</div></div>
