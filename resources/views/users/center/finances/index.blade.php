@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="list-wrapper">
-                <div class="row pt-5 pb-4 d-flex justify-content-start align-items-center">
+                <div class="row pt-5 pb-5 d-flex justify-content-start align-items-center">
                     <div class="col-md-7">
                         <form name="search" method="get" action="" autocomplete="off" id="filter-form">
                             <div class="input-group">
