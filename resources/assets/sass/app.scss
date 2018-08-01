@@ -564,11 +564,16 @@ select.form-control {
                     padding:0 15px;
                 }
 
-                .reminder {
+                .mycoin {
                     padding:20px;
                     color: #857221;
                     background-color: #fff8d9;
                     border:none;
+                    background-image: url(/images/icons/coin.png);
+                    background-repeat: no-repeat;
+                    background-position: 15px center;
+                    background-size:50px;
+                    padding-left: 75px;
                 }
 
                 .coins {

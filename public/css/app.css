@@ -11050,11 +11050,16 @@ select.form-control {
   }
 }
 
-.center .main-container .container-wrapper .list-wrapper .reminder {
+.center .main-container .container-wrapper .list-wrapper .mycoin {
   padding: 20px;
   color: #857221;
   background-color: #fff8d9;
   border: none;
+  background-image: url(/images/icons/coin.png);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 50px;
+  padding-left: 75px;
 }
 
 .center .main-container .container-wrapper .list-wrapper .coins h4 {

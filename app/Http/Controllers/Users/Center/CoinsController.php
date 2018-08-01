@@ -28,14 +28,13 @@ class CoinsController extends BaseController
             }
             
              // 计算所需费用
-            $money = $request->coins_radio + ((float) setting('money_coins_percent') / 100) * $request->coins_radio;
+            $money = $request->coins_radio + ((float) setting('money_coins_percent')) * $request->coins_radio;
             if (Auth::user()->amount < $money) {
                 $this->error('余额不足');
             }
 
             DB::beginTransaction();
             try {
-
                 Auth::user()->coin = Auth::user()->coin + $request->coins_radio;
                 Auth::user()->amount = Auth::user()->amount - $money;
                 Auth::user()->save();
@@ -44,7 +43,7 @@ class CoinsController extends BaseController
                 DB::commit();
             } catch (\Exception $e) {
                 DB::rollBack();
-                $this->error('购买失败，请联系客服人员');
+                $this->error('系统异常，请联系客服人员');
             }
 
             $this->success('购买成功');

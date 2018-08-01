@@ -74,16 +74,17 @@ $(function(){
           setting_name : {
               required : true,
           },
-          setting_money_coins : {
+          setting_money_coins_percent : {
               required : true,
+              number:true
           }
         },
         messages : {
             setting_name : {
                 required : '网站名称不能为空',
             },
-            setting_money_coins : {
-                required : '请输入金币购买转化点数',
+            setting_money_coins_percent : {
+                required : '请输入金币购买转化百分比',
             }
         },
 
