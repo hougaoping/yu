@@ -11051,7 +11051,6 @@ select.form-control {
 }
 
 .center .main-container .container-wrapper .list-wrapper .reminder {
-  font-size: 15px;
   padding: 20px;
   color: #857221;
   background-color: #fff8d9;
@@ -11065,7 +11064,6 @@ select.form-control {
 }
 
 .center .main-container .container-wrapper .list-wrapper .coins .item {
-  font-size: 15px;
   border: 1px solid #ddd;
   cursor: pointer;
   width: 100%;
