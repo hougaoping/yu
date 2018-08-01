@@ -253,24 +253,23 @@ select.form-control {
     .sidebar {
         .menu-list {
             background-color:#fff;
-        }
-
-        .menu-list .list-item {
-            position: relative;
-            display: block;
-            position: relative;
-            height: 39px;
-            line-height: 39px;
-            padding: 0 20px;
-            color:#555;
-            
-            &.active {
-                color: #555;
-                background-color: #ffdc40;
-            }
-            &:hover {
-                color: #555;
-                background-color: #ffdc40;
+            .list-item {
+                position: relative;
+                display: block;
+                position: relative;
+                height: 39px;
+                line-height: 39px;
+                padding: 0 30px;
+                color:#555;
+                
+                &.active {
+                    color: #555;
+                    background-color: #ffdc40;
+                }
+                &:hover {
+                    color: #555;
+                    background-color: #ffdc40;
+                }
             }
         }
 
@@ -455,17 +454,29 @@ select.form-control {
 
         .menu-list {
             background-color:#fff;
+            padding:20px 0;
+
+            .list-title {
+                height: 57px;
+                line-height: 57px;
+                padding: 0 30px;
+                color:#555;
+                font-size:15px;
+                font-weight:bold;
+            }
+
             .list-item {
                 position: relative;
                 display:block;
                 position: relative;
                 height: 39px;
                 line-height: 39px;
-                padding: 0 20px;
+                padding: 0 30px;
                 &:hover {
                     color:#555;
                     background-color:#ffdc40;
                 }
+
                 &.active {
                     color:#555;
                     background-color:#ffdc40;
@@ -515,11 +526,12 @@ select.form-control {
                         display:inline-block;
                         padding:20px 40px;
                         margin-bottom:-1px;
-                        color:#999;
+                        color:#555;
 
                         &.active {
                             border-bottom:2px solid #000;
-                            color:#000;
+                            color:#555;
+                            font-weight:bold;
                         }
                     }
                 }
@@ -547,7 +559,12 @@ select.form-control {
             }
 
             .list-wrapper {
-                padding:0 20px;
+                padding:0 40px;
+
+                @media (max-width: 1200px) {
+                    padding:0 20px;
+                }
+
                 .reminder {
                     font-size:15px;
                     padding:20px;

@@ -10731,7 +10731,7 @@ select.form-control {
   position: relative;
   height: 39px;
   line-height: 39px;
-  padding: 0 20px;
+  padding: 0 30px;
   color: #555;
 }
 
@@ -10933,6 +10933,16 @@ select.form-control {
 
 .center .sidebar .menu-list {
   background-color: #fff;
+  padding: 20px 0;
+}
+
+.center .sidebar .menu-list .list-title {
+  height: 57px;
+  line-height: 57px;
+  padding: 0 30px;
+  color: #555;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .center .sidebar .menu-list .list-item {
@@ -10941,7 +10951,7 @@ select.form-control {
   position: relative;
   height: 39px;
   line-height: 39px;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .center .sidebar .menu-list .list-item:hover {
@@ -10999,12 +11009,13 @@ select.form-control {
   display: inline-block;
   padding: 20px 40px;
   margin-bottom: -1px;
-  color: #999;
+  color: #555;
 }
 
 .center .main-container .container-wrapper .header-line .tabs a.active {
   border-bottom: 2px solid #000;
-  color: #000;
+  color: #555;
+  font-weight: bold;
 }
 
 .center .main-container .container-wrapper .form-group-wrapper .form-group {
@@ -11031,7 +11042,13 @@ select.form-control {
 }
 
 .center .main-container .container-wrapper .list-wrapper {
-  padding: 0 20px;
+  padding: 0 40px;
+}
+
+@media (max-width: 1200px) {
+  .center .main-container .container-wrapper .list-wrapper {
+    padding: 0 20px;
+  }
 }
 
 .center .main-container .container-wrapper .list-wrapper .reminder {
