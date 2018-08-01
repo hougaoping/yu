@@ -88,6 +88,11 @@ return [
                     'active'=> 'admin.user_finances.*'
                 ],
                 [
+                    'title' => '金币明细',
+                    'route' => 'admin.user_coins.index',
+                    'active'=> 'admin.user_coins.*'
+                ],
+                [
                     'title' => '用户反馈',
                     'route' => 'admin.user_feedbacks.index',
                     'active'=> 'admin.user_feedbacks.*'

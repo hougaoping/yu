@@ -72,6 +72,7 @@ Route::name('admin.')->group(function () {
         Route::match(['get','post'], 'users/{user}/charge', 'UsersController@charge')->name('users.charge');
         Route::resource('user_emails', 'UserEmailsController', ['only'=>['index']]);
         Route::resource('user_finances', 'UserFinancesController', ['only'=>['index']]);
+        Route::resource('user_coins', 'UserCoinsController', ['only'=>['index']]);
         Route::resource('user_feedbacks', 'UserFeedbacksController', ['only'=>['index']]);
         Route::resource('admin', 'AdminController', ['except'=>['show']]);
         Route::resource('roles', 'RolesController', ['except'=>['show']]);

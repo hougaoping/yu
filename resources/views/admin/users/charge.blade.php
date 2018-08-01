@@ -3,7 +3,7 @@
 @section('content')
 <div class="content-wrapper">
     <div class="mb-4 pb-4 d-flex justify-content-between align-items-center">
-        <h2>充值</h2>
+        <h2>用户充值</h2>
         <a href="{{ route('admin.users.index') }}" class="btn btn-primary">用户列表</a>
     </div>
     <div class="form-wrapper">

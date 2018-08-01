@@ -106,6 +106,12 @@ return [
             ],
         ],
         [
+            'name' => '金币明细',
+            'items' => [
+               'admin.user_coins.index' => '金币明细',
+            ],
+        ],
+        [
             'name' => '用户反馈',
             'items' => [
                'admin.user_feedbacks.index' => '用户反馈',

@@ -37,10 +37,14 @@
 		    @foreach ($list as $data)
 	        <tr>
 				<td>{{ $data->id }}</td>
-				<td>
-					<a class="opt" href="{{ route('admin.users.profile', ['id' => $data['id']]) }}">个人信息</a>
-		            <span class="opt-separator"> | </span>
-					<a class="opt" href="{{ route('admin.users.charge', ['id' => $data['id']]) }}">充值</a>
+				<td>	
+					<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">操作</button>
+			        <div class="dropdown-menu">
+			        	<a class="dropdown-item" href="{{ route('admin.users.profile', ['id' => $data['id']]) }}">个人信息</a>
+						<a class="dropdown-item" href="{{ route('admin.user_finances.index', ['uid' => $data['id']]) }}">财务明细</a>
+						<a class="dropdown-item" href="{{ route('admin.user_coins.index', ['uid' => $data['id']]) }}">金币明细</a>
+						<a class="dropdown-item" href="{{ route('admin.users.charge', ['id' => $data['id']]) }}">充值</a>
+			        </div>
 				</td>
 				<td>
 					{{ $data->email }}
