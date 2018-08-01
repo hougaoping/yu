@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Users;
+namespace App\Http\Controllers\Users\Center;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cookie;

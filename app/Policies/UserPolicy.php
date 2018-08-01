@@ -33,4 +33,14 @@ class UserPolicy
     public function permission(User $currentUser) {
         return permission($currentUser, Route::currentRouteName());
     }
+	
+	public function seller(User $currentUser)
+    {
+        return $currentUser->type == 'seller';
+    }
+	
+	public function buyer(User $currentUser)
+    {
+        return $currentUser->type == 'buyer';
+    }
 }

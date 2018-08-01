@@ -29,15 +29,15 @@ route::match(['get','post'], 'forgot/mobile/reset', 'Users\Mobile\ForgotControll
 // 会员中心路由
 Route::name('center.')->group(function () {
     Route::group(['prefix' => 'center'], function() {
-        Route::match(['get', 'post'], 'password', 'Users\PassswordController@index')->name('password.index');
-        Route::match(['get', 'post'], 'safe_password', 'Users\SafePassswordController@index')->name('password.safe_password');
-        Route::match(['get'], 'finances', 'Users\FinancesController@index')->name('finances.index');
-        Route::match(['get'], 'finances/export', 'Users\FinancesController@export')->name('finances.export');
-        Route::match(['get'], 'finances/coins', 'Users\FinancesController@coins')->name('finances.coins');
-        Route::match(['get'], 'finances/coins/export', 'Users\FinancesController@coinsExport')->name('finances.coins.export');
-        Route::match(['get', 'post'], 'coins', 'Users\CoinsController@index')->name('coins.index');
-        Route::match(['get', 'post'], 'feedback', 'Users\FeedbackController@index')->name('feedback.index');
-        Route::match(['get', 'post'], 'profile', 'Users\ProfileController@index')->name('profile.index');
+        Route::match(['get', 'post'], 'password', 'Users\Center\PassswordController@index')->name('password.index');
+        Route::match(['get', 'post'], 'safe_password', 'Users\Center\SafePassswordController@index')->name('password.safe_password');
+        Route::match(['get'], 'finances', 'Users\Center\FinancesController@index')->name('finances.index');
+        Route::match(['get'], 'finances/export', 'Users\Center\FinancesController@export')->name('finances.export');
+        Route::match(['get'], 'finances/coins', 'Users\Center\FinancesController@coins')->name('finances.coins');
+        Route::match(['get'], 'finances/coins/export', 'Users\Center\FinancesController@coinsExport')->name('finances.coins.export');
+        Route::match(['get', 'post'], 'coins', 'Users\Center\CoinsController@index')->name('coins.index');
+        Route::match(['get', 'post'], 'feedback', 'Users\Center\FeedbackController@index')->name('feedback.index');
+        Route::match(['get', 'post'], 'profile', 'Users\Center\ProfileController@index')->name('profile.index');
         Route::match(['get'], '/', function() {
             return redirect()->route('center.profile.index');
         })->name('index');
