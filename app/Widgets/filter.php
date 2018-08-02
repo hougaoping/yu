@@ -4,7 +4,7 @@ namespace App\Widgets;
 
 use Arrilot\Widgets\AbstractWidget;
 
-class filter extends AbstractWidget
+class Filter extends AbstractWidget
 {
     /**
      * The configuration array.

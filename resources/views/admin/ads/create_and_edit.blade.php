@@ -68,7 +68,7 @@
         <div class="form-group row">
             <label for="input-name" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">广告图片：</label>
             <div class="col-md-10">
-                @widget('upload', ['config'=>'ad', 'name'=>'picture', 'multiple'=>false, 'files'=> isset($ad['picture']) ? $ad['picture'] : ''])
+                @widget('Upload', ['config'=>'ad', 'name'=>'picture', 'multiple'=>false, 'files'=> isset($ad['picture']) ? $ad['picture'] : ''])
             </div>
         </div>
         <div class="form-group row">

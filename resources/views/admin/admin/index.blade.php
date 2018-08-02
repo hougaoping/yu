@@ -12,7 +12,7 @@
 		<table class="table table-hover">
 	        <thead>
 		        <tr class="">
-		        	<th>@widget('order', ['field' => 'id', 'title'=>'ID'])</th>
+		        	<th>@widget('Order', ['field' => 'id', 'title'=>'ID'])</th>
 		            <th>操作</th>
 		            <th>电子邮箱</th>
 		            <th>所属角色</th>
@@ -37,7 +37,7 @@
 					{{ $data->email }}
 				</td>
 				<td>
-					<?php echo implode(', ', $data->getAdminRolesName())?>
+					<?php echo implode(', ', $data->getAdminRoles())?>
 				</td>
 				<td>{{ $data->created_at->diffForHumans() }}</td>
 				<td>{{ $data->updated_at->diffForHumans() }}</td>

@@ -10674,9 +10674,22 @@ select.form-control {
 .articles .page-main .content ul.article_list li div.description {
   padding: 0;
   margin: 0px;
-  margin-top: 15px;
+  padding-top: 15px;
   font-size: 15px;
   color: #999;
+}
+
+.articles .page-main .content ul.article_list li.has-image div.description .image {
+  float: left;
+  width: 130px;
+  max-height: 130px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.articles .page-main .content ul.article_list li.has-image div.description .image img {
+  width: 130px;
+  border-radius: 2px;
 }
 
 .articles .page-main .content ul.article_list li div.info {
@@ -10697,7 +10710,7 @@ select.form-control {
 }
 
 .articles .page-main .content ul.article_list li span.click_num i {
-  padding-left: 25px;
+  padding-left: 20px;
   background-image: url(/images/icons/article_icon.png);
   background-repeat: no-repeat;
   background-position: 0 0;

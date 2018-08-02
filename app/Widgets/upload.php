@@ -4,7 +4,7 @@ namespace App\Widgets;
 
 use Arrilot\Widgets\AbstractWidget;
 
-class upload extends AbstractWidget
+class Upload extends AbstractWidget
 {
     /**
      * The configuration array.

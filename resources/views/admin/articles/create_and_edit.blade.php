@@ -66,7 +66,7 @@
         <div class="form-group row">
             <label for="input-name" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">文章缩略图：</label>
             <div class="col-md-10">
-                @widget('upload', ['config'=>'article', 'name'=>'picture', 'multiple'=>false, 'files'=> isset($article['picture']) ? $article['picture'] : ''])
+                @widget('Upload', ['config'=>'article', 'name'=>'picture', 'multiple'=>false, 'files'=> isset($article['picture']) ? $article['picture'] : ''])
             </div>
         </div>
         <div class="form-group row">

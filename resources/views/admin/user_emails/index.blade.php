@@ -19,13 +19,13 @@
 		</div>
 	</div>
 	<div class="mb-4">
-	@widget('filter', ['filterMenus' => $filter])
+	@widget('Filter', ['filterMenus' => $filter])
 	</div>
 	<div class="list table-responsive">
 	    <table class="table table-hover">
 	        <thead>
 		        <tr class="">
-		        	<th>@widget('order', ['field' => 'id', 'title'=>'ID'])</th>
+		        	<th>@widget('Order', ['field' => 'id', 'title'=>'ID'])</th>
 					<th>UID</th>
 		            <th>邮箱地址</th>
 		            <th>邮箱是否验证</th>

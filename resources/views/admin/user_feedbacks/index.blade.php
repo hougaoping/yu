@@ -10,7 +10,7 @@
 	    <table class="table table-hover">
 	        <thead>
 		        <tr class="">
-		        	<th>@widget('order', ['field' => 'id', 'title'=>'ID'])</th>
+		        	<th>@widget('Order', ['field' => 'id', 'title'=>'ID'])</th>
 					<th>UID</th>
 		            <th>联系方式</th>
 		            <th>详细描述</th>

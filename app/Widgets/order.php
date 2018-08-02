@@ -6,7 +6,7 @@ use Arrilot\Widgets\AbstractWidget;
 use Illuminate\Support\Str;
 
 
-class order extends AbstractWidget
+class Order extends AbstractWidget
 {
 	
     protected $config = [];

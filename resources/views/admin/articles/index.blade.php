@@ -24,12 +24,12 @@
 	    <table class="table table-hover">
 	    	<thead>
 		        <tr class="">
-		        	<th>@widget('order', ['field' => 'id', 'title'=>'ID'])</th>
+		        	<th>@widget('Order', ['field' => 'id', 'title'=>'ID'])</th>
 		            <th>操作</th>
 		            <th>文章标题</th>
 					<th>文章分类</th>
 					<th>文章状态</th>
-					<th>@widget('order', ['field' => 'click', 'title'=>'点击次数'])</th>
+					<th>@widget('Order', ['field' => 'click', 'title'=>'点击次数'])</th>
 		            <th>创建时间</th>
 		            <th>更新时间</th>
 				</tr>

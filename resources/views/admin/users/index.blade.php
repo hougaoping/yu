@@ -17,21 +17,21 @@
 		</div>
 	</div>
 	<div class="mb-4">
-		@widget('filter', ['filterMenus' => $filter])
+		@widget('Filter', ['filterMenus' => $filter])
 	</div>
 	<div class="list table-responsive">
 	    <table class="table table-hover">
 	        <thead>
 		        <tr class="">
-		        	<th>@widget('order', ['field' => 'id', 'title'=>'UID'])</th>
+		        	<th>@widget('Order', ['field' => 'id', 'title'=>'UID'])</th>
 					<th>操作</th>
 		            <th>邮箱地址</th>
 		            <th>手机号码</th>
 		            <th>余额</th>
-					<th>@widget('order', ['field' => 'login_count', 'title'=>'登录'])</th>
+					<th>@widget('Order', ['field' => 'login_count', 'title'=>'登录'])</th>
 					<th>最后登录IP</th>
-		            <th>@widget('order', ['field' => 'last_login_time	', 'title'=>'最后登录时间'])</th>
-					<th>@widget('order', ['field' => 'register_time', 'title'=>'注册时间'])</th>
+		            <th>@widget('Order', ['field' => 'last_login_time	', 'title'=>'最后登录时间'])</th>
+					<th>@widget('Order', ['field' => 'register_time', 'title'=>'注册时间'])</th>
 	         	</tr>
 	     	</thead>
 		    @foreach ($list as $data)
