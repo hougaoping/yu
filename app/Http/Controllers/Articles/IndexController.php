@@ -14,10 +14,18 @@ use App\Models\ArticleCategory;
 
 class IndexController extends BaseController
 {
-	public function category(ArticleCategory $category, Request $request) {
-		$articles = $category->articles()->paginate($this->_rows());
+	public function category(ArticleCategory $category = null, Request $request) {
+
+        if (!is_null($category)) {
+            $title    = $category->name;
+            $articles = $category->articles()->paginate($this->_rows());
+        }else {
+            $title    = '全部分类';
+            $articles = Article::paginate($this->_rows());
+        }
+        
         $categories = ArticleCategory::where('parent_id', null)->get();
-		return view('articles.category', compact('category', 'articles', 'categories'));
+		return view('articles.category', compact('title', 'category', 'articles', 'categories'));
 	}
 	
 	public function index(Article $article, Request $request) {
@@ -26,7 +34,7 @@ class IndexController extends BaseController
         }
         
         $article->increment('click', 1);
-        $newest = Article::newest();
+        $newest = Article::where('status', 1)->limit(10)->orderBy('id', 'desc')->get();
 		return view('articles.index', compact('article', 'newest'));
 	} 
 }

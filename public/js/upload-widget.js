@@ -1,14 +1,18 @@
 $(function () {
 	// 移除现有图片功能
 	var uploadWidget = $('.upload-widget');
-	uploadWidget.delegate('.remove', 'click', function(){
-		var files = $(this).parents('.upload-widget').find('.files');
+	uploadWidget.delegate('.remove', 'click', function() {
+		var files = uploadWidget.find('.files');
 		var id = $(this).attr('data-id');
 
 		var rs = files.val().replace(eval("/" + id + ",?/"), '').replace(/(,*$)/g, "");
 		files.val(rs);
 
 		$(this).parent('.image').remove(); // 不能用隐藏，否则删除再上传原来的图片则会无法正常显示
+
+		if (uploadWidget.attr('data-multiple') == 'single') {
+			uploadWidget.find('.file-box').show();
+		}
 		return false;
 	});
 	
@@ -55,6 +59,10 @@ $(function () {
 
 			}
 			uploadWidget.find('.progress .progress-bar').delay(1000).fadeOut();
+			
+			if (uploadWidget.attr('data-multiple') == 'single') {
+				uploadWidget.find('.file-box').hide();
+			}
 		}
 	});
 });

@@ -46,7 +46,7 @@ Route::name('center.')->group(function () {
 
 Route::name('article.')->group(function() {
     Route::group(['prefix' => 'articles'], function() {
-        Route::match(['get'], 'category/{category}', 'Articles\IndexController@category')->where('article', '[0-9]+')->name('category');
+        Route::match(['get'], 'category/{category?}', 'Articles\IndexController@category')->where('article', '[0-9]+')->name('category');
         Route::match(['get'], '/{article}', 'Articles\IndexController@index')->where('article', '[0-9]+')->name('index');
     });
 });

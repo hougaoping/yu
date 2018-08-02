@@ -10,6 +10,15 @@ return [
         'ext'          => 'jpg,png,gif,jpeg',                      // 允许上传的文件后缀
     ],
 
+
+    'article' => [
+        'disk'         => 'uploads',
+        'save_path'    => 'article',
+        'rule'         => 'date',
+        'size'         => 15 * 1024 * 1024,
+        'ext'          => 'jpg,png,gif,jpeg',
+    ],
+
     'editor' => [
         'disk'         => 'uploads',
         'save_path'    => 'editor',

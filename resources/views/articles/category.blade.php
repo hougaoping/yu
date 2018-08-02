@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('title') {{ $category->name }} @stop
+@section('title') {{ $title }} @stop
 @section('content')
 <div class="container articles">
     <div class="page-main row">
         <div class="sidebar col-md-3 col-12 order-1 order-md-2 mb-4">
-            <div class="menu-list">
+            <div class="category-list">
                 @foreach ($categories as $category)
-                <a class="list-item {{ active_class(if_route('article.category') && if_route_param('category', $category->id)) }}"" href="{{ route('article.category', $category) }}" title="{{ $category->name }}">{{ $category->name }}</a>
+                <a class="category-item {{ active_class(if_route('article.category') && if_route_param('category', $category->id)) }}"" href="{{ route('article.category', $category) }}" title="{{ $category->name }}">{{ $category->name }}</a>
                 @endforeach
             </div>
         </div>
@@ -16,10 +16,10 @@
 					@foreach ($articles as $article)
 					<li>
 						<a href="{{ route('article.index', $article) }}" target="" title="{{ $article->title }}">{{ $article->title }}</a>
-						<div> {{ description($article->content, 120) }} </div> 
+						<div class="description"> {{ Stringy\create(strip_tags($article->content))->first(90) }} </div> 
 						<div class="info">
                             <span class="time">{{ $article->date_time }}</span>
-                            <span class="click_num"><i></i>{{ $article->click }}人读过</span></div>
+                            <span class="click_num"><i></i>{{ $article->click }}人阅读</span></div>
 					</li>
 					@endforeach
 				</ul>

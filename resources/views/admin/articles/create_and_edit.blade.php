@@ -64,6 +64,12 @@
             </div>
         </div>
         <div class="form-group row">
+            <label for="input-name" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">文章缩略图：</label>
+            <div class="col-md-10">
+                @widget('upload', ['config'=>'article', 'name'=>'picture', 'multiple'=>false, 'files'=> isset($article['picture']) ? $article['picture'] : ''])
+            </div>
+        </div>
+        <div class="form-group row">
             <div class="col-md-7 col-lg-5 offset-md-2">
                 <button type="submit" class="btn btn-primary" id="btn-submit">保存</button>
             </div>
@@ -73,6 +79,8 @@
 @stop
 
 @push('links')
+
+
 <script type="text/javascript" src="/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 tinymce.init({
@@ -120,9 +128,19 @@ tinymce.init({
  });
 </script>
 
+
+
+<script src="/jq-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="/jq-upload/js/jquery.iframe-transport.js"></script>
+<script src="/jq-upload/js/jquery.fileupload.js"></script>
+<link rel="stylesheet" href="/css/upload-widget.css"></link>
+<script src="/js/upload-widget.js"></script>
+
 @endpush
 
 @push('scripts')
+
+var uploadScript = <?php echo json_encode(route('admin.upload')) ?>;
 
 // 设置触发表单事件
 $(function(){

@@ -68,7 +68,7 @@
         <div class="form-group row">
             <label for="input-name" class="col-md-2 col-form-label text-sm-left text-md-right text-muted">广告图片：</label>
             <div class="col-md-10">
-                @widget('upload', ['config'=>'ad', 'name'=>'picture', 'files'=> isset($ad['picture']) ? $ad['picture'] : ''])
+                @widget('upload', ['config'=>'ad', 'name'=>'picture', 'multiple'=>false, 'files'=> isset($ad['picture']) ? $ad['picture'] : ''])
             </div>
         </div>
         <div class="form-group row">
@@ -86,7 +86,6 @@
 <script src="/jq-upload/js/jquery.fileupload.js"></script>
 <link rel="stylesheet" href="/css/upload-widget.css"></link>
 <script src="/js/upload-widget.js"></script>
-
 @endpush
 
 @push('scripts')

@@ -1,6 +1,6 @@
-<div class="upload-widget">
+<div class="upload-widget" {!! $multiple ? 'data-multiple="multiple"' : 'data-multiple="single"' !!}>
     <div class="file-box">
-        <input class="file-btn fileupload" type="file" name="files[]" multiple="" data-form-data='{"config": "{{ $config }}", "time": @json(time()), "token": @json( md5(time() . 'ad') )}'>
+        <input class="file-btn fileupload" type="file" name="files[]" {!! $multiple ? 'multiple=""' : '' !!} data-form-data='{"config": "{{ $config }}", "time": @json(time()), "token": @json( md5(time() . $config) )}'>
         <div class="progress">
             <div class="progress-bar" style="width: 0%;"></div>
         </div>
