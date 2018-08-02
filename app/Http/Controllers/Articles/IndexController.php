@@ -20,12 +20,12 @@ class IndexController extends BaseController
             $title    = $category->name;
             $articles = $category->articles()->paginate($this->_rows());
         }else {
-            $title    = '全部分类';
+            $title    = '文章中心';
             $articles = Article::paginate($this->_rows());
         }
         
-        $categories = ArticleCategory::where('parent_id', null)->get();
-		return view('articles.category', compact('title', 'category', 'articles', 'categories'));
+        $categories = ArticleCategory::get()->toTree();
+		return view('articles.category', compact('title', 'articles', 'categories'));
 	}
 	
 	public function index(Article $article, Request $request) {

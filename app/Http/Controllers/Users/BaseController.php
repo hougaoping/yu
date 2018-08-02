@@ -5,4 +5,5 @@ use App\Http\Controllers\FrontController;
 
 class BaseController extends FrontController
 {
+    
 }
