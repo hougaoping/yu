@@ -30,8 +30,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $_admin_roles = null;
-
     public function userEmail()
     {
         return $this->hasOne('App\Models\UserEmail');
@@ -120,18 +118,14 @@ class User extends Authenticatable
 		}
     }
 
+
     // 获得管理员权限
     public function getAdminPermissions() {
-
-        $admin_roles = json_decode($this->admin_roles);
-
-        if (is_array($admin_roles) and !empty($admin_roles)) {
-            if (is_null($this->_admin_roles)) {
-                $this->_admin_roles = AdminRole::whereIn('id', $admin_roles)->get();
-            }
-
+        $ids = json_decode($this->admin_roles);
+        if (is_array($ids) and !empty($ids)) {
+            $admin_roles = AdminRole::whereIn('id', $ids)->get();
             $permissions = [];
-            foreach($this->_admin_roles as $v) {
+            foreach($admin_roles as $v) {
                 $permission = is_array(json_decode($v['permissions'])) ? json_decode($v['permissions']) : [];
                 $permissions = array_merge($permissions, $permission);
             }
@@ -143,15 +137,14 @@ class User extends Authenticatable
     }
 
     public function getAdminRolesName() {
-        $adminRoles = AdminRole::pluck('name', 'id');
-        $roles = (array) json_decode($this->admin_roles);
+        $all    = AdminRole::pluck('name', 'id');
+        $roles  = (array) json_decode($this->admin_roles);
         $_roles = [];
-        foreach($adminRoles as $key=>$value) {
+        foreach($all as $key=>$value) {
             if (in_array($key , $roles)) {
                 $_roles[] = $value;
             }
         }
         return $_roles;
     }
-
 }
