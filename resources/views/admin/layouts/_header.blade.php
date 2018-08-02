@@ -6,7 +6,7 @@
         </button>
         <div class="dropdown-menu">
           <?php
-            $roles = Auth::user()->getAdminRolesName();
+            $roles = Auth::user()->getAdminRoles();
             echo isset($roles[0]) ? '<a class="dropdown-item disabled" href="">' . $roles[0] . '</a>' : '';
           ?>
           <a class="dropdown-item" href="{{ route('center.password.index') }}" target="_blank">修改我的密码</a>

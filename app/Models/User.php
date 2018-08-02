@@ -56,13 +56,13 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\UserFeedback');
     }
 
-	// 用户的财务明细
+	// 财务明细
 	public function finances()
     {
         return $this->hasMany('App\Models\UserFinance');
     }
 	
-	// 用户的金币明细
+	// 金币明细
 	public function coins()
     {
         return $this->hasMany('App\Models\UserCoin');
@@ -136,7 +136,7 @@ class User extends Authenticatable
         }
     }
 
-    public function getAdminRolesName() {
+    public function getAdminRoles() {
         $all    = AdminRole::pluck('name', 'id');
         $roles  = (array) json_decode($this->admin_roles);
         $_roles = [];
