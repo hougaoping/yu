@@ -393,8 +393,9 @@ table .opt {
     .content-wrapper {
         min-height: auto;
         .list {
+
             .table {
-                min-width:700px;
+                min-width:900px;
             }
 
             .table th i.sort {
@@ -409,7 +410,8 @@ table .opt {
                 text-decoration: none;
             }
 
-            .table th i.sort-up {
+            .table t
+            h i.sort-up {
                 background-position: right -118px;
             }
 
