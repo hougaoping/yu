@@ -29,7 +29,7 @@ class FinancesController extends BaseController
     }
 
     public function export(Excel $excel, Request $request) {
-        return Excel::download(new FinancesExport(Auth::id()), 'finances.xlsx');
+        return Excel::download(new FinancesExport(), 'finances.xlsx');
     }
 
     public function coins(Request $request) {
@@ -40,6 +40,6 @@ class FinancesController extends BaseController
     }
 
     public function coinsExport(Request $request) {
-       return Excel::download(new CoinsExport(Auth::id()), 'coins.xlsx');
+       return Excel::download(new CoinsExport(), 'coins.xlsx');
     }
 }

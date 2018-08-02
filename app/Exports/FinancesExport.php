@@ -6,14 +6,15 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithMapping;
 use App\Models\UserFinance;
+use Auth;
 
-class FinancesExport implements FromCollection, WithHeadings
+class FinancesExport implements FromCollection, WithHeadings, WithMapping
 {
     use Exportable;
 
-    public function __construct($user) {
-        $this->user = $user;
+    public function __construct() {
     }
 
     // 添加表头
@@ -27,8 +28,19 @@ class FinancesExport implements FromCollection, WithHeadings
         ];
     }
 
+    public function map($finances): array
+    {
+        return [
+            $finances->id,
+            $finances->type,
+            $finances->change,
+            $finances->amount,
+            $finances->created_at,
+        ];
+    }
+
     public function collection()
     {
-        return UserFinance::query()->withSearch($this->user)->get(['id', 'enum', 'change', 'amount', 'created_at']);
+        return UserFinance::query()->withSearch(Auth::id())->get();
     }
 }
