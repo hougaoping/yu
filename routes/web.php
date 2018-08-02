@@ -14,30 +14,33 @@ Route::get('login', function() {
 Route::match(['get', 'post'], 'signup', 'Users\IndexController@register')->name('signup');
 Route::match(['get','post'], 'signin', 'Users\IndexController@login')->name('signin');
 Route::get('signup/confirm', 'Users\IndexController@confirmEmail')->name('signup.confirm');
-Route::get('logout', 'Users\IndexController@logout')->name('logout');
 
 Route::match(['get', 'post'], 'signup/mobile', 'Users\Mobile\IndexController@register')->name('signup.mobile');
 Route::match(['get','post'], 'signin/mobile', 'Users\Mobile\IndexController@login')->name('signin.mobile');
 Route::post('signup/mobile/verify', 'Users\mobile\IndexController@verify')->middleware('throttle:3')->name('signup.mobile.verify');
 
-// 忘记密码
-Route::match(['get','post'], 'forgot', 'Users\ForgotController@index')->name('forgot');
-route::match(['get','post'], 'forgot/reset', 'Users\ForgotController@reset')->name('forgot.reset');
-Route::match(['get','post'], 'forgot/mobile', 'Users\Mobile\ForgotController@index')->name('forgot.mobile');
-route::match(['get','post'], 'forgot/mobile/reset', 'Users\Mobile\ForgotController@reset')->name('forgot.mobile.reset');
+Route::get('logout', 'Users\IndexController@logout')->name('logout');
+
+// 找回密码
+Route::group(['prefix' => 'forgot', 'namespace' => 'Users'], function() {
+    Route::match(['get','post'], '/', 'ForgotController@index')->name('forgot');
+    route::match(['get','post'], 'reset', 'ForgotController@reset')->name('forgot.reset');
+    Route::match(['get','post'], 'mobile', 'Mobile\ForgotController@index')->name('forgot.mobile');
+    route::match(['get','post'], 'mobile/reset', 'Mobile\ForgotController@reset')->name('forgot.mobile.reset');
+});
 
 // 会员中心路由
 Route::name('center.')->group(function () {
-    Route::group(['prefix' => 'center'], function() {
-        Route::match(['get', 'post'], 'password', 'Users\Center\PassswordController@index')->name('password.index');
-        Route::match(['get', 'post'], 'safe_password', 'Users\Center\SafePassswordController@index')->name('password.safe_password');
-        Route::match(['get'], 'finances', 'Users\Center\FinancesController@index')->name('finances.index');
-        Route::match(['get'], 'finances/export', 'Users\Center\FinancesController@export')->name('finances.export');
-        Route::match(['get'], 'finances/coins', 'Users\Center\FinancesController@coins')->name('finances.coins');
-        Route::match(['get'], 'finances/coins/export', 'Users\Center\FinancesController@coinsExport')->name('finances.coins.export');
-        Route::match(['get', 'post'], 'coins', 'Users\Center\CoinsController@index')->name('coins.index');
-        Route::match(['get', 'post'], 'feedback', 'Users\Center\FeedbackController@index')->name('feedback.index');
-        Route::match(['get', 'post'], 'profile', 'Users\Center\ProfileController@index')->name('profile.index');
+    Route::group(['prefix' => 'center', 'namespace' => 'Users\Center'], function() {
+        Route::match(['get', 'post'], 'password', 'PassswordController@index')->name('password.index');
+        Route::match(['get', 'post'], 'safe_password', 'SafePassswordController@index')->name('password.safe_password');
+        Route::match(['get'], 'finances', 'FinancesController@index')->name('finances.index');
+        Route::match(['get'], 'finances/export', 'FinancesController@export')->name('finances.export');
+        Route::match(['get'], 'finances/coins', 'FinancesController@coins')->name('finances.coins');
+        Route::match(['get'], 'finances/coins/export', 'FinancesController@coinsExport')->name('finances.coins.export');
+        Route::match(['get', 'post'], 'coins', 'CoinsController@index')->name('coins.index');
+        Route::match(['get', 'post'], 'feedback', 'FeedbackController@index')->name('feedback.index');
+        Route::match(['get', 'post'], 'profile', 'ProfileController@index')->name('profile.index');
         Route::match(['get'], '/', function() {
             return redirect()->route('center.profile.index');
         })->name('index');
