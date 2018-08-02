@@ -29,7 +29,7 @@
         <div class="form-group row">
             <label class="col-md-2 col-form-label text-sm-left text-md-right text-muted">分类关键字：</label>
             <div class="col-md-7 col-lg-5">
-            <input type="text" name="class_key" value="{{ isset($link['class_key']) ? $link['class_key'] : 'home' }}" size="40" class="form-control">
+            <input type="text" name="category" value="{{ isset($link['category']) ? $link['category'] : 'home' }}" size="40" class="form-control">
             </div>
         </div>
         <div class="form-group row">

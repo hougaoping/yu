@@ -18,7 +18,7 @@ class CrateLinksTable extends Migration
             $table->string('name');
             $table->string('url');
             $table->integer('order');
-            $table->string('class_key')->index();
+            $table->string('category')->index();
             $table->boolean('status');
             $table->timestamps();
         });

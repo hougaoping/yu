@@ -118,14 +118,18 @@ class User extends Authenticatable
 		}
     }
 
+    protected $_admin_roles_cache = null;
 
     // 获得管理员权限
     public function getAdminPermissions() {
         $ids = json_decode($this->admin_roles);
         if (is_array($ids) and !empty($ids)) {
-            $admin_roles = AdminRole::whereIn('id', $ids)->get();
+            if (is_null($this->_admin_roles_cache)) {
+                $this->_admin_roles_cache = AdminRole::whereIn('id', $ids)->get();
+            } 
+            
             $permissions = [];
-            foreach($admin_roles as $v) {
+            foreach($this->_admin_roles_cache as $v) {
                 $permission = is_array(json_decode($v['permissions'])) ? json_decode($v['permissions']) : [];
                 $permissions = array_merge($permissions, $permission);
             }

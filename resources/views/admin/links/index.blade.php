@@ -50,7 +50,7 @@
 					<span class="subject">{{ $data->name }}</span>
 					{{ $data->url }}
 				</td>
-				<td>{{ $data->class_key }}</td>
+				<td>{{ $data->category }}</td>
 				<td>
 					@if ($data->status == 1)
 					  启用

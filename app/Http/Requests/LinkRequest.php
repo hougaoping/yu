@@ -28,7 +28,7 @@ class LinkRequest extends FormRequest
             'name'      => 'required',
             'url'       => 'required|url',
             'order'     => 'required|integer',
-            'class_key' => 'required',
+            'category' => 'required',
         ];
     }	
 
