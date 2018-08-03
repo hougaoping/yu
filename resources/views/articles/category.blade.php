@@ -15,7 +15,7 @@
                 <ul class="article_list">
 					@foreach ($articles as $article)
 					<li class="{{ !empty($article->picture) ? 'has-image': '' }}">
-						<a href="{{ route('article.index', $article) }}" target="" title="{{ $article->title }}">{{ $article->title }}</a>
+						<a href="{{ route('article.index', $article) }}" target="" title="{{ $article->title }}" class="h4">{{ $article->title }}</a>
                         <div class="description">
                             @if(!empty($article->picture))
                             <div class="image"><img src="{{ Widget::Url(['id'=>$article->picture]) }}"></div>
