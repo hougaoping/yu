@@ -5,7 +5,7 @@
 <div class="center container clearfix">
     @include('users.layouts._sidebar')
     <div class="main-container">
-        <div class="container-wrapper">
+        <div class="container-wrapper border">
             <div class="header-line d-flex justify-content-between align-items-center border-bottom">
                 <div class="tabs clearfix">
                     <a href="{{ route('center.password.index') }}" class="active">修改登录密码</a>

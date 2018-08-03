@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-md-6 col-12">
 			<div class="card mb-4">
-				<div class="card-header">注册信息</div>
+				<div class="card-header border-bottom-0">注册信息</div>
 				<div class="show">
 					<table class="table table-hover">
 						<colgroup>
@@ -51,7 +51,7 @@
 		</div>
 		<div class="col-md-6 col-12">
 			<div class="card">
-				<div class="card-header">个人信息</div>
+				<div class="card-header border-bottom-0">个人信息</div>
 				<div class="show">
 					<table class="table table-hover">
 						<colgroup>

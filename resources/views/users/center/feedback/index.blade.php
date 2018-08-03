@@ -4,7 +4,7 @@
 <div class="center container clearfix">
     @include('users.layouts._sidebar')
     <div class="main-container">
-        <div class="container-wrapper">
+        <div class="container-wrapper border">
             <div class="header-line p-4 border-bottom">
                 <h3>意见反馈</h3>
             </div>

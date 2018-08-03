@@ -1,7 +1,7 @@
 @extends('admin.layouts.admin')
 @section('content')
 	<div class="card">
-		<div class="card-header">系统信息</div>
+		<div class="card-header border-bottom-0">系统信息</div>
 		<div class="table-responsive">
 			<table class="table table-hover" style="min-width:900px">
 				<tbody>

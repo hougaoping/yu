@@ -4,7 +4,7 @@
 <div class="center container clearfix">
     @include('users.layouts._sidebar')
     <div class="main-container">
-        <div class="container-wrapper">
+        <div class="container-wrapper border">
             <div class="header-line d-flex justify-content-between align-items-center border-bottom">
                 <div class="tabs clearfix">
                     <a href="{{ route('center.finances.index') }}" class="active">财务明细</a>
@@ -30,7 +30,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col mt-3 mt-md-0"><a class="btn btn-primary export" href="<?php echo route('center.finances.export') ?>" id="export" onclick="return confirm('确定导出吗？操作可能需要一些时间');">导出Excel</a></div>
+                    <div class="col mt-3 mt-md-0"><a class="btn btn-primary export" href="<?php echo route('center.finances.export') ?>" id="export">导出数据</a></div>
                 </div>
             
             <div class="list table-responsive">

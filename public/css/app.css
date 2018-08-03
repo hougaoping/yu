@@ -10675,27 +10675,19 @@ select.form-control {
   margin: 0px;
   padding-top: 15px;
   font-size: 15px;
-  color: #999;
+  color: #aab2bd;
 }
 
 .articles .page-main .content ul.article_list li.has-image div.description .image {
-  float: left;
-  width: 130px;
-  max-height: 130px;
+  margin-bottom: 10px;
   overflow: hidden;
-  margin-right: 10px;
-}
-
-.articles .page-main .content ul.article_list li.has-image div.description .image img {
-  width: 130px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .articles .page-main .content ul.article_list li div.info {
   margin-top: 10px;
   padding-left: 0;
   line-height: 2;
-  font-size: 13px;
   text-align: left;
   color: #aab2bd;
 }
@@ -10762,7 +10754,6 @@ select.form-control {
   font-weight: bold;
   text-align: center;
   border-bottom: 1px solid #eee;
-  letter-spacing: 10px;
 }
 
 .articles .sidebar .part ul {
@@ -10926,9 +10917,14 @@ select.form-control {
 }
 
 .center .sidebar {
-  width: 220px;
+  background-color: #fff;
+  width: 200px;
   overflow: hidden;
   position: absolute;
+  bottom: 0;
+  top: 0;
+  border: solid 1px #dee2e6;
+  border-right: 0;
 }
 
 .center .sidebar .menu-list {
@@ -10965,7 +10961,7 @@ select.form-control {
 
 .center .main-container {
   width: 100%;
-  padding-left: 235px;
+  padding-left: 200px;
 }
 
 .center .main-container .table-responsive .table {
@@ -11032,12 +11028,12 @@ select.form-control {
 }
 
 .center .main-container .container-wrapper .list-wrapper {
-  padding: 0 30px;
+  padding: 0 40px;
 }
 
 @media (max-width: 1200px) {
   .center .main-container .container-wrapper .list-wrapper {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 }
 

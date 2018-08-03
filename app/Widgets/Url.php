@@ -12,7 +12,7 @@ class Url extends AbstractWidget
    
     public function run()
     {
-        $file = File::where('id', $this->config['id'])->first();
-		return $file->url();
+        $file = File::where('id', intval($this->config['id']))->first();
+        return $file ? $file->url() : '';
     }
 }
