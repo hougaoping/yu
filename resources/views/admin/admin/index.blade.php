@@ -26,7 +26,7 @@
 				<td>{{ $data->id }}</td>
 				<td>
 					<a class="opt edit" href="{{ route('admin.admin.edit', ['id' => $data->id]) }}">编辑</a>
-		            <span class="opt-separator"> | </span>
+		            <span class="split"> | </span>
 		            <form action="{{ route('admin.admin.destroy', $data->id) }}" method="post" class="inline">
 		            	{{ csrf_field() }}
 		            	{{ method_field('DELETE') }}

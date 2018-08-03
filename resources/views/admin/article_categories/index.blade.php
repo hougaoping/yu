@@ -38,7 +38,7 @@
 	        	<td>{{ $category['id']}}</td>
 				<td>
 					<a class="opt edit" href="{{ route('admin.article_categories.edit', ['id' => $category['id']]) }}">编辑</a>
-		            <span class="opt-separator"> | </span>
+		            <span class="split"> | </span>
 		            <form action="{{ route('admin.article_categories.destroy', $category['id']) }}" method="post" class="inline">
 		            	{{ csrf_field() }}
 		            	{{ method_field('DELETE') }}

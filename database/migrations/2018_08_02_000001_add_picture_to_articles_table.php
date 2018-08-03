@@ -14,7 +14,7 @@ class AddPictureToArticlesTable extends Migration
     public function up()
     {
         Schema::table('articles', function (Blueprint $table) {
-			$table->string('picture')->default("");
+			$table->string('picture')->nullable();
         });
     }
 

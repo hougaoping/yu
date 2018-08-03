@@ -17,7 +17,7 @@ Route::get('signup/confirm', 'Users\IndexController@confirmEmail')->name('signup
 
 Route::match(['get', 'post'], 'signup/mobile', 'Users\Mobile\IndexController@register')->name('signup.mobile');
 Route::match(['get','post'], 'signin/mobile', 'Users\Mobile\IndexController@login')->name('signin.mobile');
-Route::post('signup/mobile/verify', 'Users\mobile\IndexController@verify')->middleware('throttle:3')->name('signup.mobile.verify');
+Route::post('signup/mobile/verify', 'Users\Mobile\IndexController@verify')->middleware('throttle:3')->name('signup.mobile.verify');
 
 Route::get('logout', 'Users\IndexController@logout')->name('logout');
 

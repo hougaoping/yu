@@ -142,12 +142,6 @@ tinymce.init({
 
 var uploadScript = <?php echo json_encode(route('admin.upload')) ?>;
 
-// 设置触发表单事件
-$(function(){
-    $('#btn-submit').click(function(){
-        $("[name=content]").val(CKEDITOR.instances.ck_content.getData());
-    });
-});
 
 var error_placment = function (error, element){
     $(element).after(error);

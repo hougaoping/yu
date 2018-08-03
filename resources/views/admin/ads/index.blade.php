@@ -45,7 +45,7 @@
 				<td>{{ $data->id }}</td>
 				<td>
 					<a class="opt edit" href="{{ route('admin.ads.edit', ['id' => $data['id']]) }}">编辑</a>
-		            <span class="opt-separator"> | </span>
+		            <span class="split"> | </span>
 		            <form class="inline" action="{{ route('admin.ads.destroy', $data['id']) }}" method="post">
 		            	{{ csrf_field() }}
 		            	{{ method_field('DELETE') }}
