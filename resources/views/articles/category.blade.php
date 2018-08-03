@@ -12,7 +12,7 @@
         </div>
         <div class="col-md-9 col-12 order-2 order-md-1">
             <div class="content">
-                <ul class="article_list">
+                <ul class="article-list">
 					@foreach ($articles as $article)
 					<li class="{{ !empty($article->picture) ? 'has-image': '' }}">
 						<a href="{{ route('article.index', $article) }}" target="" title="{{ $article->title }}" class="h4">{{ $article->title }}</a>
@@ -25,7 +25,7 @@
                         <i class="clearfix"></i>
 						<div class="info">
                             <span class="time">{{ $article->date_time }}</span>
-                            <span class="click_num"><i></i>{{ $article->click }}人阅读</span></div>
+                            <span class="click_num">{{ $article->click }}人阅读</span></div>
 					</li>
 					@endforeach
 				</ul>

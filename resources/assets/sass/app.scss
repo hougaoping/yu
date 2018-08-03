@@ -191,23 +191,23 @@ select.form-control {
                 padding:1.5rem;
             }
 
-            ul.article_list {
+            ul.article-list {
                 padding: 0px 20px;
                 margin:0;
             }
 
-            ul.article_list li {
+            ul.article-list li {
                 padding-top: 20px;
                 padding-bottom: 10px;
                 border-bottom: 1px solid #eee;
                 list-style: none;
             }
 
-            ul.article_list li:last-child {
+            ul.article-list li:last-child {
                 border-bottom: none;
             }
         
-            ul.article_list li div.description {
+            ul.article-list li div.description {
                 padding: 0;
                 margin: 0px;
                 padding-top: 15px;
@@ -215,7 +215,7 @@ select.form-control {
                 color: #aaa;
             }
 
-            ul.article_list li.has-image {
+            ul.article-list li.has-image {
                 div.description {
                     .image {
                         margin-bottom:10px;
@@ -225,7 +225,7 @@ select.form-control {
                 }
             }
 
-            ul.article_list li div.info {
+            ul.article-list li div.info {
                 margin-top: 10px;
                 padding-left: 0;
                 line-height: 2;
@@ -233,25 +233,12 @@ select.form-control {
                 color: #aaa;
             }
 
-            ul.article_list li span {
-                padding-right: 20px;
+            ul.article-list li span {
+                padding-right: 10px;
             }
 
-            ul.article_list li span:hover {
+            ul.article-list li span:hover {
                 color: #666;
-            }
-
-            ul.article_list li span.click_num i {
-                padding-left: 20px;
-                background-image: url(/images/icons/article_icon.png);
-                background-repeat: no-repeat;
-                background-position: 0 0;
-                position: relative;
-                top: -2px;
-            }
-
-            ul.article_list li span.click_num:hover i {
-                background-position: 0 -18px;
             }
         }
     }
