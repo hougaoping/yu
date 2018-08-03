@@ -47,7 +47,7 @@
 		            </form>
 				</td>
 				<td>
-					{{ $data->title }}
+					<a href="{{ route('article.index', $data->id) }}" target="_blank">{{ $data->title }}</a>
 				</td>
 				<td>
 					@isset($data->category) {{ $data->category->name}} @endisset
