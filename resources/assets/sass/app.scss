@@ -143,23 +143,22 @@ select.form-control {
 
 .articles {
     margin-top: 20px;
-   
+
     .page-main {
         .content {
             background-color: #fff;
             .title {
                 text-align:center;
-                font-size:2rem;
                 font-weight:normal;
-                padding:3rem 0;
+                padding:30px 0;
                 margin:0;
             }
 
             .article-info {
                 text-align: center;
                 padding: 0;
-                height: 2.7rem;
-                line-height: 2.7rem;
+                height: 30px;
+                line-height: 30px;
                 span {
                     padding-right: 10px;
                     color: #aab2bd;
@@ -259,7 +258,7 @@ select.form-control {
                 line-height: 44px;
                 padding: 0 30px;
                 color:#555;
-                
+
                 &.active {
                     color: #555;
                     background-color: #ffdc40;
