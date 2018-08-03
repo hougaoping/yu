@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-9 col-12 order-1 mb-4">
             <div class="content">
-                <h1 class="title">{{ $article->title }}</h1>
+                <h1 class="title h2">{{ $article->title }}</h1>
                 <div class="article-info">
                     <span>{{ $article->date_time }}</span>
                     <span><a title="" href="{{ route('article.category', $article->category) }}">{{ $article->category->name }}</a></span>
@@ -28,6 +28,8 @@
             </div>
         </div>
     </div>
+</div>
+<div class="goto-top" title="回到页面顶部" style="display: block;">
 </div>
 @stop
 

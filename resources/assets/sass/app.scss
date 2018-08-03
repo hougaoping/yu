@@ -89,6 +89,25 @@ select.form-control {
     }
 }
 
+.goto-top {
+    position: fixed;
+    bottom: 45px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: none;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: url("/images/icons/top.png") no-repeat 15px 0px;
+    background-color: #f9f9f9;
+}
+
+.goto-top:hover {
+    background-position: 15px -48px;
+    border: 1px solid #777;
+}
+
 .header {
     width:100%;
     height:60px;
@@ -161,10 +180,6 @@ select.form-control {
                 line-height: 30px;
                 span {
                     padding-right: 10px;
-                    color: #aab2bd;
-                    &:hover {
-                        color: #656d78;
-                    }
                 }
             }
 
