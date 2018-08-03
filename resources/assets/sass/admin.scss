@@ -50,7 +50,6 @@ select.form-control {
     padding-right:30px;
 }
 
-
 .form-control.error {
     border:1px solid #dc3545;
 }
@@ -182,7 +181,7 @@ table .opt {
             }
         }
 
-        & span {
+        span {
             float: right;
             width: 45%;
             height: 43px;
@@ -409,8 +408,7 @@ table .opt {
                 text-decoration: none;
             }
 
-            .table t
-            h i.sort-up {
+            .table th i.sort-up {
                 background-position: right -118px;
             }
 
