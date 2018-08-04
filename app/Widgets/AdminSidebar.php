@@ -16,26 +16,23 @@ class AdminSidebar extends AbstractWidget
 
     public function run()
     {
-		$sidebar = $this->sidebar(config('admin.sidebar'), true);
-        return view('widgets.admin_sidebar', [
+		$sidebar = $this->sidebar(config('admin.sidebar'));
+        return view('widgets.admin.sidebar', [
             'config' => $this->config,
 			'sidebar'=> $sidebar
         ]);
     }
 	
-	protected function sidebar($sidebar, $permission = true) {
+	protected function sidebar($sidebar) {
 		foreach($sidebar as &$menu) {
 			foreach($menu['items'] as &$item) {
 				if (active_class(if_route_pattern($item['active']))) {
 					$item['is_active'] = true;
 					$menu['is_active'] = true;
 				}
-
-				if ($permission) {
-					if(permission(Auth::user(), $item['route'])) {
-						$item['permission'] = true;
-						$menu['permission'] = true;
-					}
+				if(permission(Auth::user(), $item['route'])) {
+					$item['permission'] = true;
+					$menu['permission'] = true;
 				}
 			}
 		}
