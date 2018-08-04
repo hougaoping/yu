@@ -3,7 +3,7 @@
 <div class="form-wrapper">
   <div class="id-tabs border-bottom mb-5 d-flex justify-content-start align-items-center">
     <a href="#first" class="selected">常规设置</a>
-    <a href="#second" class="">金额设置</a>
+    <a href="#second" class="">资金设置</a>
   </div>
 
   <form method="post" action="" class="form-aligned" autocomplete="off" id="form">
