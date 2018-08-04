@@ -121,23 +121,33 @@ class User extends Authenticatable
     protected $_admin_roles_cache = null;
 
     // 获得管理员权限
-    public function getAdminPermissions() {
+    public function permission($active) {
+        $permissions = [];
         $ids = json_decode($this->admin_roles);
         if (is_array($ids) and !empty($ids)) {
             if (is_null($this->_admin_roles_cache)) {
                 $this->_admin_roles_cache = AdminRole::whereIn('id', $ids)->get();
             } 
             
-            $permissions = [];
             foreach($this->_admin_roles_cache as $v) {
                 $permission = is_array(json_decode($v['permissions'])) ? json_decode($v['permissions']) : [];
                 $permissions = array_merge($permissions, $permission);
             }
-
-            return $permissions;
-        }else {
-            return [];
         }
+
+        $config = config('admin.permissions');
+        foreach ($config['equal'] as $key => $actions) {
+            if (in_array($active, $actions)) {
+                $active = $key;
+                break;
+            }
+        }
+
+        $permissions = array_merge($config['public'], $permissions);
+        if (!in_array($active, $permissions)) {
+            return false;
+        }
+        return true;
     }
 
     public function getAdminRoles() {

@@ -21,29 +21,6 @@ function get_tree($categories, $level = 0) {
     return $tree;
 }
 
-function permission($user, $active) {
-
-    // return true;
-
-    $permissions = is_object($user) ? $user->getAdminPermissions() : [];
-    
-    $configPermissions = config('admin.permissions');
-    $equal = $configPermissions['equal'];
-
-    foreach ($equal as $key => $actions) {
-        if (in_array($active, $actions)) {
-            $active = $key;
-            break;
-        }
-    }
-
-    $permissions = array_merge($configPermissions['public'], $permissions);
-    if (!in_array($active, $permissions)) {
-        return false;
-    }
-    return true;
-}
-
 // 隐藏电子邮件
 function email_asterisk($email)
 {

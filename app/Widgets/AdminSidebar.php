@@ -30,7 +30,7 @@ class AdminSidebar extends AbstractWidget
 					$item['is_active'] = true;
 					$menu['is_active'] = true;
 				}
-				if(permission(Auth::user(), $item['route'])) {
+				if(Auth::user()->permission($item['route'])) {
 					$item['permission'] = true;
 					$menu['permission'] = true;
 				}

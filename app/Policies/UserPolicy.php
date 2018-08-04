@@ -31,7 +31,7 @@ class UserPolicy
     }
 
     public function permission(User $currentUser) {
-        return permission($currentUser, Route::currentRouteName());
+        return $currentUser->permission(Route::currentRouteName());
     }
 	
 	public function seller(User $currentUser)
